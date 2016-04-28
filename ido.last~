@@ -1,0 +1,86 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/amodeo/.emacs.d/" . "auto-save-list/")
+ ("/Users/amodeo/Dropbox/Apps/" . "MobileOrg/")
+ ("/Users/amodeo/Dropbox/" . "Apps/")
+ ("/Users/" . "amodeo/")
+ ("/Users/amodeo/Code/" . "Python/")
+ ("/Users/amodeo/Code/Python/" . "gorg/")
+ ("/Users/amodeo/Code/Python/gorg/" . "control/")
+ ("/Users/amodeo/" . "Code/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/amodeo/Org/"
+ "/Users/amodeo/Code/Python/gorg/control/"
+ "/Users/amodeo/Code/Python/gorg/"
+ "/Users/amodeo/.emacs.d/"
+ "/Users/amodeo/org/"
+ "/Users/amodeo/Code/Python/gorg/view/"
+ "/Users/amodeo/Dropbox/Apps/MobileOrg/"
+ "/Users/amodeo/Code/Python/gorg/data/"
+ "/Users/amodeo/Code/Python/turtle/"
+ "/Users/amodeo/Code/Python/PyQt/"
+ "/Users/amodeo/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "food.org"
+ "core.py"
+ "test.py"
+ "init.el"
+ "body.org"
+ "lorg.org"
+ "main.org"
+ "work.org"
+ "gorg.org"
+ "journal.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/amodeo/Org/" (22305 11775 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org_archive" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" ".git/" ".#lorg.org" ".#food.org" "#lorg.org#" "#food.org#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/" (22304 9498 0 0) "view/" "test.py~" "test.py" "data/" "control/" "__pycache__/" "__init__.py" ".DS_Store" ".#test.py" "#gorg.org#" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/" (22303 57191 0 0) "smex-items" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" "../" "./")
+
+ ("/Users/amodeo/org/" (22297 25701 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org_archive" "main.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" ".git/" ".#work.org" ".#main.org" ".#dump.org" ".#body.org" "#work.org#" "#dump.org#" "#body.org#" "../" "./")
+
+ ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22295 47302 0 0) "work.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "journal.org" "index.org" "Icon
+" "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "body.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
+
+ ("/Users/amodeo/" (22293 39220 0 0) "Public/" "Pictures/" "Org/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".python_history" ".leo/" ".idlerc/" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/auto-save-list/" (22269 20438 0 0) ".saves-909-lucass-MacBook-Pro.local~" ".saves-829-lucass-MacBook-Pro.local~" ".saves-823-lucass-MacBook-Pro.local~" ".saves-743-lucass-MacBook-Pro.local~" ".saves-627-lucass-MacBook-Pro.local~" ".saves-548-lucass-MacBook-Pro.local~" ".saves-4868-lucass-MacBook-Pro.local~" ".saves-1762-lucass-MacBook-Pro.local~" ".saves-1320-lucass-MacBook-Pro.local~" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/control/" (22261 41777 0 0) "core.py~" "core.py" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/view/" (22260 16387 0 0) "gates.py~" "gates.py" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/Dropbox/Apps/" (22098 42924 0 0) "MobileOrg/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Dropbox/Org/" (22098 42930 0 0) "Org.git/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Dropbox/" (22223 29355 0 0) "Things/" "Stuff/" "Screenshots/" "Org/" "Icon
+" "Gorg/" "Apps/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/data/" (22212 4946 0 0) "stores.py~" "stores.py" "nodes.py~" "nodes.py" "__pycache__/" "__init__.py" ".DS_Store" "#stores.py#" "#nodes.py#" "../" "./")
+
+ ("/Users/" (22095 45135 0 0) "Shared/" "Guest/" "amodeo/" ".localized" "../" "./")
+
+ ("/Users/amodeo/Code/Python/" (22178 28664 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Code/" (22178 52480 0 0) "Python/" "iOS/" "elisp/" "C/" ".DS_Store" "#poker.py#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/turtle/" (22102 50605 0 0) "turt-test.py~" "turt-test.py" "seby-turtle.py" "../" "./")
+
+ ("/Users/amodeo/Code/Python/PyQt/" (22100 30989 0 0) "test2.py" "test.py~" "test.py" "#test3.py#" "#test2.py#" "#test.py#" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
