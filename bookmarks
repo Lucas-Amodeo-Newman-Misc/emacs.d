@@ -13,8 +13,8 @@
  (rear-context-string . "D:  273\n  :END:\n")
  (position . 49))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "** BUTTON oven m")
- (rear-context-string . "AABFEABEA\n:END:\n")
- (position . 24991))
+ (filename . "~/org/main.org")
+ (front-context-string . "** BUTTON blah b")
+ (rear-context-string . "ID:  1181\n:END:\n")
+ (position . 26512))
 )

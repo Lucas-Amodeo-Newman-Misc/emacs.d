@@ -51,6 +51,7 @@
      (tags priority-down category-keep)
      (search category-keep))))
  '(org-agenda-todo-ignore-scheduled (quote all))
+ '(org-archive-location "org_archive::datetree/* From %s")
  '(org-columns-default-format "%25ITEM %TODO %6STATUS %3DURATION %URGENCY 6%LOCATION")
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "LOGBOOK" "RESULTS" "NOTES")))
  '(org-global-properties
@@ -195,7 +196,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 1174)
+(set 'last-lorg-id-number 1182)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
