@@ -8,13 +8,13 @@
  (rear-context-string . "D:  273\n  :END:\n")
  (position . 49))
 ("org-refile-last-stored"
- (filename . "~/Org/food.org")
- (front-context-string . "** ACTION add \"t")
- (rear-context-string . "D:  273\n  :END:\n")
- (position . 49))
-("org-capture-last-stored"
  (filename . "~/org/main.org")
- (front-context-string . "** BUTTON blah b")
- (rear-context-string . "ID:  1181\n:END:\n")
- (position . 26512))
+ (front-context-string . "** ACTION proces")
+ (rear-context-string . "CATION:\n  :END:\n")
+ (position . 109))
+("org-capture-last-stored"
+ (filename . "~/org/journal.org")
+ (front-context-string . "**** JOURNAL [20")
+ (rear-context-string . "EK.  I promise.\n")
+ (position . 43487))
 )

@@ -4,6 +4,19 @@
    'package-archives
    '("melpa" . "http://melpa.org/packages/")
    t)
+  (add-to-list
+   'package-archives
+   '("gnu" . "https://elpa.gnu.org/packages/")
+   t)
+  (add-to-list
+   'package-archives
+   '("marmalade" . "https://marmalade-repo.org/packages/")
+   t)
+
+;; (add-to-list
+;;  'load-path
+;;  "~/.emacs.d/repos/org-mode/lisp")
+
 (package-initialize)
 
 ;; SMEX
@@ -23,22 +36,16 @@
  '(org-agenda-custom-commands
    (quote
     (("0" "Ready to Schedule"
-      ((tags "&STATUS=\"active\"&URGENCY>5" nil))
+      ((tags "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY>5" nil))
       nil)
      ("9" "Ready to Prioritize"
-      ((tags "+STATUS=\"active\"+URGENCY<=5-URGENCY<2" nil))
+      ((tags "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY<=5-URGENCY<3" nil))
       nil)
-     ("8" "Unactionable + Urgent"
-      ((tags "STATUS=\"wait\"-URGENCY<6" nil))
-      nil)
-     ("`" "Action Baskets"
-      ((todo "ACTION!" nil))
-      nil)
-     ("z" "Meta"
-      ((todo "NOTICE|PROCESS"))
+     ("8" "Ready to Reset"
+      ((tags "ACTIVE=\"t\"+DONE=\"t\"" nil))
       nil)
      ("p" "Pan Am"
-      ((tags "+STATUS=\"active\"+LOCATION=\"pan am\"" nil))
+      ((tags "ACTIVE=\"t\"+DONE=\"nil\"+LOCATION=\"pan am\"" nil))
       nil)
      ("b" "Buttons"
       ((todo "BUTTON"))
@@ -50,15 +57,22 @@
      (todo todo-state-up priority-down category-keep)
      (tags priority-down category-keep)
      (search category-keep))))
+ '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-agenda-todo-ignore-scheduled (quote all))
- '(org-archive-location "org_archive::datetree/* From %s")
- '(org-columns-default-format "%25ITEM %TODO %6STATUS %3DURATION %URGENCY 6%LOCATION")
+ '(org-agenda-use-tag-inheritance (quote (todo search timeline agenda tags)))
+ '(org-archive-location "archive.org_archive::datetree/* From %s")
+ '(org-columns-default-format
+   "%25ITEM %TODO %3ACTIVE %3DONE %3DURATION %URGENCY 6%LOCATION")
+ '(org-confirm-elisp-link-function nil)
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "LOGBOOK" "RESULTS" "NOTES")))
  '(org-global-properties
    (quote
-    (("STATUS_ALL" . "\"active\" \"next\" \"wait\" \"done\" \"n\"")
+    (("ACTIVE_ALL" . "nil t")
+     ("DONE_ALL" . "nil t")
+     ("CONDITION-TYPE_ALL" . "\"active\" \"done\"")
      ("URGENCY_ALL" . "n 1 2 3 4 5 6 7 8 9"))))
  '(org-hide-leading-stars t)
+ '(org-id-link-to-org-use-id (quote create-if-interactive))
  '(org-indent-mode-turns-off-org-adapt-indentation nil)
  '(org-log-into-drawer t)
  '(org-refile-targets (quote ((org-agenda-files :regexp . "Inbox"))))
@@ -67,9 +81,10 @@
     ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
      (sequence "ACTION!(`)" "ACTION(1)" "BREAKDOWN(2)" "|" "DONE(3!)")
      (sequence "BUTTON(b)" "|")
+     (sequence "|" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|"))))
- '(org-use-property-inheritance (quote ("URGENCY" "LOCATION")))
+ '(org-use-property-inheritance (quote ("URGENCY")))
  '(org-yank-folded-subtrees nil))
 
 ;;ORG BASICS
@@ -82,7 +97,7 @@
 					;local keybindings
 (add-hook 'org-mode-hook
 	  '(lambda ()
-	     (define-key org-mode-map "\M-<RET>" 'org-insert-heading-respect-content)))
+	     (define-key org-mode-map "\M-\^M" 'org-insert-heading-respect-content)))
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (define-key org-mode-map "\C-c0" 'org-demote-subtree)))
@@ -94,7 +109,7 @@
 	  'visual-line-mode)
 
 (add-hook 'org-capture-before-finalize-hook
-	  'lorg-set-all-id)
+	  'lorg-set-id)
 
 ;;ORG CAPTURE
 
@@ -104,69 +119,90 @@
 	("J" "Journal+" entry (file+datetree "~/org/journal.org")
 	 "* JOURNAL %?\n:NOTES:\nCreated: %U\n:END:")
 	("p" "Process" entry (file+datetree "~/org/journal.org")
-	 "* PROCESS %?\n%i\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* PROCESS %?\n%i\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("n" "Notice" entry (file+datetree "~/org/journal.org")
-	 "* NOTICE %?\n%i\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 6\n:END:")
+	 "* NOTICE %?\n%i\n\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("M" "Main Captures")
 	("M`" "Action!" entry (file+headline "~/org/main.org" "Initiatives")
-	 "* ACTION! %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("M1" "Action" entry (file+headline "~/org/main.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("M2" "Breakdown" entry (file+headline "~/org/main.org" "Initiatives")
-	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Mb" "Button" entry (file+headline "~/org/main.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:PRESSED: nil\n:PRESSED_ALL: t nil\n:COLUMNS: %25ITEM %6TODO %3PRESSED\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	("MI" "Item" entry (file+headline "~/org/main.org" "Items")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("MA" "Appointment" entry (file+headline "~/org/main.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Mi" "Info" entry (file+datetree "~/org/main.org")
 	 "* INFO %?\n  %i\n")
 	("G" "GORG Captures")
 	("G`" "Gorg Action!" entry (file+headline "~/org/gorg.org" "Initiatives")
-	 "* ACTION! %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("G1" "Gorg Action" entry (file+headline "~/org/gorg.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("G2" "Gorg Breakdown" entry (file+headline "~/org/gorg.org" "Initiatives")
-	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Gj" "Gorg Journal" entry (file+datetree "~/org/gorg.org")
-	 "* %U\n%?")
+	 "* JOURNAL %U\n%?")
 	("Gi" "Gorg Info" entry (file+datetree "~/org/gorg.org")
 	 "* INFO %?\n%i")
 	("W" "Work Captures")
 	("W`" "Work Action!" entry (file+headline "~/org/work.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("W1" "Work Action" entry (file+headline "~/org/work.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("W2" "Work Breakdown" entry (file+headline "~/org/work.org" "Initiatives")
-	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Wb" "Work Button" entry (file+headline "~/org/work.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:PRESSED: nil\n:PRESSED_ALL: t nil\n:COLUMNS: %25ITEM %6TODO %3PRESSED\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
 	 "* %U\n%?")
 	("Wi" "Work Info" entry (file+datetree "~/org/work.org")
 	 "* INFO %?\n%i")
+	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
+	 "* JOURNAL %U\n%?")
 	("B" "Body Captures")
 	("B`" "Body Action!" entry (file+headline "~/org/body.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("B1" "Body Action" entry (file+headline "~/org/body.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("B2" "Body Breakdown" entry (file+headline "~/org/body.org" "Initiatives")
-	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
 	 "* %U\n%?")
 	("Bi" "Body Info" entry (file+datetree "~/org/body.org")
 	 "* INFO %?\n%i")
+	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
+	 "* JOURNAL %U\n%?")
 	("F" "Food Captures")
 	("F`" "Food Action!" entry (file+headline "~/org/food.org" "Initiatives")
-	 "* ACTION! %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("F1" "Food Action" entry (file+headline "~/org/food.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("F2" "Food Breakdown" entry (file+headline "~/org/food.org" "Initiatives")
-	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:STATUS: active\n:URGENCY: 5\n:END:")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Fb" "Food Button" entry (file+headline "~/org/food.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:PRESSED: nil\n:PRESSED_ALL: t nil\n:COLUMNS: %25ITEM %6TODO %3PRESSED\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	("FI" "Food Item" entry (file+headline "~/org/food.org" "Items")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Fj" "Food Journal" entry (file+datetree "~/org/food.org")
-	 "* %U\n%?")
+	 "* JOURNAL %U\n%?")
 	("Fi" "Food Info" entry (file+datetree "~/org/food.org")
+	 "* INFO %?\n%i")
+	("L" "Lorg Captures")
+	("L`" "Lorg Action!" entry (file+headline "~/org/lorg.org" "Initiatives")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("L1" "Lorg Action" entry (file+headline "~/org/lorg.org" "Initiatives")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("L2" "Lorg Breakdown" entry (file+headline "~/org/lorg.org" "Initiatives")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("Lb" "Lorg Button" entry (file+headline "~/org/lorg.org" "Buttons")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	("Lj" "Lorg Journal" entry (file+datetree "~/org/lorg.org")
+	 "* JOURNAL %U\n%?")
+	("Li" "Lorg Info" entry (file+datetree "~/org/lorg.org")
 	 "* INFO %?\n%i")))
 
 ;;ORG APPEARANCE
@@ -196,7 +232,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 1182)
+(set 'last-lorg-id-number 1592)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -244,7 +280,8 @@
 	  (if switch
 	      (progn
 		(switch-to-buffer target-buffer)
-		(goto-char target-point))
+		(goto-char target-point)
+		(org-reveal))
 	    (progn
 	      (set-buffer target-buffer)
 	      (goto-char target-point)))
@@ -257,100 +294,192 @@
 
 (set 'current-condition nil)
 
-(defun lorg-store-id ()
+(defun lorg-store-condition-id ()
   (interactive nil)
   (set 'current-condition (lorg-get-id))
-  (print "Id stored."))
+  (print "Condition ID stored."))
 
 (defun lorg-set-condition-id ()
-  "Accepts as argument a string specifying a LORG_ID number.  Stores this LORG_ID as the value of a CONDITION property in the entry at point."
+  "Accepts no arguments.  Stores the value of the global variable 'current-condition as the CONDITION-ID property of the entry at point."
   (interactive nil)
-  (org-entry-put (point) "CONDITION" current-condition)
-  (print "Condition set."))
+  (org-entry-put (point) "CONDITION-ID" current-condition)
+  (print "Condition ID set."))
 
-;updating entry statuses based on conditions
-(defun lorg-test-condition-action ()
-  "Accepts no arguments.  Checks the STATUS property of the action or breakdown item at point; if status is 'done', return t, otherwise returns nil."
-  (if (equal (org-entry-get (point) "STATUS") "done")
-      t
-    nil))
+(defun lorg-set-condition-type (type-abbrev)
+  "Accepts as argument a string containing a condition type abbreviation.  As of this writing, that value should be either the letter 'a' or the letter 'd', signifying 'active' or 'done'.  Sets the CONDITION-TYPE property of the entry at point."
+  (interactive "scondition type (either \"a\" or \"d\"):")
+  (if (equal type-abbrev "a")
+      (progn (org-entry-put (point) "CONDITION-TYPE" "active") (print "Condition type set to 'active'."))
+    (if (equal type-abbrev "d")
+      (progn (org-entry-put (point) "CONDITION-TYPE" "done") (print "Condition type set to 'done'."))
+      (print "No condition type match."))))
 
-(defun lorg-test-condition-button-action!()
-  "Accepts no arguments.  Checks and returns the PRESSED property of the button entry at point, or else returns t or nil depending on whether the STATUS property is 'active'."
-  (if (equal (org-entry-get (point) "TODO") "BUTTON")
-      (org-entry-get (point) "PRESSED")
-    (if (equal (org-entry-get (point) "STATUS") "active")
-	t
-      nil)))
+;;LORG UPDATING;;
+
+(defun lorg-test-condition-active ()
+  "Accepts no arguments.  Returns the ACTIVE property of the entry at point."
+  (org-entry-get (point) "ACTIVE"))
+
+(defun lorg-test-condition-done ()
+  "Accepts no arguments.  Returns the DONE property of the entry at point."
+  (org-entry-get (point) "DONE"))
     
 (defun lorg-test-condition(id condtyp)
-  "Accepts as argument a A) string specifying a LORG_ID, and B) a string specifying the type of condition being tested. B should be either the string 'action' or the string 'button.'  Visits the entry which corresponds to the LORG_ID, and returns a test of that entry appropriate to the condition type passed in."
+  "Accepts as argument a A) string specifying a LORG_ID, and B) a string specifying the type of condition being tested. B should be either the string 'active' or the string 'done.'  Visits the entry which corresponds to the LORG_ID, and returns a test of that entry appropriate to the condition type passed in."
   (lorg-find-entry-id id nil)
-  (if (equal condtyp "next")
-      (lorg-test-condition-action)
-    (if (equal condtyp "wait")
-	(lorg-test-condition-button-action!)
+  (if (equal condtyp "active")
+      (lorg-test-condition-active)
+    (if (equal condtyp "done")
+	(lorg-test-condition-done)
       "Not a valid condition type.")))
 
-(defun lorg-update-status()
-  "Accepts no arguments.  Updates the status of the entry at point based on its CONDITION property."
+(defun lorg-update-entry-activity()
+  "Accepts no arguments.  Updates the ACTIVE property of the entry at point by checking its CONDITION-ID and CONDITION-TYPE properties."
   (interactive nil)
   (let ((condition-id nil)
 	(condition-type nil)
 	(condition-met nil))
-    (set 'condition-id (org-entry-get (point) "CONDITION"))
-    (set 'condition-type (if (equal (org-entry-get (point) "STATUS") "next")
-			     "next"
-			   (if (equal (org-entry-get (point) "STATUS") "wait")
-			       "wait"
+    (set 'condition-id (org-entry-get (point) "CONDITION-ID"))
+    (set 'condition-type (if (equal (org-entry-get (point) "CONDITION-TYPE") "active")
+			     "active"
+			   (if (equal (org-entry-get (point) "CONDITION-TYPE") "done")
+			       "done"
 			     nil)))
-    (print (org-entry-get (point) "LORG_ID"))
-    (print condition-id)
-    (print condition-type)
     (if (and condition-type condition-id)
 	(set 'condition-met (save-excursion
 			      (lorg-test-condition condition-id condition-type)))
-      nil)
+      (if (or condition-type condition-id)
+	  (print (concat "Entry at " (lorg-get-id) " missing condition components."))
+	nil))
     (if condition-met
-	(org-entry-put (point) "STATUS" "active")
+	(org-entry-put (point) "ACTIVE" "t")
       nil)))
 
-(defun lorg-update-subtree-statuses()
-  "Accepts no arguments.  Updates the status of all org entries in the subtree at point based on their CONDITION."
-  (interactive nil)
-  (org-map-entries '(lorg-update-status) t 'tree)
-  (print "Statuses in tree updated."))
+(defun lorg-garbage-collect-entry()
+  "Accepts no arguments.  Checks to see if the ACTIVE and DONE properties are nil-t in the entry at point.  If so, it archives the entry."
+  (if (and (not (org-entry-get (point) "ACTIVE")) (org-entry-get (point) "DONE"))
+      (org-archive-subtree)
+    nil))
 
-(defun lorg-update-all-statuses()
-  "Accepts no arguments.  Updates the status of all org entries based on their CONDITION."
+(defun lorg-update-subtree()
+  "Accepts no arguments.  Updates and garbage collects org entries in the subtree at point."
   (interactive nil)
-  (org-map-entries '(lorg-update-status) t 'agenda)
-  (print "Statuses updated."))
+  (org-map-entries '(progn (lorg-update-entry-activity) (lorg-garbage-collect-entry)) t 'tree)
+  (print "Activities in tree updated."))
+
+(defun lorg-update-all()
+  "Accepts no arguments.  Updates and garbage collects org entries in the subtree at point."
+  (interactive nil)
+  (org-map-entries '(progn (lorg-update-entry-activity) (lorg-garbage-collect-entry)) t 'agenda)
+  (print "Activities updated."))
+
+;;LORG RESETTING;;
+
+(defun lorg-reset-entry()
+  "Accepts no arguments.  Resets the ACTIVE and DONE properties of the entry at point."
+  (interactive)
+  (progn
+    (org-entry-put (point) "ACTIVE" "nil")
+    (org-entry-put (point) "DONE" "nil")
+    (print "Entry reset.")))
+
+(defun lorg-reset-subtree()
+  "Accepts no arguments.  Resets the ACTIVE and DONE properties of the subtree beginning with the entry at point."
+  (interactive)
+  (org-map-entries '(lorg-reset-entry)
+		   t 'tree))
+
+(defun lorg-set-subtree-properties()
+  "Accepts no arguments.  Sets the inherited properties of each subtree item to the values of the those same properties in the entry at point.  Grabs the list of properties to inherit from the variable 'org-use-property-inheritance."
+  (interactive)
+  (dolist (elt org-use-property-inheritance nil)
+    (let ((prop-name nil)
+	  (prop-value nil))
+      (set 'prop-name elt)
+      (set 'prop-value (org-entry-get (point) prop-name))
+      (org-map-entries '(org-entry-put (point) prop-name prop-value) t 'tree)))
+  (print (concat "Entry properties inherited.")))
+  
+;;LORG LINKING;;
+
+(set 'current-stored-link nil)
+
+(defun lorg-store-link ()
+  "Accepts no arguments.  Stores a string consisting of a well-formed link to the entry at poin in 'current-stored-link."
+  (interactive)
+  (let ((lorg-item nil)
+	(lorg-entry-name nil)
+	(lorg-id nil))
+    (set 'lorg-item (org-entry-get (point) "ITEM"))
+    (set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
+    (set 'lorg-id (lorg-get-id))
+
+    (set 'current-stored-link (concat "[[elisp:(lorg-find-entry-id \""
+				      lorg-id
+				      "\" t)]["
+				      lorg-entry-name
+				      "]]"))
+    (print (concat  "Link stored for: " lorg-entry-name "."))))
+
+(defun lorg-insert-link ()
+  "Accepts no arguments.  Inserts the contents of 'current-stored-link at point."
+  (interactive)
+  (insert current-stored-link))
+
+;;LORG LOCATIONS
+(defun lorg-location-examine-contents()
+  (interactive)
+  "Accepts no arguments.  Opens a tags agenda view containing the contents of the LOCATION at point."
+  (interactive)
+  (if (equal (org-entry-get (point) "TODO") "LOCATION")
+      (let ((locations-list '())
+	    (match-list '())
+	    (match-string ""))
+
+	(org-map-entries '(set 'locations-list (cons `(,(replace-regexp-in-string "\*+ " ""								 	(org-entry-get (point) "ITEM"))) locations-list)) t 'tree)
+
+
+	(dolist (elt locations-list nil)
+	  (set 'match-list (cons `(,(concat "LOCATION=\"" (car elt) "\"")) match-list)))
+
+
+	(dolist (elt match-list nil)
+	  (set 'match-string (concat (car elt) "|" match-string)))
+	
+	(org-tags-view nil match-string))
+    (print "This entry is not a LOCATION.")))
 
 ;;LORG KEYBINDINGS
 
 (define-prefix-command 'lorg-map)
+(define-prefix-command 'lorg-condition-map)
+(define-prefix-command 'lorg-update-map)
+(define-prefix-command 'lorg-id-map)
+(define-prefix-command 'lorg-reset-map)
+(define-prefix-command 'lorg-properties-inheritance-map)
+(define-prefix-command 'lorg-link-map)
+
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (define-key org-mode-map "\C-cn" 'lorg-map)))
 
-(add-hook 'org-agenda-mode-hook
-	  '(lambda ()
-	     (define-key org-mode-map "\C-cn" 'lorg-map)))
+(define-key lorg-map "u" 'lorg-update-map)
+(define-key lorg-map "i" 'lorg-id-map)
+(define-key lorg-map "r" 'lorg-reset-map)
+(define-key lorg-map "c" 'lorg-condition-map)
+(define-key lorg-map "p" 'lorg-properties-inheritance-map)
+(define-key lorg-map "l" 'lorg-link-map)
 
-(define-key lorg-map "u" 'lorg-update-all-statuses)
-(define-key lorg-map "i" 'lorg-set-id)
-(define-key lorg-map "I" 'lorg-set-all-id)
-(define-key lorg-map "s" 'lorg-store-id)
-(define-key lorg-map "c" 'lorg-set-condition-id)
-
-
-
-    
-
-
-  
-  
-
-    
-
+(define-key lorg-condition-map "i" 'lorg-set-condition-id)
+(define-key lorg-condition-map "t" 'lorg-set-condition-type)
+(define-key lorg-condition-map "s" 'lorg-store-condition-id)
+(define-key lorg-id-map "e" 'lorg-set-id)
+(define-key lorg-id-map "a" 'lorg-set-all-id)
+(define-key lorg-reset-map "e" 'lorg-reset-entry)
+(define-key lorg-reset-map "s" 'lorg-reset-subtree)
+(define-key lorg-update-map "e" 'lorg-update-entry-activity)
+(define-key lorg-update-map "s" 'lorg-update-subtree)
+(define-key lorg-update-map "a" 'lorg-update-all)
+(define-key lorg-properties-inheritance-map "s" 'lorg-set-subtree-properties)
+(define-key lorg-link-map "s" 'lorg-store-link)
+(define-key lorg-link-map "i" 'lorg-insert-link)
