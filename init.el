@@ -47,8 +47,11 @@
      ("n" "Need"
       ((tags "NEED=\"t\"" nil))
       nil)
-     ("s" "Stock"
+     ("k" "Stock"
       ((tags "TODO=\"ITEM\"+SPEC>0" nil))
+      nil)
+     ("u" "Stuck"
+      ((tags "stuck" nil))
       nil)
      ("b" "Buttons"
       ((todo "BUTTON"))
@@ -101,6 +104,9 @@
 					;local keybindings
 (add-hook 'org-mode-hook
 	  '(lambda ()
+	     (define-key org-mode-map "\M-p" 'org-insert-heading)))
+(add-hook 'org-mode-hook
+	  '(lambda ()
 	     (define-key org-mode-map "\M-\^M" 'org-insert-heading-respect-content)))
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -137,6 +143,8 @@
 	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("MI" "Item" entry (file+headline "~/org/main.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
+	("ML" "Location" entry (file+headline "~/org/main.org" "Locations")
+	 "* LOCATION %i%?")
 	("MA" "Appointment" entry (file+headline "~/org/main.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Mi" "Info" entry (file+datetree "~/org/main.org")
@@ -165,6 +173,8 @@
 	 "* %U\n%?")
 	("Wi" "Work Info" entry (file+datetree "~/org/work.org")
 	 "* INFO %?\n%i")
+	("WI" "Work Item" entry (file+headline "~/org/work.org" "Items")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
 	 "* JOURNAL %U\n%?")
 	("B" "Body Captures")
@@ -178,6 +188,8 @@
 	 "* %U\n%?")
 	("Bi" "Body Info" entry (file+datetree "~/org/body.org")
 	 "* INFO %?\n%i")
+	("BI" "Body Item" entry (file+headline "~/org/body.org" "Items")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
 	 "* JOURNAL %U\n%?")
 	("F" "Food Captures")
@@ -236,7 +248,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 1633)
+(set 'last-lorg-id-number 1803)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -335,46 +347,45 @@
       (lorg-test-condition-active)
     (if (equal condtyp "done")
 	(lorg-test-condition-done)
-      "Not a valid condition type.")))
+      (print "Not a valid condition type."))))
 
-(defun lorg-update-entry-activity()
+(defun lorg-update-entry()
   "Accepts no arguments.  Updates the ACTIVE property of the entry at point by checking its CONDITION-ID and CONDITION-TYPE properties."
   (interactive)
   (let ((condition-id nil)
 	(condition-type nil)
 	(condition-met nil))
     (set 'condition-id (org-entry-get (point) "CONDITION-ID"))
-    (set 'condition-type (if (equal (org-entry-get (point) "CONDITION-TYPE") "active")
-			     "active"
-			   (if (equal (org-entry-get (point) "CONDITION-TYPE") "done")
-			       "done"
-			     nil)))
+    (set 'condition-type (org-entry-get (point) "CONDITION-TYPE"))
+
     (if (and condition-type condition-id)
 	(set 'condition-met (save-excursion
 			      (lorg-test-condition condition-id condition-type)))
       (if (or condition-type condition-id)
 	  (print (concat "Entry at " (lorg-get-id) " missing condition components."))
 	nil))
+
     (if condition-met
 	(org-entry-put (point) "ACTIVE" "t")
-      nil)))
+      nil))
+  )
 
-(defun lorg-garbage-collect-entry()
-  "Accepts no arguments.  Checks to see if the ACTIVE and DONE properties are nil-t in the entry at point.  If so, it archives the entry."
-  (if (and (not (org-entry-get (point) "ACTIVE")) (org-entry-get (point) "DONE"))
-      (org-archive-subtree)
-    nil))
+;; (defun lorg-garbage-collect-entry()				    
+;;   "Accepts no arguments.  Checks to see if the ACTIVE and DONE properties are nil-t in the entry at point.  If so, it archives the entry."
+;;   (if (and (not (org-entry-get (point) "ACTIVE")) (org-entry-get (point) "DONE"))
+;;       (org-archive-subtree)
+;;     nil))
 
 (defun lorg-update-subtree()
   "Accepts no arguments.  Updates and garbage collects org entries in the subtree at point."
   (interactive nil)
-  (org-map-entries '(progn (lorg-update-entry-activity) (lorg-garbage-collect-entry)) t 'tree)
+  (org-map-entries '(lorg-update-entry) t 'tree)
   (print "Activities in tree updated."))
 
 (defun lorg-update-all()
   "Accepts no arguments.  Updates and garbage collects org entries in the subtree at point."
   (interactive nil)
-  (org-map-entries '(progn (lorg-update-entry-activity) (lorg-garbage-collect-entry)) t 'agenda)
+  (org-map-entries '(lorg-update-entry) t 'agenda)
   (print "Activities updated."))
 
 ;;LORG RESETTING;;
@@ -406,10 +417,11 @@
   
 ;;LORG LINKING;;
 
-(set 'current-stored-link nil)
+(defvar lorg-current-stored-link nil
+  "Contains a string which holds the link produced by the last usage of 'lorg-store-link.")
 
 (defun lorg-store-link ()
-  "Accepts no arguments.  Stores a string consisting of a well-formed link to the entry at poin in 'current-stored-link."
+  "Accepts no arguments.  Stores a string consisting of a well-formed link to the entry at poin in 'lorg-current-stored-link."
   (interactive)
   (let ((lorg-item nil)
 	(lorg-entry-name nil)
@@ -418,7 +430,7 @@
     (set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
     (set 'lorg-id (lorg-get-id))
 
-    (set 'current-stored-link (concat "[[elisp:(lorg-find-entry-id \""
+    (set 'lorg-current-stored-link (concat "[[elisp:(lorg-find-entry-id \""
 				      lorg-id
 				      "\" t)]["
 				      lorg-entry-name
@@ -426,13 +438,12 @@
     (print (concat  "Link stored for: " lorg-entry-name "."))))
 
 (defun lorg-insert-link ()
-  "Accepts no arguments.  Inserts the contents of 'current-stored-link at point."
+  "Accepts no arguments.  Inserts the contents of 'lorg-current-stored-link at point."
   (interactive)
   (insert current-stored-link))
 
 ;;LORG LOCATIONS
 (defun lorg-location-examine-contents()
-  (interactive)
   "Accepts no arguments.  Opens a tags agenda view containing the contents of the LOCATION at point."
   (interactive)
   (if (equal (org-entry-get (point) "TODO") "LOCATION")
@@ -440,19 +451,47 @@
 	    (match-list '())
 	    (match-string ""))
 
-	(org-map-entries '(set 'locations-list (cons `(,(replace-regexp-in-string "\*+ " ""								 	(org-entry-get (point) "ITEM"))) locations-list)) t 'tree)
-
+	(org-map-entries '(set 'locations-list (cons (org-entry-get (point) "LORG_ID") locations-list)) t 'tree)
 
 	(dolist (elt locations-list nil)
-	  (set 'match-list (cons `(,(concat "LOCATION=\"" (car elt) "\"")) match-list)))
-
+	  (set 'match-list (cons `(,(concat "LOC_ID=\"" elt "\"")) match-list)))
 
 	(dolist (elt match-list nil)
 	  (set 'match-string (concat (car elt) "|" match-string)))
-	
+
 	(org-tags-view nil match-string))
     (print "This entry is not a LOCATION.")))
 
+(defvar lorg-current-stored-location nil
+  "A cons cell containing the name and lorg id of the LOCATION where lorg-store-location was last used.")
+
+(defun lorg-store-location()
+  "Accepts no arguments.  Stores the name of and a link to the LOCATION at point in 'lorg-current-stored-location."
+  (interactive)
+  (if (equal (org-entry-get (point) "TODO") "LOCATION")
+      (let ((lorg-item nil)
+	    (lorg-entry-name nil)
+	    (lorg-id nil)
+	    (lorg-entry-link nil))
+	(set 'lorg-item (org-entry-get (point) "ITEM"))
+	(set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
+	(set 'lorg-id (lorg-get-id))
+	(set 'lorg-current-stored-location (cons lorg-entry-name lorg-id))
+	(print "Location stored."))
+    (print "This entry is not a LOCATION.")))
+  
+(defun lorg-set-location()
+  "Accepts no arguments.  Sets the location related properties of the entry at point: LOCATION to the car of 'lorg-current-stored-location, and LOC_LINK to the cdr."
+  (interactive)
+  (org-entry-put (point) "LOCATION" (car lorg-current-stored-location))
+  (org-entry-put (point) "LOC_ID" (cdr lorg-current-stored-location))
+  (print (concat "Location set to " (car lorg-current-stored-location))))
+
+(defun lorg-visit-location()
+  "Accepts no arguments.  Brings point to the location of the item at point, by following the lorg id stored in it's LOC_ID property."
+  (interactive)
+  (lorg-find-entry-id (org-entry-get (point) "LOC_ID") t))
+  
 ;;LORG KEYBINDINGS
 
 (define-prefix-command 'lorg-map)
@@ -462,6 +501,7 @@
 (define-prefix-command 'lorg-reset-map)
 (define-prefix-command 'lorg-properties-inheritance-map)
 (define-prefix-command 'lorg-link-map)
+(define-prefix-command 'lorg-location-map)
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -473,6 +513,7 @@
 (define-key lorg-map "c" 'lorg-condition-map)
 (define-key lorg-map "p" 'lorg-properties-inheritance-map)
 (define-key lorg-map "l" 'lorg-link-map)
+(define-key lorg-map "L" 'lorg-location-map)
 
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
 (define-key lorg-condition-map "t" 'lorg-set-condition-type)
@@ -487,3 +528,7 @@
 (define-key lorg-properties-inheritance-map "s" 'lorg-set-subtree-properties)
 (define-key lorg-link-map "s" 'lorg-store-link)
 (define-key lorg-link-map "i" 'lorg-insert-link)
+(define-key lorg-location-map "s" 'lorg-store-location)
+(define-key lorg-location-map "i" 'lorg-set-location)
+(define-key lorg-location-map "v" 'lorg-visit-location)
+(define-key lorg-location-map "e" 'lorg-location-examine-contents)
