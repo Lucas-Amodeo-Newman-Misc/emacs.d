@@ -13,14 +13,14 @@
  ("/Users/amodeo/Code/" . "elisp/")
  ("/Users/amodeo/Code/Python/" . "gorg/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
- ("/Users/amodeo/" . "Org/")
+ ("/Users/amodeo/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Org/"
  "/Users/amodeo/"
- "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/elisp/gorg/gorg-modules/"
  "/Users/amodeo/Code/elisp/gorg/"
  "/Users/amodeo/Code/elisp/lorg/Org/"
@@ -37,9 +37,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
  "main.org"
  ".gnus.el"
- "init.el"
  "archive.org_archive"
  "food.org"
  "work.org"
@@ -51,6 +51,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/amodeo/.emacs.d/" (22339 43015 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+
  ("/Users/amodeo/Org/" (22336 36889 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22334 22455 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
@@ -59,8 +61,6 @@
 " "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
 
  ("/Users/amodeo/org/" (22334 16926 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
-
- ("/Users/amodeo/.emacs.d/" (22334 17213 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
  ("/Users/amodeo/.emacs.d/elpa/" (22334 16996 0 0) "smex-20150822.1146/" "org-20160516/" "marmalade-20110602.1622/" "furl-20110112.1707/" "archives/" "../" "./")
 

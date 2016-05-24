@@ -142,7 +142,7 @@
 	("Mb" "Button" entry (file+headline "~/org/main.org" "Buttons")
 	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("MI" "Item" entry (file+headline "~/org/main.org" "Items")
-	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("ML" "Location" entry (file+headline "~/org/main.org" "Locations")
 	 "* LOCATION %i%?")
 	("MA" "Appointment" entry (file+headline "~/org/main.org" "Appointments")
@@ -174,7 +174,7 @@
 	("Wi" "Work Info" entry (file+datetree "~/org/work.org")
 	 "* INFO %?\n%i")
 	("WI" "Work Item" entry (file+headline "~/org/work.org" "Items")
-	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
 	 "* JOURNAL %U\n%?")
 	("B" "Body Captures")
@@ -189,7 +189,7 @@
 	("Bi" "Body Info" entry (file+datetree "~/org/body.org")
 	 "* INFO %?\n%i")
 	("BI" "Body Item" entry (file+headline "~/org/body.org" "Items")
-	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
 	 "* JOURNAL %U\n%?")
 	("F" "Food Captures")
@@ -202,7 +202,7 @@
 	("Fb" "Food Button" entry (file+headline "~/org/food.org" "Buttons")
 	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("FI" "Food Item" entry (file+headline "~/org/food.org" "Items")
-	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 1\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
+	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Fj" "Food Journal" entry (file+datetree "~/org/food.org")
 	 "* JOURNAL %U\n%?")
 	("Fi" "Food Info" entry (file+datetree "~/org/food.org")
@@ -248,7 +248,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 1803)
+(set 'last-lorg-id-number 1851)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -440,7 +440,7 @@
 (defun lorg-insert-link ()
   "Accepts no arguments.  Inserts the contents of 'lorg-current-stored-link at point."
   (interactive)
-  (insert current-stored-link))
+  (insert lorg-current-stored-link))
 
 ;;LORG LOCATIONS
 (defun lorg-location-examine-contents()
