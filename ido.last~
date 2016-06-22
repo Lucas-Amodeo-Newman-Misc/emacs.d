@@ -38,29 +38,31 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
+ "gorg.org"
  "main.org"
+ "work.org"
+ "hal.org"
+ "hla.org"
+ "work-system.org"
+ "food.org"
  ".gnus.el"
  "archive.org_archive"
- "food.org"
- "work.org"
- "body.org"
- "gorg-directory.el"
- "test.el"
- "gorg-init.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/.emacs.d/" (22339 43015 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+ ("/Users/amodeo/.emacs.d/" (22377 48544 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
- ("/Users/amodeo/Org/" (22336 36889 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22377 48549 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#lorg.org" ".#journal.org" ".#hal.org" ".#gorg.org" ".#food.org" ".#body.org" "#main.org#" "#lorg.org#" "#hal.org#" "#gorg.org#" "#food.org#" "#body.org#" "#archive.org#" "../" "./")
 
- ("/Users/amodeo/" (22334 22455 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+ ("/Users/amodeo/org/" (22360 28245 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" "#work.org#" "#main.org#" "#lorg.org#" "#food.org#" "#body.org#" "#archive.org#" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.5/share/emacs/24.5/etc/" (22096 62295 0 0) "yow.lines" "WHY-FREE" "tutorials/" "TODO" "themes/" "THE-GNU-PROJECT" "TERMS" "srecode/" "spook.lines" "ses-example.ses" "schema/" "rgb.txt" "refcards/" "README" "publicsuffix.txt" "ps-prin1.ps" "ps-prin0.ps" "PROBLEMS" "package-keyring.gpg" "ORG-NEWS" "org/" "ORDERS" "NXML-NEWS" "nxml/" "NEXTSTEP" "NEWS.23" "NEWS.22" "NEWS.21" "NEWS.20" "NEWS.19" "NEWS.18" "NEWS.1-17" "NEWS" "MORE.STUFF" "MH-E-NEWS" "MACHINES" "LINUX-GNU" "JOKES" "images/" "HELLO" "grep.txt" "gnus-tut.txt" "GNUS-NEWS" "gnus/" "GNU" "future-bug" "FTP" "forms/" "ETAGS.README" "ETAGS.EBNF" "ERC-NEWS" "enriched.txt" "emacs.icon" "emacs.desktop" "emacs.appdata.xml" "emacs-buffer.gdb" "edt-user.el" "e/" "DOC" "DISTRIB" "DEVEL.HUMOR" "DEBUG" "COPYING" "CONTRIBUTE" "compilation.txt" "charsets/" "CENSORSHIP" "CALC-NEWS" "AUTHORS" "../" "./")
+
+ ("/Users/amodeo/" (22340 34049 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22333 51800 0 0) "work.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
 " "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
-
- ("/Users/amodeo/org/" (22334 16926 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/.emacs.d/elpa/" (22334 16996 0 0) "smex-20150822.1146/" "org-20160516/" "marmalade-20110602.1622/" "furl-20110112.1707/" "archives/" "../" "./")
 

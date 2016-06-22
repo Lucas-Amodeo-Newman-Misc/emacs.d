@@ -1,25 +1,25 @@
 
 ;; ----- smex-history -----
 (
- recover-file
  eval-buffer
- lorg-find-entry-id
- gnus
- list-packages
- recover-session
- lorg-visit-location
+ recover-file
+ org-mode
+ quickurl-list-mode
+ text-mode
+ python-mode
+ report-emacs-bug
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
- (org-mode . 7)
+ (org-mode . 10)
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 50)
+ (recover-file . 113)
  (org-mobile-push . 2)
- (eval-buffer . 144)
+ (eval-buffer . 152)
  (visual-line-mode . 3)
  (enriched-mode . 1)
  (font-lock-mode . 2)
@@ -31,7 +31,7 @@
  (lorg-find-entry-id . 21)
  (lorg-set-id . 4)
  (write-region . 1)
- (text-mode . 2)
+ (text-mode . 3)
  (read-only-mode . 3)
  (toggle-read-only . 1)
  (lorg-update-subtree-statuses . 29)
@@ -57,4 +57,7 @@
  (org-icalendar-combine-agenda-files . 1)
  (recover-session . 1)
  (gnus . 2)
+ (report-emacs-bug . 1)
+ (python-mode . 2)
+ (quickurl-list-mode . 1)
 )

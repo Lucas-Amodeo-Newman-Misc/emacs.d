@@ -47,7 +47,10 @@
      ("n" "Need"
       ((tags "NEED=\"t\"" nil))
       nil)
-     ("k" "Stock"
+     ("k" "Need to Stock"
+      ((todo "STOCK" nil))
+      nil)
+     ("K" "All Stockable"
       ((tags "TODO=\"ITEM\"+SPEC>0" nil))
       nil)
      ("u" "Stuck"
@@ -87,12 +90,13 @@
    (quote
     ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
      (sequence "ACTION!(`)" "ACTION(1)" "BREAKDOWN(2)" "|" "DONE(3!)")
-     (sequence "BUTTON(b)" "|")
+     (sequence "BUTTON(b)" "STOCK(k)" "|")
      (sequence "|" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|"))))
  '(org-use-property-inheritance (quote ("URGENCY")))
- '(org-yank-folded-subtrees nil))
+ '(org-yank-folded-subtrees nil)
+ '(send-mail-function (quote mailclient-send-it)))
 
 ;;ORG BASICS
 
@@ -131,7 +135,7 @@
 	("p" "Process" entry (file+datetree "~/org/journal.org")
 	 "* PROCESS %?\n%i\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("n" "Notice" entry (file+datetree "~/org/journal.org")
-	 "* NOTICE %?\n%i\n\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	 "* NOTICE %?%i\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("M" "Main Captures")
 	("M`" "Action!" entry (file+headline "~/org/main.org" "Initiatives")
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -148,7 +152,9 @@
 	("MA" "Appointment" entry (file+headline "~/org/main.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Mi" "Info" entry (file+datetree "~/org/main.org")
-	 "* INFO %?\n  %i\n")
+	 "* INFO %?\n%i")
+	("Mk" "Stock" entry (file+datetree "~/org/main.org")
+	 "* STOCK %i%?")
 	("G" "GORG Captures")
 	("G`" "Gorg Action!" entry (file+headline "~/org/gorg.org" "Initiatives")
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -159,6 +165,17 @@
 	("Gj" "Gorg Journal" entry (file+datetree "~/org/gorg.org")
 	 "* JOURNAL %U\n%?")
 	("Gi" "Gorg Info" entry (file+datetree "~/org/gorg.org")
+	 "* INFO %?\n%i")
+	("H" "HAL Captures")
+	("H`" "HAL Action!" entry (file+headline "~/org/hal.org" "Initiatives")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("H1" "HAL Action" entry (file+headline "~/org/hal.org" "Initiatives")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("H2" "HAL Breakdown" entry (file+headline "~/org/hal.org" "Initiatives")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("Hj" "HAL Journal" entry (file+datetree "~/org/hal.org")
+	 "* JOURNAL %U\n%?")
+	("Hi" "HAL Info" entry (file+datetree "~/org/hal.org")
 	 "* INFO %?\n%i")
 	("W" "Work Captures")
 	("W`" "Work Action!" entry (file+headline "~/org/work.org" "Initiatives")
@@ -207,6 +224,10 @@
 	 "* JOURNAL %U\n%?")
 	("Fi" "Food Info" entry (file+datetree "~/org/food.org")
 	 "* INFO %?\n%i")
+	("FA" "Food ppointment" entry (file+headline "~/org/food.org" "Appointments")
+	 "* APPOINTMENT %?\n  %i\n")
+	("Fk" "Food Stock" entry (file+datetree "~/org/food.org")
+	 "* STOCK %i%?")
 	("L" "Lorg Captures")
 	("L`" "Lorg Action!" entry (file+headline "~/org/lorg.org" "Initiatives")
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -248,7 +269,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 1851)
+(set 'last-lorg-id-number 2294)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -522,7 +543,7 @@
 (define-key lorg-id-map "a" 'lorg-set-all-id)
 (define-key lorg-reset-map "e" 'lorg-reset-entry)
 (define-key lorg-reset-map "s" 'lorg-reset-subtree)
-(define-key lorg-update-map "e" 'lorg-update-entry-activity)
+(define-key lorg-update-map "e" 'lorg-update-entry)
 (define-key lorg-update-map "s" 'lorg-update-subtree)
 (define-key lorg-update-map "a" 'lorg-update-all)
 (define-key lorg-properties-inheritance-map "s" 'lorg-set-subtree-properties)
