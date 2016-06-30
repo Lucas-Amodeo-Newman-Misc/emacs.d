@@ -93,7 +93,8 @@
      (sequence "BUTTON(b)" "STOCK(k)" "|")
      (sequence "|" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
-     (sequence "WORK(w)" "|"))))
+     (sequence "WORK(w)" "|")
+     (sequence "|" "SEQUENCE(Q)" "MOVEMENT(M)"))))
  '(org-use-property-inheritance (quote ("URGENCY")))
  '(org-yank-folded-subtrees nil)
  '(send-mail-function (quote mailclient-send-it)))
@@ -187,7 +188,7 @@
 	("Wb" "Work Button" entry (file+headline "~/org/work.org" "Buttons")
 	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
-	 "* %U\n%?")
+	 "* JOURNAL %U\n%?")
 	("Wi" "Work Info" entry (file+datetree "~/org/work.org")
 	 "* INFO %?\n%i")
 	("WI" "Work Item" entry (file+headline "~/org/work.org" "Items")
@@ -202,7 +203,7 @@
 	("B2" "Body Breakdown" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
-	 "* %U\n%?")
+	 "* JOURNAL %U\n%?")
 	("Bi" "Body Info" entry (file+datetree "~/org/body.org")
 	 "* INFO %?\n%i")
 	("BI" "Body Item" entry (file+headline "~/org/body.org" "Items")
@@ -224,7 +225,7 @@
 	 "* JOURNAL %U\n%?")
 	("Fi" "Food Info" entry (file+datetree "~/org/food.org")
 	 "* INFO %?\n%i")
-	("FA" "Food ppointment" entry (file+headline "~/org/food.org" "Appointments")
+	("FA" "Food Appointment" entry (file+headline "~/org/food.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Fk" "Food Stock" entry (file+datetree "~/org/food.org")
 	 "* STOCK %i%?")
@@ -245,7 +246,7 @@
 ;;ORG APPEARANCE
 (set 'org-startup-indented t)
 (setq org-todo-keyword-faces
-      '(("NEED" . "purple")("BLUEPRINT" . "blue")("WAIT" . "blue")("NEXT" . "purple")("HOME" . "purple")))
+      '(("SEQUENCE" . "dark orange")))
 
 ;;ORG MOBILE
 
@@ -269,7 +270,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2294)
+(set 'last-lorg-id-number 2523)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -512,8 +513,62 @@
   "Accepts no arguments.  Brings point to the location of the item at point, by following the lorg id stored in it's LOC_ID property."
   (interactive)
   (lorg-find-entry-id (org-entry-get (point) "LOC_ID") t))
+
+;; LORG ACTIVATE
+
+(defun lorg-activate-entry()
+  "Accepts no arguments.  Activates the entry at point."
+  (interactive)
+  (org-entry-put (point) "ACTIVE" "t")
+  (org-entry-put (point) "DONE" "nil")
+  (print "Entry activated."))
+
+(defun lorg-activate-subtree(arg)
+  "Accepts a prefix argument.  Activates the subtree at point.  Without the prefix arg, calls lorg-activate-entry and lorg-update-subtree on the entry at point.  With the prefix arg, calls lorg-activate-entry on the entry at point and each individual member of the subtree which begins at point."
+  (interactive "P")
+  (if arg
+      (org-map-entries '(lorg-activate-entry) t 'tree)
+    (lorg-activate-entry)
+    (lorg-update-subtree)))
+;;LORG COMMANDS FROM AGENDA VIEW
+
+(defun lorg-modified-org-agenda-goto (&optional highlight)
+  "Go to the entry at point in the corresponding Org-mode file."
+  (interactive)
+  (let* ((marker (or (org-get-at-bol 'org-marker)
+		     (org-agenda-error)))
+	 (buffer (marker-buffer marker))
+	 (pos (marker-position marker)))
+    (set-buffer buffer)
+    (widen)
+    (push-mark)
+    (goto-char pos)
+    (when (derived-mode-p 'org-mode)
+      (org-show-context 'agenda)
+      (save-excursion
+	(and (outline-next-heading)
+	     (org-flag-heading nil)))	; show the next heading
+      (when (outline-invisible-p)
+	(outline-show-entry))			; display invisible text
+      (recenter (/ (window-height) 2))
+      (org-back-to-heading t)
+      (if (re-search-forward org-complex-heading-regexp nil t)
+	  (goto-char (match-beginning 4))))
+    (run-hooks 'org-agenda-after-show-hook)
+    (and highlight (org-highlight (point-at-bol) (point-at-eol)))))
+
+(defun lorg-weird-combination ()
+  "Just a test."
+  (interactive)
+  (lorg-modified-org-agenda-goto)
+  (lorg-reset-entry))
   
 ;;LORG KEYBINDINGS
+
+(require 'org-agenda)
+(add-hook 'org-agenda-mode-hook
+	  '(lambda ()
+	     (define-key org-agenda-mode-map "\C-cn" 'lorg-map)))
 
 (define-prefix-command 'lorg-map)
 (define-prefix-command 'lorg-condition-map)
@@ -523,6 +578,7 @@
 (define-prefix-command 'lorg-properties-inheritance-map)
 (define-prefix-command 'lorg-link-map)
 (define-prefix-command 'lorg-location-map)
+(define-prefix-command 'lorg-activation-map)
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -535,6 +591,8 @@
 (define-key lorg-map "p" 'lorg-properties-inheritance-map)
 (define-key lorg-map "l" 'lorg-link-map)
 (define-key lorg-map "L" 'lorg-location-map)
+(define-key lorg-map "a" 'lorg-activation-map)
+ 
 
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
 (define-key lorg-condition-map "t" 'lorg-set-condition-type)
@@ -553,3 +611,5 @@
 (define-key lorg-location-map "i" 'lorg-set-location)
 (define-key lorg-location-map "v" 'lorg-visit-location)
 (define-key lorg-location-map "e" 'lorg-location-examine-contents)
+(define-key lorg-activation-map "e" 'lorg-activate-entry)
+(define-key lorg-activation-map "s" 'lorg-activate-subtree)

@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- eval-buffer
  recover-file
- org-mode
- quickurl-list-mode
- text-mode
- python-mode
- report-emacs-bug
+ eval-buffer
+ lorg-activate-subtree
+ lorg-activate-entry
+ lorg-find-entry-id
+ lorg-weird-combination
+ lorg-modified-org-agenda-goto
 )
 
 ;; ----- smex-data -----
@@ -17,9 +17,9 @@
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 113)
+ (recover-file . 118)
  (org-mobile-push . 2)
- (eval-buffer . 152)
+ (eval-buffer . 154)
  (visual-line-mode . 3)
  (enriched-mode . 1)
  (font-lock-mode . 2)
@@ -28,7 +28,7 @@
  (lorg-update-status . 24)
  (lorg-store-id . 2)
  (lorg-set-condition-id . 1)
- (lorg-find-entry-id . 21)
+ (lorg-find-entry-id . 22)
  (lorg-set-id . 4)
  (write-region . 1)
  (text-mode . 3)
@@ -60,4 +60,8 @@
  (report-emacs-bug . 1)
  (python-mode . 2)
  (quickurl-list-mode . 1)
+ (lorg-modified-org-agenda-goto . 1)
+ (lorg-weird-combination . 2)
+ (lorg-activate-entry . 23)
+ (lorg-activate-subtree . 6)
 )

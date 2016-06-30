@@ -38,22 +38,22 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
- "gorg.org"
+ "archive.org_archive"
  "main.org"
+ "food.org"
+ "mobile-pull.org"
+ "gorg.org"
  "work.org"
  "hal.org"
  "hla.org"
  "work-system.org"
- "food.org"
- ".gnus.el"
- "archive.org_archive"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/.emacs.d/" (22377 48544 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+ ("/Users/amodeo/.emacs.d/" (22389 13755 0 0) "smex-items" "repos/" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
- ("/Users/amodeo/Org/" (22377 48549 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#lorg.org" ".#journal.org" ".#hal.org" ".#gorg.org" ".#food.org" ".#body.org" "#main.org#" "#lorg.org#" "#hal.org#" "#gorg.org#" "#food.org#" "#body.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22389 13966 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#body.org" "#body.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/org/" (22360 28245 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" "#work.org#" "#main.org#" "#lorg.org#" "#food.org#" "#body.org#" "#archive.org#" "../" "./")
 
