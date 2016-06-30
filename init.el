@@ -130,7 +130,7 @@
 
 (setq org-capture-templates
       '(("j" "Journal" entry (file+datetree "~/org/journal.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("J" "Journal+" entry (file+datetree "~/org/journal.org")
 	 "* JOURNAL %?\n:NOTES:\nCreated: %U\n:END:")
 	("p" "Process" entry (file+datetree "~/org/journal.org")
@@ -164,7 +164,7 @@
 	("G2" "Gorg Breakdown" entry (file+headline "~/org/gorg.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Gj" "Gorg Journal" entry (file+datetree "~/org/gorg.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("Gi" "Gorg Info" entry (file+datetree "~/org/gorg.org")
 	 "* INFO %?\n%i")
 	("H" "HAL Captures")
@@ -175,7 +175,7 @@
 	("H2" "HAL Breakdown" entry (file+headline "~/org/hal.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Hj" "HAL Journal" entry (file+datetree "~/org/hal.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("Hi" "HAL Info" entry (file+datetree "~/org/hal.org")
 	 "* INFO %?\n%i")
 	("W" "Work Captures")
@@ -194,7 +194,7 @@
 	("WI" "Work Item" entry (file+headline "~/org/work.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("B" "Body Captures")
 	("B`" "Body Action!" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -209,7 +209,7 @@
 	("BI" "Body Item" entry (file+headline "~/org/body.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("F" "Food Captures")
 	("F`" "Food Action!" entry (file+headline "~/org/food.org" "Initiatives")
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -222,7 +222,7 @@
 	("FI" "Food Item" entry (file+headline "~/org/food.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Fj" "Food Journal" entry (file+datetree "~/org/food.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("Fi" "Food Info" entry (file+datetree "~/org/food.org")
 	 "* INFO %?\n%i")
 	("FA" "Food Appointment" entry (file+headline "~/org/food.org" "Appointments")
@@ -239,7 +239,7 @@
 	("Lb" "Lorg Button" entry (file+headline "~/org/lorg.org" "Buttons")
 	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("Lj" "Lorg Journal" entry (file+datetree "~/org/lorg.org")
-	 "* JOURNAL %U\n%?")
+	 "* JOURNAL %U\n%i%?")
 	("Li" "Lorg Info" entry (file+datetree "~/org/lorg.org")
 	 "* INFO %?\n%i")))
 
@@ -270,7 +270,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2523)
+(set 'last-lorg-id-number 2534)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -565,7 +565,7 @@
   (lorg-reset-entry))
 
 ;;LORG DROPBOX/MOBILE/BACKUP
-(defun lorg-backup-orgfiles ()
+(defun lorg-git-push-orgfiles ()
  "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the org folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
  (shell)
  (execute-kbd-macro "cd ~/Org")
@@ -577,7 +577,7 @@
  (execute-kbd-macro "git push db master")
  (execute-kbd-macro (kbd "RET")))
 
-(defun lorg-backup-init ()
+(defun lorg-git-push-.emacs.d ()
    "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the emacs init folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
  (shell)
  (execute-kbd-macro "cd ~/.emacs.d")
@@ -589,20 +589,17 @@
  (execute-kbd-macro "git push db master")
  (execute-kbd-macro (kbd "RET")))
 
-(defun lorg-backup-all ()
+(defun lorg-git-push-all ()
      "Accepts no arguments.  Backups both the orgfiles and the emacs init folder."
-     (lorg-backup-orgfiles)
-     (lorg-backup-init))
+     (lorg-git-push-orgfiles)
+     (lorg-git-push-.emacs.d))
 
-(defun lorg-backup-and-mobile-push ()
+(defun lorg-git-and-mobile-push ()
   "Accepts no arguments.  Backups the orgfiles and emacs init folder, and pushes the org files to mobile-org."
   (interactive)
-  (lorg-backup-all)
+  (lorg-git-push-all)
   (org-mobile-push))
   
-
-
-
 ;;LORG KEYBINDINGS
 
 (require 'org-agenda)
@@ -632,6 +629,8 @@
 (define-key lorg-map "l" 'lorg-link-map)
 (define-key lorg-map "L" 'lorg-location-map)
 (define-key lorg-map "a" 'lorg-activation-map)
+
+(define-key lorg-map "P" 'lorg-git-and-mobile-push)
  
 
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
