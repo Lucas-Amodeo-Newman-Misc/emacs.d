@@ -530,6 +530,7 @@
       (org-map-entries '(lorg-activate-entry) t 'tree)
     (lorg-activate-entry)
     (lorg-update-subtree)))
+
 ;;LORG COMMANDS FROM AGENDA VIEW
 
 (defun lorg-modified-org-agenda-goto (&optional highlight)
@@ -562,7 +563,46 @@
   (interactive)
   (lorg-modified-org-agenda-goto)
   (lorg-reset-entry))
+
+;;LORG DROPBOX/MOBILE/BACKUP
+(defun lorg-backup-orgfiles ()
+ "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the org folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+ (shell)
+ (execute-kbd-macro "cd ~/Org")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git add .")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git commit -m \"routine commit and push\"")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git push db master")
+ (execute-kbd-macro (kbd "RET")))
+
+(defun lorg-backup-init ()
+   "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the emacs init folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+ (shell)
+ (execute-kbd-macro "cd ~/.emacs.d")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git add .")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git commit -m \"routine commit and push\"")
+ (execute-kbd-macro (kbd "RET"))
+ (execute-kbd-macro "git push db master")
+ (execute-kbd-macro (kbd "RET")))
+
+(defun lorg-backup-all ()
+     "Accepts no arguments.  Backups both the orgfiles and the emacs init folder."
+     (lorg-backup-orgfiles)
+     (lorg-backup-init))
+
+(defun lorg-backup-and-mobile-push ()
+  "Accepts no arguments.  Backups the orgfiles and emacs init folder, and pushes the org files to mobile-org."
+  (interactive)
+  (lorg-backup-all)
+  (org-mobile-push))
   
+
+
+
 ;;LORG KEYBINDINGS
 
 (require 'org-agenda)
