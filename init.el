@@ -195,6 +195,8 @@
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
 	 "* JOURNAL %U\n%i%?")
+	("Ww" "Work Work" entry (file+headline "~/org/work.org" "Shifts")
+	 "* WORK %U\n%i%?")
 	("B" "Body Captures")
 	("B`" "Body Action!" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
@@ -270,7 +272,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2534)
+(set 'last-lorg-id-number 2542)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."

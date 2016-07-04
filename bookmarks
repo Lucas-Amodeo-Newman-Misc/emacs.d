@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n   :END:\n")
  (position . 339))
 ("org-capture-last-stored"
- (filename . "~/Org/body.org")
- (front-context-string . "**** JOURNAL [20")
- (rear-context-string . "-06-30 Thursday\n")
- (position . 38084))
+ (filename . "~/Org/main.org")
+ (front-context-string . "** APPOINTMENT g")
+ (rear-context-string . "  2536\n   :END:\n")
+ (position . 95791))
 )
