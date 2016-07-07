@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/journal.org")
- (front-context-string . "**** JOURNAL [20")
- (rear-context-string . "16-07-04 Monday\n")
- (position . 63259))
+ (front-context-string . "**** NOTICE acti")
+ (rear-context-string . "ings after 3pm.\n")
+ (position . 63966))
 )
