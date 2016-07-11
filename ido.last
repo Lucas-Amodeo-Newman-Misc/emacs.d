@@ -37,6 +37,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "hal.org"
  "main.org"
  "init.el"
  "body.org"
@@ -45,13 +46,12 @@
  "mobile-pull.org"
  "gorg.org"
  "work.org"
- "hal.org"
  "hla.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22399 51067 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#main.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22403 4166 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#mobile-pull.org" ".#food.org" "#work.org#" "#food.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/.emacs.d/" (22393 50204 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
 
