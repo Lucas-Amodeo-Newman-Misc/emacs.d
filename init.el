@@ -180,7 +180,7 @@
 	 "* INFO %?\n%i")
 	("W" "Work Captures")
 	("W`" "Work Action!" entry (file+headline "~/org/work.org" "Initiatives")
-	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("W1" "Work Action" entry (file+headline "~/org/work.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("W2" "Work Breakdown" entry (file+headline "~/org/work.org" "Initiatives")
@@ -272,7 +272,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2637)
+(set 'last-lorg-id-number 2673)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -501,8 +501,9 @@
 	(set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
 	(set 'lorg-id (lorg-get-id))
 	(set 'lorg-current-stored-location (cons lorg-entry-name lorg-id))
-	(print "Location stored."))
-    (print "This entry is not a LOCATION.")))
+	(print (car lorg-current-stored-location))
+	(print (concat "Location: " (car lorg-current-stored-location) "stored."))
+    (print "This entry is not a LOCATION."))))
   
 (defun lorg-set-location()
   "Accepts no arguments.  Sets the location related properties of the entry at point: LOCATION to the car of 'lorg-current-stored-location, and LOC_LINK to the cdr."
@@ -564,7 +565,7 @@
   "Just a test."
   (interactive)
   (lorg-modified-org-agenda-goto)
-  (lorg-reset-entry))
+  (lorg-reset-subtree))
 
 ;;LORG DROPBOX/MOBILE/BACKUP
 (defun lorg-git-push-orgfiles ()
@@ -601,13 +602,10 @@
   (interactive)
   (lorg-git-push-all)
   (org-mobile-push))
+
+;; LORG AGENDA MODE COMMANDS
   
 ;;LORG KEYBINDINGS
-
-(require 'org-agenda)
-(add-hook 'org-agenda-mode-hook
-	  '(lambda ()
-	     (define-key org-agenda-mode-map "\C-cn" 'lorg-map)))
 
 (define-prefix-command 'lorg-map)
 (define-prefix-command 'lorg-condition-map)
@@ -618,6 +616,7 @@
 (define-prefix-command 'lorg-link-map)
 (define-prefix-command 'lorg-location-map)
 (define-prefix-command 'lorg-activation-map)
+
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -633,8 +632,6 @@
 (define-key lorg-map "a" 'lorg-activation-map)
 
 (define-key lorg-map "P" 'lorg-git-and-mobile-push)
- 
-
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
 (define-key lorg-condition-map "t" 'lorg-set-condition-type)
 (define-key lorg-condition-map "s" 'lorg-store-condition-id)
@@ -654,3 +651,40 @@
 (define-key lorg-location-map "e" 'lorg-location-examine-contents)
 (define-key lorg-activation-map "e" 'lorg-activate-entry)
 (define-key lorg-activation-map "s" 'lorg-activate-subtree)
+
+;; lorg bindings for agenda mode
+(define-prefix-command 'lorg-agenda-map)
+(define-prefix-command 'lorg-agenda-condition-map)
+(define-prefix-command 'lorg-agenda-update-map)
+(define-prefix-command 'lorg-agenda-id-map)
+(define-prefix-command 'lorg-agenda-reset-map)
+(define-prefix-command 'lorg-agenda-properties-inheritance-map)
+(define-prefix-command 'lorg-agenda-link-map)
+(define-prefix-command 'lorg-agenda-location-map)
+(define-prefix-command 'lorg-agenda-activation-map)
+
+(require 'org-agenda)
+(add-hook 'org-agenda-mode-hook
+	  '(lambda ()
+	     (define-key org-agenda-mode-map "\C-cn" 'lorg-agenda-map)))
+
+(define-key lorg-agenda-map "u" 'lorg-agenda-update-map)
+(define-key lorg-agenda-map "i" 'lorg-agenda-id-map)
+(define-key lorg-agenda-map "r" 'lorg-agenda-reset-map)
+(define-key lorg-agenda-map "c" 'lorg-agenda-condition-map)
+(define-key lorg-agenda-map "p" 'lorg-agenda-properties-inheritance-map)
+(define-key lorg-agenda-map "l" 'lorg-agenda-link-map)
+(define-key lorg-agenda-map "L" 'lorg-agenda-location-map)
+(define-key lorg-agenda-map "a" 'lorg-agenda-activation-map)
+
+
+
+
+
+
+
+
+
+
+
+(define-key lorg-agenda-reset-map "s" 'lorg-weird-combination)
