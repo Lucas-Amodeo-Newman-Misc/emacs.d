@@ -1,9 +1,9 @@
 
 ;; ----- smex-history -----
 (
+ recover-file
  eval-buffer
  lorg-weird-combination
- recover-file
  shell
  check-parens
  lorg-activate-subtree
@@ -17,7 +17,7 @@
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 120)
+ (recover-file . 126)
  (org-mobile-push . 2)
  (eval-buffer . 157)
  (visual-line-mode . 3)

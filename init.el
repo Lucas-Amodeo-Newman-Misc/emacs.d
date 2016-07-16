@@ -94,7 +94,7 @@
      (sequence "|" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|")
-     (sequence "|" "SEQUENCE(Q)" "MOVEMENT(M)"))))
+     (sequence "SEQUENCE(Q)" "MOVEMENT(M)" "|"))))
  '(org-use-property-inheritance (quote ("URGENCY")))
  '(org-yank-folded-subtrees nil)
  '(send-mail-function (quote mailclient-send-it)))
@@ -248,7 +248,7 @@
 ;;ORG APPEARANCE
 (set 'org-startup-indented t)
 (setq org-todo-keyword-faces
-      '(("SEQUENCE" . "dark orange")))
+      '(("SEQUENCE" . "dark orange")("MOVEMENT" . "purple")))
 
 ;;ORG MOBILE
 
@@ -272,7 +272,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2673)
+(set 'last-lorg-id-number 2743)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -464,7 +464,9 @@
 (defun lorg-insert-link ()
   "Accepts no arguments.  Inserts the contents of 'lorg-current-stored-link at point."
   (interactive)
-  (insert lorg-current-stored-link))
+  (if lorg-current-stored-link
+      (insert lorg-current-stored-link)
+    (print "No link has been stored.")))
 
 ;;LORG LOCATIONS
 (defun lorg-location-examine-contents()
@@ -632,9 +634,9 @@
 (define-key lorg-map "a" 'lorg-activation-map)
 
 (define-key lorg-map "P" 'lorg-git-and-mobile-push)
+(define-key lorg-condition-map "s" 'lorg-store-condition-id)
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
 (define-key lorg-condition-map "t" 'lorg-set-condition-type)
-(define-key lorg-condition-map "s" 'lorg-store-condition-id)
 (define-key lorg-id-map "e" 'lorg-set-id)
 (define-key lorg-id-map "a" 'lorg-set-all-id)
 (define-key lorg-reset-map "e" 'lorg-reset-entry)
@@ -677,14 +679,37 @@
 (define-key lorg-agenda-map "L" 'lorg-agenda-location-map)
 (define-key lorg-agenda-map "a" 'lorg-agenda-activation-map)
 
+;; lorg condition (agenda mode) keybindings
+(define-key lorg-agenda-condition-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-store-condition-id)))
+(define-key lorg-agenda-condition-map "i" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-condition-id)))
+(define-key lorg-agenda-condition-map "t" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-condition-type)))
 
+;; lorg id (agenda mode) keybindings
+(define-key lorg-agenda-id-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-id)))
+(define-key lorg-agenda-id-map "a" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-all-id-subtree)))
 
+;; lorg reset (agenda mode) keybindings
+(define-key lorg-agenda-reset-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-reset-entry)))
+(define-key lorg-agenda-reset-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-reset-subtree)))
 
+;; lorg update (agenda mode) keybindings
+(define-key lorg-agenda-update-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-update-entry)))
+(define-key lorg-agenda-update-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-update-subtree)))
+(define-key lorg-agenda-update-map "a" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-update-all)))
 
+;; lorg properities inheritance (agenda mode) keybindings
+(define-key lorg-agenda-properties-inheritance-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-subtree-properties)))
 
+;; lorg link (agenda mode) keybindings
+(define-key lorg-agenda-link-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-store-link)))
+(define-key lorg-agenda-link-map "i" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-insert-link)))
 
+;; lorg location (agenda mode) keybindings
+(define-key lorg-agenda-location-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-store-location)))
+(define-key lorg-agenda-location-map "i" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-set-location)))
+(define-key lorg-agenda-location-map "v" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-visit-location)))
+(define-key lorg-agenda-location-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-location-examine-contents)))
 
-
-
-
-(define-key lorg-agenda-reset-map "s" 'lorg-weird-combination)
+;; lorg activation (agenda mode) keybindings
+(define-key lorg-agenda-activation-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-activate-entry)))
+(define-key lorg-agenda-activation-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-activate-subtree)))
