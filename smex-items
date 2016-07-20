@@ -3,11 +3,11 @@
 (
  recover-file
  eval-buffer
- lorg-weird-combination
+ ido-mode
  shell
  check-parens
  lorg-activate-subtree
- lorg-activate-entry
+ customize
 )
 
 ;; ----- smex-data -----
@@ -17,9 +17,9 @@
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 126)
+ (recover-file . 143)
  (org-mobile-push . 2)
- (eval-buffer . 157)
+ (eval-buffer . 159)
  (visual-line-mode . 3)
  (enriched-mode . 1)
  (font-lock-mode . 2)
@@ -66,4 +66,5 @@
  (lorg-activate-subtree . 6)
  (shell . 3)
  (lorg-backup-and-mobile-push . 1)
+ (ido-mode . 2)
 )

@@ -27,6 +27,9 @@
 (require 'ido)
 (ido-mode t)
 
+;;HAL
+(add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
+
 ;;FROM CUSTOMIZE
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -272,7 +275,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2758)
+(set 'last-lorg-id-number 2852)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -453,13 +456,15 @@
     (set 'lorg-item (org-entry-get (point) "ITEM"))
     (set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
     (set 'lorg-id (lorg-get-id))
-
-    (set 'lorg-current-stored-link (concat "[[elisp:(lorg-find-entry-id \""
-				      lorg-id
-				      "\" t)]["
-				      lorg-entry-name
-				      "]]"))
-    (print (concat  "Link stored for: " lorg-entry-name "."))))
+    (if (not lorg-id)
+	(print "Target entry has no LORG_ID.")
+      
+      (set 'lorg-current-stored-link (concat "[[elisp:(lorg-find-entry-id \""
+					     lorg-id
+					     "\" t)]["
+					     lorg-entry-name
+					     "]]"))
+      (print (concat  "Link stored for: " lorg-entry-name ".")))))
 
 (defun lorg-insert-link ()
   "Accepts no arguments.  Inserts the contents of 'lorg-current-stored-link at point."
@@ -503,9 +508,8 @@
 	(set 'lorg-entry-name (replace-regexp-in-string "\*+ " "" lorg-item))
 	(set 'lorg-id (lorg-get-id))
 	(set 'lorg-current-stored-location (cons lorg-entry-name lorg-id))
-	(print (car lorg-current-stored-location))
-	(print (concat "Location: " (car lorg-current-stored-location) "stored."))
-    (print "This entry is not a LOCATION."))))
+	(print (concat "Location: " (car lorg-current-stored-location) " stored.")))
+    (print "This entry is not a LOCATION.")))
   
 (defun lorg-set-location()
   "Accepts no arguments.  Sets the location related properties of the entry at point: LOCATION to the car of 'lorg-current-stored-location, and LOC_LINK to the cdr."
@@ -562,12 +566,6 @@
 	  (goto-char (match-beginning 4))))
     (run-hooks 'org-agenda-after-show-hook)
     (and highlight (org-highlight (point-at-bol) (point-at-eol)))))
-
-(defun lorg-weird-combination ()
-  "Just a test."
-  (interactive)
-  (lorg-modified-org-agenda-goto)
-  (lorg-reset-subtree))
 
 ;;LORG DROPBOX/MOBILE/BACKUP
 (defun lorg-git-push-orgfiles ()
@@ -712,4 +710,4 @@
 
 ;; lorg activation (agenda mode) keybindings
 (define-key lorg-agenda-activation-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-activate-entry)))
-(define-key lorg-agenda-activation-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-activate-subtree)))
+(define-key lorg-agenda-activation-map "s" '(lambda (arg) (interactive "p") (lorg-modified-org-agenda-goto)(lorg-activate-subtree arg)))
