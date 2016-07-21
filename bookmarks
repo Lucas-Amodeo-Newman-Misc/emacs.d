@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n   :END:\n")
  (position . 339))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "** ITEM Invoice ")
- (rear-context-string . "  2840\n   :END:\n")
- (position . 98887))
+ (filename . "~/Org/lorg.org")
+ (front-context-string . "** BREAKDOWN cre")
+ (rear-context-string . "  2793\n   :END:\n")
+ (position . 14474))
 )
