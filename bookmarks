@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION! plan ")
- (rear-context-string . "  2857\n   :END:\n")
- (position . 14376))
+ (front-context-string . "** BREAKDOWN wat")
+ (rear-context-string . "  2877\n   :END:\n")
+ (position . 15147))
 )
