@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n   :END:\n")
  (position . 339))
 ("org-capture-last-stored"
- (filename . "~/Org/body.org")
- (front-context-string . "** ACTION bluepr")
- (rear-context-string . "61\n       :END:\n")
- (position . 9743))
+ (filename . "~/Org/main.org")
+ (front-context-string . "** APPOINTMENT t")
+ (rear-context-string . "14:16]\n   :END:\n")
+ (position . 101264))
 )
