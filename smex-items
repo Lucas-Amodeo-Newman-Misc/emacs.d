@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ lorg-find-entry-id
+ lorg-visit-location
  recover-file
  eval-buffer
  ido-mode
  shell
  check-parens
- lorg-activate-subtree
- customize
 )
 
 ;; ----- smex-data -----
@@ -28,7 +28,7 @@
  (lorg-update-status . 24)
  (lorg-store-id . 2)
  (lorg-set-condition-id . 1)
- (lorg-find-entry-id . 22)
+ (lorg-find-entry-id . 26)
  (lorg-set-id . 4)
  (write-region . 1)
  (text-mode . 3)
@@ -53,7 +53,7 @@
  (org-insert-heading-respect-content . 2)
  (lorg-store-location . 5)
  (lorg-set-location . 5)
- (lorg-visit-location . 3)
+ (lorg-visit-location . 4)
  (org-icalendar-combine-agenda-files . 1)
  (recover-session . 1)
  (gnus . 2)

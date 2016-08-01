@@ -15,11 +15,12 @@
  ("/Users/amodeo/Code/" . "elisp/")
  ("/Users/amodeo/Code/Python/" . "gorg/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
- ("/Users/amodeo/" . "Org/")
+ ("/Users/amodeo/" . "Desktop/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/amodeo/Desktop/"
  "/Users/amodeo/Org/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/.emacs.d/"
@@ -40,6 +41,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "locations.org"
  "hal.org"
  "movements.hal"
  "init.el"
@@ -49,20 +51,19 @@
  "food.org"
  "mobile-pull.org"
  "gorg.org"
- "work.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/amodeo/Desktop/" (22430 42417 0 0) "Things/" "Stuff/" "locations.org" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Org/" (22430 42444 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#food.org" "#work.org#" "#main.org#" "#food.org#" "#archive.org#" "../" "./")
+
  ("/Users/amodeo/Desktop/Stuff/Org/" (22309 10080 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org" ".git/" ".#main.org" ".#food.org" "#work.org#" "#main.org#" "#food.org#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Hal/" (22415 34581 0 0) "movements.hal~" "movements.hal" "#arties.hal#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/" (22414 18773 0 0) "Resume/" "Org/" "Hal/" "Gorg/" "Code/" ".DS_Store" "../" "./")
-
- ("/Users/amodeo/Desktop/" (22425 65205 0 0) "Things/" "Stuff/" ".localized" ".DS_Store" "../" "./")
-
- ("/Users/amodeo/Org/" (22426 7961 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#work.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/.emacs.d/" (22415 48847 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
