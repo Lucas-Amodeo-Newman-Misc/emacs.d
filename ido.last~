@@ -15,13 +15,13 @@
  ("/Users/amodeo/Code/" . "elisp/")
  ("/Users/amodeo/Code/Python/" . "gorg/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
- ("/Users/amodeo/" . "Desktop/")
+ ("/Users/amodeo/" . "Org/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/Desktop/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/Desktop/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/"
@@ -41,23 +41,23 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "lorg.org"
  "locations.org"
+ "main.org"
  "hal.org"
  "movements.hal"
  "init.el"
- "main.org"
  "archive.org_archive"
  "body.org"
  "food.org"
  "mobile-pull.org"
- "gorg.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Desktop/" (22430 42417 0 0) "Things/" "Stuff/" "locations.org" ".localized" ".DS_Store" "../" "./")
+ ("/Users/amodeo/Desktop/" (22430 42579 0 0) "Things/" "Stuff/" "locations.org~" "locations.org" ".localized" ".DS_Store" "../" "./")
 
- ("/Users/amodeo/Org/" (22430 42444 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#food.org" "#work.org#" "#main.org#" "#food.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22430 42991 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#lorg.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Org/" (22309 10080 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org" ".git/" ".#main.org" ".#food.org" "#work.org#" "#main.org#" "#food.org#" "../" "./")
 
