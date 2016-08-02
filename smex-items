@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ recover-file
+ check-parens
+ indent-region
  lorg-find-entry-id
  lorg-visit-location
- recover-file
  eval-buffer
  ido-mode
- shell
- check-parens
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 161)
+ (recover-file . 173)
  (org-mobile-push . 2)
  (eval-buffer . 159)
  (visual-line-mode . 3)
@@ -36,7 +36,7 @@
  (toggle-read-only . 1)
  (lorg-update-subtree-statuses . 29)
  (org-toggle-sticky-agenda . 1)
- (check-parens . 4)
+ (check-parens . 6)
  (menu-bar-open . 5)
  (lorg-update-activity . 9)
  (lorg-update-subtree-activities . 3)
@@ -67,4 +67,5 @@
  (shell . 3)
  (lorg-backup-and-mobile-push . 1)
  (ido-mode . 2)
+ (indent-region . 2)
 )

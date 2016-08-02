@@ -275,7 +275,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2890)
+(set 'last-lorg-id-number 2921)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -423,6 +423,13 @@
   (progn
     (org-entry-put (point) "ACTIVE" "nil")
     (org-entry-put (point) "DONE" "nil")
+    (setq current-prefix-arg '(4))
+    (call-interactively 'org-schedule)
+    (if (org-entry-get (point) "TAGS")
+	(if (member "ARCHIVE" (split-string (org-entry-get (point) "TAGS") ":"))
+	    (org-toggle-archive-tag)
+	  nil)
+      nil)
     (print "Entry reset.")))
 
 (defun lorg-reset-subtree()
@@ -540,6 +547,28 @@
     (lorg-activate-entry)
     (lorg-update-subtree)))
 
+;; LORG DONE
+(defun lorg-done-entry()
+  "Accepts no arguments.  Completes, soft archives, and unschedules the item at point.  If the item has the flag RECURRING, unschedules and resets the subtree which begins with that entry."
+  (interactive)
+  (if (equal (org-entry-get (point) "RECURRING") "t")
+      (lorg-reset-subtree)
+    (setq current-prefix-arg '(4))
+    (call-interactively 'org-schedule)
+    (org-toggle-archive-tag)
+    (org-entry-put (point) "ACTIVE" "t")
+    (org-entry-put (point) "DONE" "t")
+    (print "Done.")))
+
+;; LORG RECURRING
+(defun lorg-recurring-toggle()
+  "Toggles the recurring status of the entry at point."
+  (interactive)
+  (if (equal (org-entry-get (point) "RECURRING") "t")
+      (org-entry-put (point) "RECURRING" "nil")
+    (org-entry-put (point) "RECURRING" "t"))
+  (print (org-entry-get (point) "RECURRING")))
+
 ;;LORG COMMANDS FROM AGENDA VIEW
 
 (defun lorg-modified-org-agenda-goto (&optional highlight)
@@ -616,7 +645,7 @@
 (define-prefix-command 'lorg-link-map)
 (define-prefix-command 'lorg-location-map)
 (define-prefix-command 'lorg-activation-map)
-
+(define-prefix-command 'lorg-done-map)
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -632,6 +661,8 @@
 (define-key lorg-map "a" 'lorg-activation-map)
 
 (define-key lorg-map "P" 'lorg-git-and-mobile-push)
+(define-key lorg-map "g" 'lorg-recurring-toggle)
+(define-key lorg-map "d" 'lorg-done-entry)
 (define-key lorg-condition-map "s" 'lorg-store-condition-id)
 (define-key lorg-condition-map "i" 'lorg-set-condition-id)
 (define-key lorg-condition-map "t" 'lorg-set-condition-type)
@@ -652,6 +683,7 @@
 (define-key lorg-activation-map "e" 'lorg-activate-entry)
 (define-key lorg-activation-map "s" 'lorg-activate-subtree)
 
+
 ;; lorg bindings for agenda mode
 (define-prefix-command 'lorg-agenda-map)
 (define-prefix-command 'lorg-agenda-condition-map)
@@ -662,6 +694,7 @@
 (define-prefix-command 'lorg-agenda-link-map)
 (define-prefix-command 'lorg-agenda-location-map)
 (define-prefix-command 'lorg-agenda-activation-map)
+(define-prefix-command 'lorg-agenda-done-map)
 
 (require 'org-agenda)
 (add-hook 'org-agenda-mode-hook
@@ -676,6 +709,11 @@
 (define-key lorg-agenda-map "l" 'lorg-agenda-link-map)
 (define-key lorg-agenda-map "L" 'lorg-agenda-location-map)
 (define-key lorg-agenda-map "a" 'lorg-agenda-activation-map)
+
+;;lorg (agenda mode) keybindings
+(define-key lorg-agenda-map "P" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-git-and-mobile-push)))
+(define-key lorg-agenda-map "g" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-recurring-toggle)))
+(define-key lorg-agenda-done-map "d" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-done-entry)))
 
 ;; lorg condition (agenda mode) keybindings
 (define-key lorg-agenda-condition-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-store-condition-id)))
@@ -711,3 +749,6 @@
 ;; lorg activation (agenda mode) keybindings
 (define-key lorg-agenda-activation-map "e" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-activate-entry)))
 (define-key lorg-agenda-activation-map "s" '(lambda (arg) (interactive "p") (lorg-modified-org-agenda-goto)(lorg-activate-subtree arg)))
+
+
+
