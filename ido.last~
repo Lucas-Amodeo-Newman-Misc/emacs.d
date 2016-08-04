@@ -2,7 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/Users/amodeo/Desktop/Stuff/" . "Hal/")
+ ("/Users/amodeo/Desktop/Stuff/" . "Org/")
  ("/Users/amodeo/Desktop/" . "Stuff/")
  ("/Users/amodeo/Code/elisp/gorg/" . "gorg-modules/")
  ("/Users/amodeo/.emacs.d/elpa/" . "org-mode/")
@@ -21,10 +21,10 @@
 ;; ----- ido-work-directory-list -----
 (
  "/Users/amodeo/Desktop/"
- "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/pygame/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/"
  "/Users/amodeo/Code/elisp/gorg/gorg-modules/"
  "/Users/amodeo/Code/elisp/gorg/"
@@ -42,25 +42,23 @@
 
 ;; ----- ido-work-file-list -----
 (
- "locations.org"
- "actions.hal"
- "movements.hal"
+ "location.org"
  "init.el"
  "setup.py"
  "circles.py"
  "main.org"
  "work.org"
  "lorg.org"
+ "locations.org"
  "hal.org"
+ "movements.hal"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Desktop/Stuff/Hal/" (22434 625 0 0) "actions.hal" ".#actions.hal" "#arties.hal#" "#actions.hal#" "../" "./")
-
  ("/Users/amodeo/Desktop/" (22432 35584 0 0) "Things/" "Stuff/" ".localized" ".DS_Store" "../" "./")
 
- ("/Users/amodeo/Org/" (22433 64245 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#food.org" ".#body.org" "#work.org#" "#food.org#" "#body.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22434 11255 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/.emacs.d/" (22433 60230 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
@@ -69,6 +67,8 @@
  ("/Users/amodeo/" (22430 44777 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Org/" (22309 10080 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org" ".git/" ".#main.org" ".#food.org" "#work.org#" "#main.org#" "#food.org#" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Hal/" (22415 34581 0 0) "movements.hal~" "movements.hal" "#arties.hal#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/" (22414 18773 0 0) "Resume/" "Org/" "Hal/" "Gorg/" "Code/" ".DS_Store" "../" "./")
 
