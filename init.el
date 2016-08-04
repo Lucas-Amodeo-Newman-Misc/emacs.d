@@ -275,7 +275,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2921)
+(set 'last-lorg-id-number 2948)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -713,7 +713,7 @@
 ;;lorg (agenda mode) keybindings
 (define-key lorg-agenda-map "P" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-git-and-mobile-push)))
 (define-key lorg-agenda-map "g" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-recurring-toggle)))
-(define-key lorg-agenda-done-map "d" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-done-entry)))
+(define-key lorg-agenda-map "d" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-done-entry)))
 
 ;; lorg condition (agenda mode) keybindings
 (define-key lorg-agenda-condition-map "s" '(lambda () (interactive) (lorg-modified-org-agenda-goto)(lorg-store-condition-id)))
