@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- eval-buffer
  recover-file
+ eval-buffer
  check-parens
  indent-region
  lorg-find-entry-id
@@ -17,7 +17,7 @@
  (customize . 57)
  (org-indent-mode . 8)
  (org-agenda . 1)
- (recover-file . 179)
+ (recover-file . 181)
  (org-mobile-push . 2)
  (eval-buffer . 162)
  (visual-line-mode . 3)
