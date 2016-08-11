@@ -38,14 +38,14 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-custom-commands
    (quote
-    (("0" "Ready to Schedule"
+    (("0" "Upper Priority"
       ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY>5" nil))
       nil)
-     ("9" "Ready to Prioritize"
-      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY<=5-URGENCY<3" nil))
+     ("9" "Top Initiatives"
+      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY=5" nil))
       nil)
-     ("8" "Ready to Reset"
-      ((tags-todo "ACTIVE=\"t\"+DONE=\"t\"" nil))
+     ("8" "Ready to Prioritize"
+      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY<5-URGENCY<2" nil))
       nil)
      ("n" "Need"
       ((tags "NEED=\"t\"" nil))
@@ -207,6 +207,8 @@
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("B2" "Body Breakdown" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("Bb" "Body Button" entry (file+headline "~/org/body.org" "Buttons")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
 	 "* JOURNAL %U\n%?")
 	("Bi" "Body Info" entry (file+datetree "~/org/body.org")
@@ -275,7 +277,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 2966)
+(set 'last-lorg-id-number 2978)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
