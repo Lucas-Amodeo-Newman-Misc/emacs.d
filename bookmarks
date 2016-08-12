@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION in bed")
- (rear-context-string . "tive initiatves\n")
- (position . 15507))
+ (front-context-string . "** BUTTON kitche")
+ (rear-context-string . "  2979\n   :END:\n")
+ (position . 33721))
 )

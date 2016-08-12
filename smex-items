@@ -1,11 +1,11 @@
 
 ;; ----- smex-history -----
 (
+ lorg-find-entry-id
  recover-file
  eval-buffer
  check-parens
  indent-region
- lorg-find-entry-id
  lorg-visit-location
  ido-mode
 )
@@ -28,7 +28,7 @@
  (lorg-update-status . 24)
  (lorg-store-id . 2)
  (lorg-set-condition-id . 1)
- (lorg-find-entry-id . 26)
+ (lorg-find-entry-id . 27)
  (lorg-set-id . 4)
  (write-region . 1)
  (text-mode . 3)
