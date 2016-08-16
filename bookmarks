@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION evenin")
- (rear-context-string . "  2986\n   :END:\n")
- (position . 16029))
+ (front-context-string . "**** INFO icloud")
+ (rear-context-string . "-08-13 Saturday\n")
+ (position . 194961))
 )
