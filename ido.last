@@ -20,8 +20,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/Org/"
  "/Users/amodeo/.emacs.d/"
+ "/Users/amodeo/Org/"
  "/Users/amodeo/Code/Python/pygame/"
  "/Users/amodeo/Desktop/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
@@ -42,8 +42,8 @@
 
 ;; ----- ido-work-file-list -----
 (
- "body.org"
  "init.el"
+ "body.org"
  "rts.py"
  "circles.py"
  "food.org"
@@ -56,9 +56,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22443 51804 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#body.org" "#archive.org#" "../" "./")
+ ("/Users/amodeo/.emacs.d/" (22451 44134 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
 
- ("/Users/amodeo/.emacs.d/" (22443 49327 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+ ("/Users/amodeo/Org/" (22451 40924 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#food.org" "#main.org#" "#food.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/Code/Python/pygame/" (22441 65434 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" ".#rts.py" "#rts.py#" "../" "./")
 
