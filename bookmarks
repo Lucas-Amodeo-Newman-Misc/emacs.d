@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION power ")
- (rear-context-string . "  2994\n   :END:\n")
- (position . 16339))
+ (front-context-string . "** BREAKDOWN cle")
+ (rear-context-string . "tive initiatves\n")
+ (position . 16112))
 )
