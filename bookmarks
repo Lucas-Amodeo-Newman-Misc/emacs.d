@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n   :END:\n")
  (position . 339))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "** BREAKDOWN cle")
- (rear-context-string . "tive initiatves\n")
- (position . 16112))
+ (filename . "~/Org/work.org")
+ (front-context-string . "** ACTION pack l")
+ (rear-context-string . "  3001\n   :END:\n")
+ (position . 1469))
 )
