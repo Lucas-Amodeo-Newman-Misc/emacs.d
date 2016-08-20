@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n   :END:\n")
  (position . 339))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "** ITEM sponges\n")
- (rear-context-string . "  2942\n   :END:\n")
- (position . 108695))
+ (filename . "~/Org/journal.org")
+ (front-context-string . "**** NOTICE acti")
+ (rear-context-string . "end and family.\n")
+ (position . 75522))
 )
