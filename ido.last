@@ -15,7 +15,7 @@
  ("/Users/amodeo/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/" . "pygame/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
- ("/Users/amodeo/" . "Code/")
+ ("/Users/amodeo/" . "Org/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -42,9 +42,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "main.org"
  "hal.org"
  "actions.hal"
- "main.org"
  "init.el"
  "body.org"
  "rts.py"
@@ -56,7 +56,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22459 20516 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#main.org" "#work.org#" "#main.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22460 35423 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#mobile-pull.org#" "#main.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Hal/" (22453 3321 0 0) "actions.hal~" "actions.hal" "#arties.hal#" "../" "./")
 
