@@ -56,15 +56,15 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22460 36539 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#mobile-pull.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22461 44183 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#food.org" "#mobile-pull.org#" "#main.org#" "#food.org#" "#archive.org#" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/" (22461 8413 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Hal/" (22453 3321 0 0) "actions.hal~" "actions.hal" "#arties.hal#" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/" (22435 16900 0 0) "server1keypair.pem" "Resume/" "Org/" "Hal/" "Gorg/" "Code/" ".DS_Store" "../" "./")
 
  ("/Users/amodeo/Desktop/" (22458 63569 0 0) "Things/" "Stuff/" ".localized" ".DS_Store" ".#refresh_refresh.txt" "#refresh_refresh.txt#" "../" "./")
-
- ("/Users/amodeo/.emacs.d/" (22451 44134 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
 
  ("/Users/amodeo/Code/Python/pygame/" (22441 65434 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" ".#rts.py" "#rts.py#" "../" "./")
 
