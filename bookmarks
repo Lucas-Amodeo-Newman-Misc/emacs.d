@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** BREAKDOWN eve")
- (rear-context-string . "uated by breaks\n")
- (position . 16814))
+ (front-context-string . "** ACTION check ")
+ (rear-context-string . "before bedtime.\n")
+ (position . 17337))
 )
