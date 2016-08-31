@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION check ")
- (rear-context-string . "before bedtime.\n")
- (position . 17337))
+ (front-context-string . "**** INFO psycho")
+ (rear-context-string . "6-08-30 Tuesday\n")
+ (position . 214965))
 )
