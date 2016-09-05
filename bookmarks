@@ -14,7 +14,7 @@
  (position . 339))
 ("org-capture-last-stored"
  (filename . "~/Org/journal.org")
- (front-context-string . "**** NOTICE No m")
- (rear-context-string . " of the system.\n")
- (position . 76521))
+ (front-context-string . "**** NOTICE do N")
+ (rear-context-string . "my imagination.\n")
+ (position . 76792))
 )
