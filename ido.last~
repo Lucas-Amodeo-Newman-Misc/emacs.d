@@ -13,17 +13,17 @@
  ("/Users/amodeo/Dropbox/" . "Apps/")
  ("/Users/" . "amodeo/")
  ("/Users/amodeo/Code/" . "Python/")
- ("/Users/amodeo/Code/Python/" . "pyorg/")
+ ("/Users/amodeo/Code/Python/" . "hal/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
- ("/Users/amodeo/" . ".emacs.d/")
+ ("/Users/amodeo/" . "Org/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/Code/Python/hal/"
- "/Users/amodeo/.emacs.d/"
- "/Users/amodeo/Code/Python/pyorg/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/Code/Python/hal/"
+ "/Users/amodeo/Code/Python/pyorg/"
+ "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/Code/Python/pygame/"
  "/Users/amodeo/Desktop/"
@@ -44,13 +44,13 @@
 
 ;; ----- ido-work-file-list -----
 (
- "hal-definitions.py"
- "pyorg.py"
+ "main.org"
+ "work.org"
  "actions.org"
+ "pyorg.py"
  "init.el"
  "hal-actions.py"
  "hal-core.py"
- "main.org"
  "hal.org"
  "actions.hal"
  "body.org"
@@ -58,11 +58,15 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Code/Python/hal/" (22478 3133 0 0) "pyorg.py" "hal-core.py~" "hal-core.py" "hal-actions.py~" "hal-actions.py" "actions.org~" "actions.org" ".#pyorg.py" ".#hal-actions.py" "#pyorg.py#" "#hal-actions.py#" "../" "./")
+ ("/Users/amodeo/Org/" (22478 56380 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#main.org#" "#archive.org#" "../" "./")
+
+ ("/Users/amodeo/" (22477 62877 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/amodeo/Code/Python/hal/" (22477 60431 0 0) "hal-core.py~" "hal-core.py" "hal-actions.py~" "hal-actions.py" "actions.org~" "actions.org" "#hal-actions.py#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/pyorg/" (22477 60119 0 0) "pyorg.py~" "pyorg.py" ".#pyorg.py" "#pyorg.py#" "../" "./")
 
  ("/Users/amodeo/.emacs.d/" (22477 59658 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
-
- ("/Users/amodeo/Code/Python/pyorg/" (22477 59718 0 0) "pyorg.py~" "pyorg.py" ".#pyorg.py" "#pyorg.py#" "../" "./")
 
  ("/Users/amodeo/Code/Python/" (22477 58813 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py" "sockets/" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pyorg/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "hal/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")
 
@@ -86,10 +90,6 @@
  ("/Users/amodeo/Code/Python/pygame/" (22442 222 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
 
  ("/Users/amodeo/Code/" (22461 60579 0 0) "Python/" "iOS/" "elisp/" "C/" "AWS/" ".DS_Store" "#poker.py#" "../" "./")
-
- ("/Users/amodeo/Org/" (22477 55949 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#journal.org" "#main.org#" "#journal.org#" "#archive.org#" "../" "./")
-
- ("/Users/amodeo/" (22473 48822 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Hal/" (22453 3321 0 0) "actions.hal~" "actions.hal" "#arties.hal#" "../" "./")
 

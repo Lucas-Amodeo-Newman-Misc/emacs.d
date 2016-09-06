@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ list-packages
+ recover-file
  text-mode
  org-mode
  org-indent-mode
  indent-for-tab-command
  set-variable
- recover-file
- python-mode
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 217)
+ (recover-file . 226)
  (org-mobile-push . 2)
  (eval-buffer . 162)
  (visual-line-mode . 3)
@@ -43,7 +43,7 @@
  (lorg-reset-subtree . 1)
  (lorg-set-subtree-properties . 5)
  (byte-compile-file . 1)
- (list-packages . 4)
+ (list-packages . 5)
  (lorg-store-link . 3)
  (lorg-insert-link . 2)
  (lorg-examine-location . 1)
