@@ -30,6 +30,11 @@
 ;;HAL
 (add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
 
+;;INDENT
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
 ;;FROM CUSTOMIZE
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -275,7 +280,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3241)
+(set 'last-lorg-id-number 3248)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
