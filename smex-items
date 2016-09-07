@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ menu-bar-open
+ org-mode
  list-packages
  recover-file
  text-mode
- org-mode
  org-indent-mode
  indent-for-tab-command
- set-variable
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
- (org-mode . 13)
+ (org-mode . 14)
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
@@ -37,7 +37,7 @@
  (lorg-update-subtree-statuses . 29)
  (org-toggle-sticky-agenda . 1)
  (check-parens . 6)
- (menu-bar-open . 5)
+ (menu-bar-open . 7)
  (lorg-update-activity . 9)
  (lorg-update-subtree-activities . 3)
  (lorg-reset-subtree . 1)
