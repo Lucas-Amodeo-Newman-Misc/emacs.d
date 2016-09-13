@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- menu-bar-open
  org-mode
+ linum-mode
+ line-number-mode
+ menu-bar-open
  list-packages
  recover-file
  text-mode
- org-indent-mode
- indent-for-tab-command
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
- (org-mode . 14)
+ (org-mode . 15)
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
@@ -70,4 +70,6 @@
  (indent-region . 2)
  (set-variable . 1)
  (indent-for-tab-command . 1)
+ (line-number-mode . 2)
+ (linum-mode . 4)
 )

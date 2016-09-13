@@ -45,20 +45,20 @@
 ;; ----- ido-work-file-list -----
 (
  "test.py"
- "hal_core.py"
- "hal_definitions.py"
- "hal_actions.py"
+ "definitions.org"
  "hal-core.py"
  "actions.org"
  "hal-actions.py"
  "pyorg.py"
  "hal-definitions.py"
  "hal.org"
+ "main.org"
+ "work.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Code/Python/hal/" (22479 13957 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "actions.org~" "__pycache__/" "../" "./")
+ ("/Users/amodeo/Code/Python/hal/" (22479 14130 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "definitions.org" "__pycache__/" "../" "./")
 
  ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22479 9449 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
 " "hal.org" "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")

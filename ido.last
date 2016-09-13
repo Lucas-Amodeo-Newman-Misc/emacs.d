@@ -13,19 +13,19 @@
  ("/Users/amodeo/Dropbox/" . "Apps/")
  ("/Users/" . "amodeo/")
  ("/Users/amodeo/Code/" . "Python/")
- ("/Users/amodeo/Code/Python/" . "hal/")
+ ("/Users/amodeo/Code/Python/" . "pygame/")
  ("/Users/amodeo/Code/Python/gorg/" . "control/")
  ("/Users/amodeo/" . "Code/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/amodeo/Code/Python/pygame/"
+ "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/hal/"
  "/Users/amodeo/Org/"
  "/Users/amodeo/Code/Python/pyorg/"
- "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
- "/Users/amodeo/Code/Python/pygame/"
  "/Users/amodeo/Desktop/"
  "/Users/amodeo/"
  "/Users/amodeo/Code/elisp/gorg/gorg-modules/"
@@ -44,6 +44,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "rts.py"
+ "init.el"
  "test.py"
  "definitions.org"
  "hal-core.py"
@@ -52,12 +54,14 @@
  "pyorg.py"
  "hal-definitions.py"
  "hal.org"
- "main.org"
- "work.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/amodeo/Org/" (22483 2841 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#lorg.org" "#work.org#" "#lorg.org#" "#archive.org#" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/" (22483 658 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
+
  ("/Users/amodeo/Code/Python/hal/" (22479 14130 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "definitions.org" "__pycache__/" "../" "./")
 
  ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22479 9449 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
@@ -68,10 +72,6 @@
  ("/Users/amodeo/Desktop/" (22478 45787 0 0) "Things/" "Stuff/" "Old Firefox Data/" ".localized" ".DS_Store" ".#refresh_refresh.txt" "#refresh_refresh.txt#" "../" "./")
 
  ("/Users/amodeo/Code/Python/pyorg/" (22478 2620 0 0) "pyorg.py~" "pyorg.py" "../" "./")
-
- ("/Users/amodeo/.emacs.d/" (22479 9447 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
-
- ("/Users/amodeo/Org/" (22479 9447 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22477 62877 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 
