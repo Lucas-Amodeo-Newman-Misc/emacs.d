@@ -30,11 +30,6 @@
 ;;HAL
 (add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
 
-;;INDENT
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
-
 ;;FROM CUSTOMIZE
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -280,7 +275,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3433)
+(set 'last-lorg-id-number 3644)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
@@ -398,7 +393,7 @@
 	nil))
 
     (if condition-met
-	(org-entry-put (point) "ACTIVE" "t")
+	(lorg-activate-entry)
       nil))
   )
 
@@ -460,7 +455,7 @@
   "Contains a string which holds the link produced by the last usage of 'lorg-store-link.")
 
 (defun lorg-store-link ()
-  "Accepts no arguments.  Stores a string consisting of a well-formed link to the entry at poin in 'lorg-current-stored-link."
+  "Accepts no arguments.  Stores a string consisting of a well-formed link to the entry at pointnnnpp in 'lorg-current-stored-link."
   (interactive)
   (let ((lorg-item nil)
 	(lorg-entry-name nil)
@@ -603,7 +598,8 @@
 
 ;;LORG DROPBOX/MOBILE/BACKUP
 (defun lorg-git-push-orgfiles ()
- "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the org folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+  "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the org folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+  (interactive)
  (shell)
  (execute-kbd-macro "cd ~/Org")
  (execute-kbd-macro (kbd "RET"))
@@ -615,7 +611,8 @@
  (execute-kbd-macro (kbd "RET")))
 
 (defun lorg-git-push-.emacs.d ()
-   "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the emacs init folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+  "Accepts no arguments.  Runs a sequence of kbd macros that navigates to the emacs init folder, adds and commits everything to the git repository there, and then pushes it to the dropbox master branch."
+  (interactive)
  (shell)
  (execute-kbd-macro "cd ~/.emacs.d")
  (execute-kbd-macro (kbd "RET"))
@@ -627,7 +624,8 @@
  (execute-kbd-macro (kbd "RET")))
 
 (defun lorg-git-push-all ()
-     "Accepts no arguments.  Backups both the orgfiles and the emacs init folder."
+  "Accepts no arguments.  Backups both the orgfiles and the emacs init folder."
+  (interactive)
      (lorg-git-push-orgfiles)
      (lorg-git-push-.emacs.d))
 

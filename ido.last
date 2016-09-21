@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/amodeo/Code/Python/gorg/Control/" . "Commands/")
  ("/Users/amodeo/Desktop/Stuff/" . "Hal/")
  ("/Users/amodeo/Desktop/" . "Stuff/")
  ("/Users/amodeo/Code/elisp/gorg/" . "gorg-modules/")
@@ -13,17 +14,25 @@
  ("/Users/amodeo/Dropbox/" . "Apps/")
  ("/Users/" . "amodeo/")
  ("/Users/amodeo/Code/" . "Python/")
- ("/Users/amodeo/Code/Python/" . "pygame/")
- ("/Users/amodeo/Code/Python/gorg/" . "control/")
+ ("/Users/amodeo/Code/Python/" . "gorg/")
+ ("/Users/amodeo/Code/Python/gorg/" . "Control/")
  ("/Users/amodeo/" . "Code/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/Code/Python/pygame/"
- "/Users/amodeo/.emacs.d/"
- "/Users/amodeo/Code/Python/hal/"
+ "/Users/amodeo/Code/Python/gorg/Control/"
+ "/Users/amodeo/Code/Python/gorg/"
+ "/Users/amodeo/Code/Python/gorg/Control/Commands/"
+ "/Users/amodeo/Code/Python/gorg/View/"
+ "/Users/amodeo/Code/Python/gorg/Data/"
+ "/Users/amodeo/Code/Python/gorg/control/"
+ "/Users/amodeo/Code/Python/gorg/view/"
+ "/Users/amodeo/Code/Python/gorg/data/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/.emacs.d/"
+ "/Users/amodeo/Code/Python/pygame/"
+ "/Users/amodeo/Code/Python/hal/"
  "/Users/amodeo/Code/Python/pyorg/"
  "/Users/amodeo/Desktop/Stuff/Hal/"
  "/Users/amodeo/Desktop/"
@@ -32,62 +41,70 @@
  "/Users/amodeo/Code/elisp/gorg/"
  "/Users/amodeo/Code/elisp/lorg/Org/"
  "/Users/amodeo/Code/elisp/lorg/"
- "/Users/amodeo/Code/Python/gorg/control/"
- "/Users/amodeo/Code/Python/gorg/"
  "/Users/amodeo/org/"
- "/Users/amodeo/Code/Python/gorg/view/"
  "/Users/amodeo/Dropbox/Apps/MobileOrg/"
- "/Users/amodeo/Code/Python/gorg/data/"
  "/Users/amodeo/Code/Python/turtle/"
  "/Users/amodeo/Code/Python/PyQt/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "rts.py"
- "init.el"
+ "keymaps.txt"
  "test.py"
- "definitions.org"
- "hal-core.py"
- "actions.org"
- "hal-actions.py"
- "pyorg.py"
- "hal-definitions.py"
- "hal.org"
+ "__init__.py"
+ "Core.py"
+ "Gates.py"
+ "Basic.py"
+ "Keymaps.py"
+ "Stores.py"
+ "keymaps.py"
+ "gates.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22483 2841 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#lorg.org" "#work.org#" "#lorg.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Code/Python/gorg/Control/" (22498 12818 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 
- ("/Users/amodeo/.emacs.d/" (22483 658 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
+ ("/Users/amodeo/Code/Python/gorg/Control/Commands/" (22498 9494 0 0) "Basic.py~" "Basic.py" "__pycache__/" "__init__.py~" "__init__.py" "../" "./")
 
- ("/Users/amodeo/Code/Python/hal/" (22479 14130 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "definitions.org" "__pycache__/" "../" "./")
+ ("/Users/amodeo/Code/Python/gorg/control/" (22498 8920 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 
- ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22479 9449 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
+ ("/Users/amodeo/Code/Python/gorg/" (22498 8775 0 0) "View/" "test2.py" "test.py~" "test.py" "Data/" "Control/" "__pycache__/" "__init__.py~" "__init__.py" ".DS_Store" "#gorg.org#" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/" (22497 64083 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/data/" (22497 64332 0 0) "Stores.py~" "Stores.py" "nodes.py~" "Nodes.py" "__pycache__/" "__init__.py" ".DS_Store" "#stores.py#" "#nodes.py#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/view/" (22497 64662 0 0) "gates.py~" "Gates.py" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/View/" (22497 64662 0 0) "gates.py~" "Gates.py" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/Data/" (22497 64332 0 0) "Stores.py~" "Stores.py" "nodes.py~" "Nodes.py" "__pycache__/" "__init__.py" ".DS_Store" "#stores.py#" "#nodes.py#" "../" "./")
+
+ ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22496 27743 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
 " "hal.org" "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
 
- ("/Users/amodeo/org/" (22479 9447 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+ ("/Users/amodeo/org/" (22497 28197 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
- ("/Users/amodeo/Desktop/" (22478 45787 0 0) "Things/" "Stuff/" "Old Firefox Data/" ".localized" ".DS_Store" ".#refresh_refresh.txt" "#refresh_refresh.txt#" "../" "./")
+ ("/Users/amodeo/Desktop/" (22496 48031 0 0) "WirelessDiagnostics_C2XGL9PLDV13_2016-09-14_19.27.13.tar.gz" "Things/" "Stuff/" "Old Firefox Data/" ".localized" ".DS_Store" ".#refresh_refresh.txt" "#refresh_refresh.txt#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/hal/" (22481 27208 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "definitions.org~" "definitions.org" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/Org/" (22497 28197 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+
+ ("/Users/amodeo/" (22496 57573 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/elpa/" (22479 1829 0 0) "smex-20150822.1146/" "org-20160905/" "org-20160516/" "marmalade-20110602.1622/" "hal-mode-readme.txt" "furl-20110112.1707/" "archives/" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/elpa/org-20160905/" (22479 1840 0 0) "README_ELPA" "ox.elc" "ox.el" "ox-texinfo.elc" "ox-texinfo.el" "ox-publish.elc" "ox-publish.el" "ox-org.elc" "ox-org.el" "ox-odt.elc" "ox-odt.el" "ox-md.elc" "ox-md.el" "ox-man.elc" "ox-man.el" "ox-latex.elc" "ox-latex.el" "ox-icalendar.elc" "ox-icalendar.el" "ox-html.elc" "ox-html.el" "ox-beamer.elc" "ox-beamer.el" "ox-ascii.elc" "ox-ascii.el" "orgcard.pdf" "org.elc" "org.el" "org-w3m.elc" "org-w3m.el" "org-version.el" "org-timer.elc" "org-timer.el" "org-table.elc" "org-table.el" "org-src.elc" "org-src.el" "org-rmail.elc" "org-rmail.el" "org-protocol.elc" "org-protocol.el" "org-plot.elc" "org-plot.el" "org-pkg.elc" "org-pkg.el" "org-pcomplete.elc" "org-pcomplete.el" "org-mouse.elc" "org-mouse.el" "org-mobile.elc" "org-mobile.el" "org-mhe.elc" "org-mhe.el" "org-macs.elc" "org-macs.el" "org-macro.elc" "org-macro.el" "org-loaddefs.el~" "org-loaddefs.el" "org-list.elc" "org-list.el" "org-lint.elc" "org-lint.el" "org-irc.elc" "org-irc.el" "org-install.el" "org-inlinetask.elc" "org-inlinetask.el" "org-info.elc" "org-info.el" "org-indent.elc" "org-indent.el" "org-id.elc" "org-id.el" "org-habit.elc" "org-habit.el" "org-gnus.elc" "org-gnus.el" "org-footnote.elc" "org-footnote.el" "org-feed.elc" "org-feed.el" "org-faces.elc" "org-faces.el" "org-eshell.elc" "org-eshell.el" "org-entities.elc" "org-entities.el" "org-element.elc" "org-element.el" "org-docview.elc" "org-docview.el" "org-datetree.elc" "org-datetree.el" "org-ctags.elc" "org-ctags.el" "org-crypt.elc" "org-crypt.el" "org-compat.elc" "org-compat.el" "org-colview.elc" "org-colview.el" "org-clock.elc" "org-clock.el" "org-capture.elc" "org-capture.el" "org-bibtex.elc" "org-bibtex.el" "org-bbdb.elc" "org-bbdb.el" "org-autoloads.el~" "org-autoloads.el" "org-attach.elc" "org-attach.el" "org-archive.elc" "org-archive.el" "org-agenda.elc" "org-agenda.el" "org" "ob.elc" "ob.el" "ob-tangle.elc" "ob-tangle.el" "ob-table.elc" "ob-table.el" "ob-stan.elc" "ob-stan.el" "ob-sqlite.elc" "ob-sqlite.el" "ob-sql.elc" "ob-sql.el" "ob-shen.elc" "ob-shen.el" "ob-shell.elc" "ob-shell.el" "ob-sed.elc" "ob-sed.el" "ob-screen.elc" "ob-screen.el" "ob-scheme.elc" "ob-scheme.el" "ob-scala.elc" "ob-scala.el" "ob-sass.elc" "ob-sass.el" "ob-ruby.elc" "ob-ruby.el" "ob-ref.elc" "ob-ref.el" "ob-R.elc" "ob-R.el" "ob-python.elc" "ob-python.el" "ob-processing.elc" "ob-processing.el" "ob-plantuml.elc" "ob-plantuml.el" "ob-picolisp.elc" "ob-picolisp.el" "ob-perl.elc" "ob-perl.el" "ob-org.elc" "ob-org.el" "ob-octave.elc" "ob-octave.el" "ob-ocaml.elc" "ob-ocaml.el" "ob-mscgen.elc" "ob-mscgen.el" "ob-maxima.elc" "ob-maxima.el" "ob-matlab.elc" "ob-matlab.el" "ob-makefile.elc" "ob-makefile.el" "ob-lob.elc" "ob-lob.el" "ob-lisp.elc" "ob-lisp.el" "ob-lilypond.elc" "ob-lilypond.el" "ob-ledger.elc" "ob-ledger.el" "ob-latex.elc" "ob-latex.el" "ob-keys.elc" "ob-keys.el" "ob-js.elc" "ob-js.el" "ob-java.elc" "ob-java.el" "ob-J.elc" "ob-J.el" "ob-io.elc" "ob-io.el" "ob-haskell.elc" "ob-haskell.el" "ob-groovy.elc" "ob-groovy.el" "ob-gnuplot.elc" "ob-gnuplot.el" "ob-fortran.elc" "ob-fortran.el" "ob-forth.elc" "ob-forth.el" "ob-exp.elc" "ob-exp.el" "ob-eval.elc" "ob-eval.el" "ob-emacs-lisp.elc" "ob-emacs-lisp.el" "ob-ebnf.elc" "ob-ebnf.el" "ob-dot.elc" "ob-dot.el" "ob-ditaa.elc" "ob-ditaa.el" "ob-css.elc" "ob-css.el" "ob-core.elc" "ob-core.el" "ob-coq.elc" "ob-coq.el" "ob-comint.elc" "ob-comint.el" "ob-clojure.elc" "ob-clojure.el" "ob-calc.elc" "ob-calc.el" "ob-C.elc" "ob-C.el" "ob-awk.elc" "ob-awk.el" "ob-asymptote.elc" "ob-asymptote.el" "ob-abc.elc" "ob-abc.el" "etc/" "dir" "COPYING" "../" "./")
+
+ ("/Users/amodeo/Code/Python/pygame/" (22483 49602 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py~" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
 
  ("/Users/amodeo/Code/Python/pyorg/" (22478 2620 0 0) "pyorg.py~" "pyorg.py" "../" "./")
 
- ("/Users/amodeo/" (22477 62877 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
-
  ("/Users/amodeo/Code/Python/" (22477 58813 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py" "sockets/" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pyorg/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "hal/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")
 
- ("/Users/amodeo/Code/Python/gorg/data/" (22414 52335 0 0) "stores.py~" "stores.py" "nodes.py~" "nodes.py" "__pycache__/" "__init__.py" ".DS_Store" "#stores.py#" "#nodes.py#" "../" "./")
-
- ("/Users/amodeo/Code/Python/gorg/view/" (22414 55019 0 0) "gates.py~" "gates.py" "__pycache__/" "../" "./")
-
- ("/Users/amodeo/Code/Python/gorg/" (22414 57427 0 0) "view/" "test.py~" "test.py" "data/" "control/" "__pycache__/" "__init__.py" ".DS_Store" "#gorg.org#" "../" "./")
-
- ("/Users/amodeo/Code/Python/gorg/control/" (22414 56596 0 0) "core.py~" "core.py" "__pycache__/" "../" "./")
-
  ("/Users/amodeo/Code/elisp/gorg/gorg-modules/" (22353 40304 0 0) "test.el" "gorg-utilities.el" "gorg-interface2.el" "gorg-interface.el" "gorg-interface-init.el" "gorg-directory.el" "alists.el" ".DS_Store" "../" "./")
-
- ("/Users/amodeo/Code/Python/pygame/" (22442 222 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
 
  ("/Users/amodeo/Code/" (22461 60579 0 0) "Python/" "iOS/" "elisp/" "C/" "AWS/" ".DS_Store" "#poker.py#" "../" "./")
 
@@ -100,8 +117,6 @@
  ("/Users/amodeo/.emacs.d/elpa/org-20160516/" (22334 12538 0 0) "README_ELPA" "ox.elc" "ox.el" "ox-texinfo.elc" "ox-texinfo.el" "ox-publish.elc" "ox-publish.el" "ox-org.elc" "ox-org.el" "ox-odt.elc" "ox-odt.el" "ox-md.elc" "ox-md.el" "ox-man.elc" "ox-man.el" "ox-latex.elc" "ox-latex.el" "ox-icalendar.elc" "ox-icalendar.el" "ox-html.elc" "ox-html.el" "ox-beamer.elc" "ox-beamer.el" "ox-ascii.elc" "ox-ascii.el" "orgcard.pdf" "org.elc" "org.el" "org-w3m.elc" "org-w3m.el" "org-version.el" "org-timer.elc" "org-timer.el" "org-table.elc" "org-table.el" "org-src.elc" "org-src.el" "org-rmail.elc" "org-rmail.el" "org-protocol.elc" "org-protocol.el" "org-plot.elc" "org-plot.el" "org-pkg.elc" "org-pkg.el" "org-pcomplete.elc" "org-pcomplete.el" "org-mouse.elc" "org-mouse.el" "org-mobile.elc" "org-mobile.el" "org-mhe.elc" "org-mhe.el" "org-macs.elc" "org-macs.el" "org-macro.elc" "org-macro.el" "org-loaddefs.el~" "org-loaddefs.el" "org-list.elc" "org-list.el" "org-lint.elc" "org-lint.el" "org-irc.elc" "org-irc.el" "org-install.el" "org-inlinetask.elc" "org-inlinetask.el" "org-info.elc" "org-info.el" "org-indent.elc" "org-indent.el" "org-id.elc" "org-id.el" "org-habit.elc" "org-habit.el" "org-gnus.elc" "org-gnus.el" "org-footnote.elc" "org-footnote.el" "org-feed.elc" "org-feed.el" "org-faces.elc" "org-faces.el" "org-eshell.elc" "org-eshell.el" "org-entities.elc" "org-entities.el" "org-element.elc" "org-element.el" "org-docview.elc" "org-docview.el" "org-datetree.elc" "org-datetree.el" "org-ctags.elc" "org-ctags.el" "org-crypt.elc" "org-crypt.el" "org-compat.elc" "org-compat.el" "org-colview.elc" "org-colview.el" "org-clock.elc" "org-clock.el" "org-capture.elc" "org-capture.el" "org-bibtex.elc" "org-bibtex.el" "org-bbdb.elc" "org-bbdb.el" "org-autoloads.el~" "org-autoloads.el" "org-attach.elc" "org-attach.el" "org-archive.elc" "org-archive.el" "org-agenda.elc" "org-agenda.el" "org" "ob.elc" "ob.el" "ob-tangle.elc" "ob-tangle.el" "ob-table.elc" "ob-table.el" "ob-stan.elc" "ob-stan.el" "ob-sqlite.elc" "ob-sqlite.el" "ob-sql.elc" "ob-sql.el" "ob-shen.elc" "ob-shen.el" "ob-shell.elc" "ob-shell.el" "ob-sed.elc" "ob-sed.el" "ob-screen.elc" "ob-screen.el" "ob-scheme.elc" "ob-scheme.el" "ob-scala.elc" "ob-scala.el" "ob-sass.elc" "ob-sass.el" "ob-ruby.elc" "ob-ruby.el" "ob-ref.elc" "ob-ref.el" "ob-R.elc" "ob-R.el" "ob-python.elc" "ob-python.el" "ob-processing.elc" "ob-processing.el" "ob-plantuml.elc" "ob-plantuml.el" "ob-picolisp.elc" "ob-picolisp.el" "ob-perl.elc" "ob-perl.el" "ob-org.elc" "ob-org.el" "ob-octave.elc" "ob-octave.el" "ob-ocaml.elc" "ob-ocaml.el" "ob-mscgen.elc" "ob-mscgen.el" "ob-maxima.elc" "ob-maxima.el" "ob-matlab.elc" "ob-matlab.el" "ob-makefile.elc" "ob-makefile.el" "ob-lob.elc" "ob-lob.el" "ob-lisp.elc" "ob-lisp.el" "ob-lilypond.elc" "ob-lilypond.el" "ob-ledger.elc" "ob-ledger.el" "ob-latex.elc" "ob-latex.el" "ob-keys.elc" "ob-keys.el" "ob-js.elc" "ob-js.el" "ob-java.elc" "ob-java.el" "ob-J.elc" "ob-J.el" "ob-io.elc" "ob-io.el" "ob-haskell.elc" "ob-haskell.el" "ob-groovy.elc" "ob-groovy.el" "ob-gnuplot.elc" "ob-gnuplot.el" "ob-fortran.elc" "ob-fortran.el" "ob-forth.elc" "ob-forth.el" "ob-exp.elc" "ob-exp.el" "ob-eval.elc" "ob-eval.el" "ob-emacs-lisp.elc" "ob-emacs-lisp.el" "ob-ebnf.elc" "ob-ebnf.el" "ob-dot.elc" "ob-dot.el" "ob-ditaa.elc" "ob-ditaa.el" "ob-css.elc" "ob-css.el" "ob-core.elc" "ob-core.el" "ob-coq.elc" "ob-coq.el" "ob-comint.elc" "ob-comint.el" "ob-clojure.elc" "ob-clojure.el" "ob-calc.elc" "ob-calc.el" "ob-C.elc" "ob-C.el" "ob-awk.elc" "ob-awk.el" "ob-asymptote.elc" "ob-asymptote.el" "ob-abc.elc" "ob-abc.el" "etc/" "dir" "COPYING" "../" "./")
 
  ("/usr/local/Cellar/emacs/24.5/share/emacs/24.5/etc/" (22096 62295 0 0) "yow.lines" "WHY-FREE" "tutorials/" "TODO" "themes/" "THE-GNU-PROJECT" "TERMS" "srecode/" "spook.lines" "ses-example.ses" "schema/" "rgb.txt" "refcards/" "README" "publicsuffix.txt" "ps-prin1.ps" "ps-prin0.ps" "PROBLEMS" "package-keyring.gpg" "ORG-NEWS" "org/" "ORDERS" "NXML-NEWS" "nxml/" "NEXTSTEP" "NEWS.23" "NEWS.22" "NEWS.21" "NEWS.20" "NEWS.19" "NEWS.18" "NEWS.1-17" "NEWS" "MORE.STUFF" "MH-E-NEWS" "MACHINES" "LINUX-GNU" "JOKES" "images/" "HELLO" "grep.txt" "gnus-tut.txt" "GNUS-NEWS" "gnus/" "GNU" "future-bug" "FTP" "forms/" "ETAGS.README" "ETAGS.EBNF" "ERC-NEWS" "enriched.txt" "emacs.icon" "emacs.desktop" "emacs.appdata.xml" "emacs-buffer.gdb" "edt-user.el" "e/" "DOC" "DISTRIB" "DEVEL.HUMOR" "DEBUG" "COPYING" "CONTRIBUTE" "compilation.txt" "charsets/" "CENSORSHIP" "CALC-NEWS" "AUTHORS" "../" "./")
-
- ("/Users/amodeo/.emacs.d/elpa/" (22334 16996 0 0) "smex-20150822.1146/" "org-20160516/" "marmalade-20110602.1622/" "furl-20110112.1707/" "archives/" "../" "./")
 
  ("/usr/" (22095 59456 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "adic/" "../" "./")
 

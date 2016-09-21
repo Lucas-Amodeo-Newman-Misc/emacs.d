@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- org-mode
  linum-mode
- line-number-mode
- menu-bar-open
- list-packages
- recover-file
+ lorg-find-entry-id
+ lorg-git-push-orgfiles
+ org-mode
  text-mode
+ recover-file
+ line-number-mode
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
- (org-mode . 15)
+ (org-mode . 16)
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 226)
+ (recover-file . 227)
  (org-mobile-push . 2)
  (eval-buffer . 162)
  (visual-line-mode . 3)
@@ -28,10 +28,10 @@
  (lorg-update-status . 24)
  (lorg-store-id . 2)
  (lorg-set-condition-id . 1)
- (lorg-find-entry-id . 27)
+ (lorg-find-entry-id . 30)
  (lorg-set-id . 4)
  (write-region . 1)
- (text-mode . 8)
+ (text-mode . 9)
  (read-only-mode . 3)
  (toggle-read-only . 1)
  (lorg-update-subtree-statuses . 29)
@@ -71,5 +71,6 @@
  (set-variable . 1)
  (indent-for-tab-command . 1)
  (line-number-mode . 2)
- (linum-mode . 4)
+ (linum-mode . 5)
+ (lorg-git-push-orgfiles . 1)
 )

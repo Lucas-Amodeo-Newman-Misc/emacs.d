@@ -9,12 +9,12 @@
  (position . 49))
 ("org-refile-last-stored"
  (filename . "~/Org/work.org")
- (front-context-string . "** ITEM Artie's ")
- (rear-context-string . "CATION:\n  :END:\n")
- (position . 108))
+ (front-context-string . "** ACTION home f")
+ (rear-context-string . "ATION:\n  :END:\n\n")
+ (position . 109))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "**** INFO sam ha")
- (rear-context-string . "16-09-12 Monday\n")
- (position . 217748))
+ (front-context-string . "** ACTION count ")
+ (rear-context-string . "  3642\n   :END:\n")
+ (position . 13502))
 )
