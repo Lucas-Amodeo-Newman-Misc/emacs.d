@@ -92,7 +92,7 @@
     ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
      (sequence "ACTION!(`)" "ACTION(1)" "BREAKDOWN(2)" "|" "DONE(3!)")
      (sequence "BUTTON(b)" "STOCK(k)" "|")
-     (sequence "|" "ITEM(I)" "LOCATION(L)")
+     (sequence "|" "PERSON(P)" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|")
      (sequence "SEQUENCE(Q)" "MOVEMENT(M)" "|"))))
@@ -251,7 +251,7 @@
 ;;ORG APPEARANCE
 (set 'org-startup-indented t)
 (setq org-todo-keyword-faces
-      '(("SEQUENCE" . "dark orange")("MOVEMENT" . "purple")))
+      '(("SEQUENCE" . "dark orange")("MOVEMENT" . "purple")("PERSON" . "blue")))
 
 ;;ORG MOBILE
 
@@ -275,7 +275,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3644)
+(set 'last-lorg-id-number 3785)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
