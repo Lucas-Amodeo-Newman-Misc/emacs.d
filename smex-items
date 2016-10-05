@@ -17,7 +17,7 @@
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 229)
+ (recover-file . 232)
  (org-mobile-push . 2)
  (eval-buffer . 162)
  (visual-line-mode . 3)
