@@ -1,9 +1,9 @@
 
 ;; ----- smex-history -----
 (
+ lorg-find-entry-id
  recover-file
  linum-mode
- lorg-find-entry-id
  lorg-git-push-orgfiles
  org-mode
  text-mode
@@ -28,7 +28,7 @@
  (lorg-update-status . 24)
  (lorg-store-id . 2)
  (lorg-set-condition-id . 1)
- (lorg-find-entry-id . 30)
+ (lorg-find-entry-id . 31)
  (lorg-set-id . 4)
  (write-region . 1)
  (text-mode . 9)

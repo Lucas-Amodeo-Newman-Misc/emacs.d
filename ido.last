@@ -14,17 +14,18 @@
  ("/Users/amodeo/Dropbox/" . "Apps/")
  ("/Users/" . "amodeo/")
  ("/Users/amodeo/Code/" . "Python/")
- ("/Users/amodeo/Code/Python/" . "gorg/")
+ ("/Users/amodeo/Code/Python/" . "poker/")
  ("/Users/amodeo/Code/Python/gorg/" . "Control/")
- ("/Users/amodeo/" . ".emacs.d/")
+ ("/Users/amodeo/" . "Code/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/.emacs.d/"
- "/Users/amodeo/Org/"
+ "/Users/amodeo/Code/Python/poker/"
  "/Users/amodeo/Code/Python/gorg/Control/"
  "/Users/amodeo/Code/Python/gorg/"
+ "/Users/amodeo/.emacs.d/"
+ "/Users/amodeo/Org/"
  "/Users/amodeo/Code/Python/gorg/Control/Commands/"
  "/Users/amodeo/Code/Python/gorg/View/"
  "/Users/amodeo/Code/Python/gorg/Data/"
@@ -49,31 +50,35 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "cards.py"
+ "Core.py"
+ "keymaps.txt"
+ "Keymaps.py"
+ "test.py"
  "init.el"
  "work.org"
- "keymaps.txt"
- "test.py"
  "__init__.py"
- "Core.py"
  "Gates.py"
  "Basic.py"
- "Keymaps.py"
- "Stores.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/amodeo/" (22529 54703 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/amodeo/Code/Python/poker/" (22530 18676 0 0) "poker.py" "cards.py~" "cards.py" ".git/" "#poker.py#" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/Control/" (22498 13193 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
+
+ ("/Users/amodeo/Code/Python/gorg/" (22498 12212 0 0) "View/" "test2.py" "test.py~" "test.py" "Data/" "Control/" "__pycache__/" "__init__.py~" "__init__.py" ".DS_Store" "#gorg.org#" "../" "./")
+
+ ("/Users/amodeo/Org/" (22528 63180 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#food.org" "#main.org#" "#food.org#" "#archive.org#" "../" "./")
+
  ("/Users/amodeo/.emacs.d/" (22498 62581 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" ".#ido.last" "../" "./")
-
- ("/Users/amodeo/Org/" (22499 64447 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" "#work.org#" "#archive.org#" "../" "./")
-
- ("/Users/amodeo/Code/Python/gorg/Control/" (22498 12818 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/Control/Commands/" (22498 9494 0 0) "Basic.py~" "Basic.py" "__pycache__/" "__init__.py~" "__init__.py" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/control/" (22498 8920 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
-
- ("/Users/amodeo/Code/Python/gorg/" (22498 8775 0 0) "View/" "test2.py" "test.py~" "test.py" "Data/" "Control/" "__pycache__/" "__init__.py~" "__init__.py" ".DS_Store" "#gorg.org#" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/data/" (22497 64332 0 0) "Stores.py~" "Stores.py" "nodes.py~" "Nodes.py" "__pycache__/" "__init__.py" ".DS_Store" "#stores.py#" "#nodes.py#" "../" "./")
 
@@ -91,8 +96,6 @@
  ("/Users/amodeo/Desktop/" (22496 48031 0 0) "WirelessDiagnostics_C2XGL9PLDV13_2016-09-14_19.27.13.tar.gz" "Things/" "Stuff/" "Old Firefox Data/" ".localized" ".DS_Store" ".#refresh_refresh.txt" "#refresh_refresh.txt#" "../" "./")
 
  ("/Users/amodeo/Code/Python/hal/" (22481 27208 0 0) "test.py~" "test.py" "pyorg.py~" "pyorg.py" "hal_definitions.py~" "hal_definitions.py" "hal_core.py~" "hal_core.py" "hal_actions.py~" "hal_actions.py" "definitions.org~" "definitions.org" "__pycache__/" "../" "./")
-
- ("/Users/amodeo/" (22496 57573 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/amodeo/.emacs.d/elpa/" (22479 1829 0 0) "smex-20150822.1146/" "org-20160905/" "org-20160516/" "marmalade-20110602.1622/" "hal-mode-readme.txt" "furl-20110112.1707/" "archives/" "../" "./")
 
