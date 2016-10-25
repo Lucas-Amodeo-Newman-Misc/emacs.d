@@ -535,9 +535,11 @@
 (defun lorg-activate-entry()
   "Accepts no arguments.  Activates the entry at point."
   (interactive)
-  (org-entry-put (point) "ACTIVE" "t")
-  (org-entry-put (point) "DONE" "nil")
-  (print "Entry activated."))
+  (if (equal (org-entry-get (point) "DONE") "t")
+      nil
+    (org-entry-put (point) "ACTIVE" "t")
+    (org-entry-put (point) "DONE" "nil")
+    (print "Entry activated.")))
 
 (defun lorg-activate-subtree(arg)
   "Accepts a prefix argument.  Activates the subtree at point.  Without the prefix arg, calls lorg-activate-entry and lorg-update-subtree on the entry at point.  With the prefix arg, calls lorg-activate-entry on the entry at point and each individual member of the subtree which begins at point."
