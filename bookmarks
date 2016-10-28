@@ -14,7 +14,7 @@
  (position . 109))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** ACTION! give ")
- (rear-context-string . "  nil\n    :END:\n")
- (position . 14752))
+ (front-context-string . "** ACTION impoun")
+ (rear-context-string . "  3875\n   :END:\n")
+ (position . 10588))
 )
