@@ -246,6 +246,19 @@
 	("Lj" "Lorg Journal" entry (file+datetree "~/org/lorg.org")
 	 "* JOURNAL %U\n%i%?")
 	("Li" "Lorg Info" entry (file+datetree "~/org/lorg.org")
+	 "* INFO %?\n%i")
+	("C" "Car Captures")
+	("C`" "Car Action!" entry (file+headline "~/org/car.org" "Initiatives")
+	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("C1" "Car Action" entry (file+headline "~/org/car.org" "Initiatives")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("C2" "Car Breakdown" entry (file+headline "~/org/car.org" "Initiatives")
+	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("Cb" "Car Button" entry (file+headline "~/org/car.org" "Buttons")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	("Cj" "Car Journal" entry (file+datetree "~/org/car.org")
+	 "* JOURNAL %U\n%i%?")
+	("Ci" "Car Info" entry (file+datetree "~/org/car.org")
 	 "* INFO %?\n%i")))
 
 ;;ORG APPEARANCE
@@ -275,7 +288,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3877)
+(set 'last-lorg-id-number 3879)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
