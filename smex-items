@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ eval-buffer
  recover-file
  lorg-find-entry-id
  linum-mode
  lorg-git-push-orgfiles
  org-mode
  text-mode
- line-number-mode
 )
 
 ;; ----- smex-data -----
@@ -17,9 +17,9 @@
  (customize . 57)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 233)
+ (recover-file . 238)
  (org-mobile-push . 2)
- (eval-buffer . 162)
+ (eval-buffer . 163)
  (visual-line-mode . 3)
  (enriched-mode . 1)
  (font-lock-mode . 2)
