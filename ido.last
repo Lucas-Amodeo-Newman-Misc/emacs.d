@@ -21,8 +21,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/Org/"
  "/Users/amodeo/.emacs.d/"
+ "/Users/amodeo/Org/"
  "/Users/amodeo/Code/Python/gorg/Control/"
  "/Users/amodeo/Code/Python/gorg/View/"
  "/Users/amodeo/Code/Python/gorg/Control/Commands/"
@@ -50,8 +50,8 @@
 
 ;; ----- ido-work-file-list -----
 (
- "main.org"
  "init.el"
+ "main.org"
  "Keymaps.py"
  "Core.py"
  "Gates.py"
@@ -64,9 +64,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22567 24583 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#work.org" ".#lorg.org" ".#food.org" ".#car.org" ".#body.org" "#work.org#" "#lorg.org#" "#food.org#" "#car.org#" "#body.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/.emacs.d/" (22569 63460 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
- ("/Users/amodeo/.emacs.d/" (22567 23671 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
+ ("/Users/amodeo/Org/" (22569 62040 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#main.org" ".#food.org" ".#car.org" "#main.org#" "#food.org#" "#car.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/Control/" (22561 28064 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 

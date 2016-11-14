@@ -38,27 +38,36 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-custom-commands
    (quote
-    (("0" "Upper Priority"
-      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY>5" nil))
+    (("A" . "Actions")
+    ("A7" "Actions-7"
+      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY>6" nil))
       nil)
-     ("9" "Top Initiatives"
-      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY=5" nil))
+     ("A6" "Actions-6"
+      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY=6" nil))
       nil)
-     ("8" "Ready to Prioritize"
+     ("A5" "Actions-5"
+      ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY=5-URGENCY<2" nil))
+      nil)
+     ("A4" "Actions-4"
       ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY<5-URGENCY<2" nil))
       nil)
-     ("n" "Need"
-      ((tags "NEED=\"t\"" nil))
-      nil)
-     ("k" "Stock"
-      ((tags "TODO=\"ITEM\"+STOCK=\"t\"" nil))
-      nil)
-     ("u" "Stuck"
-      ((tags "stuck" nil))
-      nil)
-     ("b" "Buttons"
-      ((todo "BUTTON"))
-      nil))))
+    ("B" .  "Buttons")
+    ("B7" "Buttons-7"
+     ((tags "TODO=\"BUTTON\"+URGENCY=7"))
+     nil)
+    ("B6" "Buttons-6"
+     ((tags "TODO=\"BUTTON\"+URGENCY=6"))
+     nil)
+    ("n" "Need"
+     ((tags "NEED=\"t\"" nil))
+     nil)
+    ("k" "Stock"
+     ((tags "TODO=\"ITEM\"+STOCK=\"t\"" nil))
+     nil)
+    ("u" "Stuck"
+     ((tags "stuck" nil))
+     nil)
+)))
  '(org-agenda-files (quote ("~/Org")))
  '(org-agenda-sorting-strategy
    (quote
@@ -146,7 +155,7 @@
 	("M2" "Breakdown" entry (file+headline "~/org/main.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Mb" "Button" entry (file+headline "~/org/main.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("MI" "Item" entry (file+headline "~/org/main.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3STOCK %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:STOCK: nil\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("ML" "Location" entry (file+headline "~/org/main.org" "Locations")
@@ -187,7 +196,7 @@
 	("W2" "Work Breakdown" entry (file+headline "~/org/work.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Wb" "Work Button" entry (file+headline "~/org/work.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("Wj" "Work Journal" entry (file+datetree "~/org/work.org")
 	 "* JOURNAL %U\n%?")
 	("Wi" "Work Info" entry (file+datetree "~/org/work.org")
@@ -206,7 +215,7 @@
 	("B2" "Body Breakdown" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Bb" "Body Button" entry (file+headline "~/org/body.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("BA" "Body Appointment" entry (file+headline "~/org/body.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Bj" "Body Journal" entry (file+datetree "~/org/body.org")
@@ -225,7 +234,7 @@
 	("F2" "Food Breakdown" entry (file+headline "~/org/food.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Fb" "Food Button" entry (file+headline "~/org/food.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("FI" "Food Item" entry (file+headline "~/org/food.org" "Items")
 	 "* ITEM %i%?\n:PROPERTIES:\n:COLUMNS: %15ITEM %3STOCK %3NEED %3SPEC %3QUANTITY %3UNIT %5LOCATION\n:STOCK: nil\n:NEED: nil\n:SPEC: 0\n:QUANTITY: 1\n:UNIT:\n:LOCATION: \n:END:")
 	("Fj" "Food Journal" entry (file+datetree "~/org/food.org")
@@ -244,7 +253,7 @@
 	("L2" "Lorg Breakdown" entry (file+headline "~/org/lorg.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Lb" "Lorg Button" entry (file+headline "~/org/lorg.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("Lj" "Lorg Journal" entry (file+datetree "~/org/lorg.org")
 	 "* JOURNAL %U\n%i%?")
 	("Li" "Lorgx Info" entry (file+datetree "~/org/lorg.org")
@@ -257,7 +266,7 @@
 	("C2" "Car Breakdown" entry (file+headline "~/org/car.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Cb" "Car Button" entry (file+headline "~/org/car.org" "Buttons")
-	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:COLUMNS: %25ITEM %6TODO %3ACTIVE\n:END:")
+	 "* BUTTON %i%?\n:PROPERTIES:\n:ACTIVE: nil\n:URGENCY: 6\n:COLUMNS: %25ITEM %6TODO %3ACTIVE %2URGENCY\n:END:")
 	("CA" "Car Appointment" entry (file+headline "~/org/car.org" "Appointments")
 	 "* APPOINTMENT %?\n  %i\n")
 	("Cj" "Car Journal" entry (file+datetree "~/org/car.org")
@@ -292,7 +301,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3926)
+(set 'last-lorg-id-number 3933)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."

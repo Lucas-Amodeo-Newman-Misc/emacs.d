@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
+ check-parens
+ customize
  recover-file
  linum-mode
  eval-buffer
  lorg-find-entry-id
  lorg-git-push-orgfiles
- org-mode
- text-mode
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
  (org-mode . 16)
- (customize . 57)
+ (customize . 58)
  (org-indent-mode . 13)
  (org-agenda . 1)
  (recover-file . 250)
@@ -36,7 +36,7 @@
  (toggle-read-only . 1)
  (lorg-update-subtree-statuses . 29)
  (org-toggle-sticky-agenda . 1)
- (check-parens . 6)
+ (check-parens . 7)
  (menu-bar-open . 7)
  (lorg-update-activity . 9)
  (lorg-update-subtree-activities . 3)
