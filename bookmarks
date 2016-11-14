@@ -14,7 +14,7 @@
  (position . 109))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** BREAKDOWN sta")
- (rear-context-string . "  3919\n   :END:\n")
- (position . 11552))
+ (front-context-string . "** BREAKDOWN buy")
+ (rear-context-string . "C3FF4B\n   :END:\n")
+ (position . 11966))
 )
