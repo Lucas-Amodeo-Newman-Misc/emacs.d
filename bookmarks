@@ -14,7 +14,7 @@
  (position . 109))
 ("org-capture-last-stored"
  (filename . "~/Org/main.org")
- (front-context-string . "** BREAKDOWN cle")
- (rear-context-string . "079DDA\n   :END:\n")
- (position . 8363))
+ (front-context-string . "** BUTTON need t")
+ (rear-context-string . "  3946\n   :END:\n")
+ (position . 36309))
 )
