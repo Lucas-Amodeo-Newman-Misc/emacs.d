@@ -1,9 +1,9 @@
 
 ;; ----- smex-history -----
 (
+ recover-file
  check-parens
  customize
- recover-file
  linum-mode
  eval-buffer
  lorg-find-entry-id
@@ -17,7 +17,7 @@
  (customize . 58)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 250)
+ (recover-file . 256)
  (org-mobile-push . 2)
  (eval-buffer . 164)
  (visual-line-mode . 3)

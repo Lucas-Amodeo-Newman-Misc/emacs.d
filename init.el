@@ -100,7 +100,7 @@
    (quote
     ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
      (sequence "ACTION!(`)" "ACTION(1)" "BREAKDOWN(2)" "|" "DONE(3!)")
-     (sequence "BUTTON(b)" "STOCK(k)" "|")
+     (sequence "STOCK(k)" "|" "BUTTON(b)")
      (sequence "|" "PERSON(P)" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|")
@@ -301,7 +301,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3933)
+(set 'last-lorg-id-number 3936)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
