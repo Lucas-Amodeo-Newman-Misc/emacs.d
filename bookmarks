@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n  :END:\n\n")
  (position . 109))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "** BUTTON need t")
- (rear-context-string . "  3946\n   :END:\n")
- (position . 36309))
+ (filename . "~/Org/lorg.org")
+ (front-context-string . "** BREAKDOWN com")
+ (rear-context-string . "  3940\n   :END:\n")
+ (position . 19530))
 )
