@@ -635,7 +635,7 @@
  (execute-kbd-macro (kbd "RET"))
  (execute-kbd-macro "git commit -m \"routine commit and push\"")
  (execute-kbd-macro (kbd "RET"))
- (execute-kbd-macro "git push db master")
+ (execute-kbd-macro "git push origin master")
  (execute-kbd-macro (kbd "RET")))
 
 (defun lorg-git-push-.emacs.d ()
@@ -648,7 +648,7 @@
  (execute-kbd-macro (kbd "RET"))
  (execute-kbd-macro "git commit -m \"routine commit and push\"")
  (execute-kbd-macro (kbd "RET"))
- (execute-kbd-macro "git push db master")
+ (execute-kbd-macro "git push origin master")
  (execute-kbd-macro (kbd "RET")))
 
 (defun lorg-git-push-all ()
