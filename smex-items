@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ lorg-git-push-\.emacs\.d
+ lorg-git-push-orgfiles
  recover-file
  lorg-find-entry-id
  check-parens
  customize
  linum-mode
- eval-buffer
- lorg-git-push-orgfiles
 )
 
 ;; ----- smex-data -----
@@ -72,5 +72,6 @@
  (indent-for-tab-command . 1)
  (line-number-mode . 2)
  (linum-mode . 6)
- (lorg-git-push-orgfiles . 1)
+ (lorg-git-push-orgfiles . 2)
+ (lorg-git-push-\.emacs\.d . 1)
 )
