@@ -16,13 +16,13 @@
  ("/Users/amodeo/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/" . "gorg/")
  ("/Users/amodeo/Code/Python/gorg/" . "Control/")
- ("/Users/amodeo/" . ".emacs.d/")
+ ("/Users/amodeo/" . "Org/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/gorg/Control/"
  "/Users/amodeo/Code/Python/gorg/View/"
  "/Users/amodeo/Code/Python/gorg/Control/Commands/"
@@ -50,8 +50,8 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
  "main.org"
+ "init.el"
  "car.org"
  "Keymaps.py"
  "Core.py"
@@ -64,6 +64,10 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/amodeo/Org/" (22576 33399 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+
+ ("/Users/amodeo/" (22573 63742 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
+
  ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22573 57874 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
 " "hal.org" "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "car.org" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
 
@@ -77,11 +81,7 @@
 
  ("/Users/amodeo/Code/Python/gorg/View/" (22558 5985 0 0) "Gates.py~" "Gates.py" "__pycache__/" "../" "./")
 
- ("/Users/amodeo/" (22573 61095 0 0) "Public/" "Pictures/" "org.ics" "News/" "Music/" "Movies/" "Library/" "Emacs/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
-
  ("/Users/amodeo/.emacs.d/" (22573 57872 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
-
- ("/Users/amodeo/Org/" (22573 59439 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#lorg.org" ".#car.org" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/Control/" (22561 28064 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 

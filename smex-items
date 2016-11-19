@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ recover-session
+ recover-file
  lorg-git-push-\.emacs\.d
  lorg-git-push-orgfiles
- recover-file
  lorg-find-entry-id
  check-parens
  customize
- linum-mode
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (customize . 58)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 257)
+ (recover-file . 262)
  (org-mobile-push . 2)
  (eval-buffer . 164)
  (visual-line-mode . 3)
@@ -55,7 +55,7 @@
  (lorg-set-location . 5)
  (lorg-visit-location . 4)
  (org-icalendar-combine-agenda-files . 1)
- (recover-session . 1)
+ (recover-session . 3)
  (gnus . 2)
  (report-emacs-bug . 1)
  (python-mode . 4)
