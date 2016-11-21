@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n  :END:\n\n")
  (position . 109))
 ("org-capture-last-stored"
- (filename . "~/Org/main.org")
- (front-context-string . "*** ITEM Mail Ke")
- (rear-context-string . " 3969\n    :END:\n")
- (position . 19569))
+ (filename . "~/org/main.org")
+ (front-context-string . "** ACTION modify")
+ (rear-context-string . "ecking the mail\n")
+ (position . 8250))
 )

@@ -21,8 +21,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Org/"
+ "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/gorg/Control/"
  "/Users/amodeo/Code/Python/gorg/View/"
  "/Users/amodeo/Code/Python/gorg/Control/Commands/"
@@ -50,8 +50,8 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
  "main.org"
+ "init.el"
  "car.org"
  "Keymaps.py"
  "Core.py"
@@ -64,13 +64,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22576 34312 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#work.org#" "#main.org#" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22576 33399 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22573 63742 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
-
- ("/Users/amodeo/.emacs.d/" (22576 34312 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
-
- ("/Users/amodeo/.emacs.d/auto-save-list/" (22576 34312 0 0) ".saves-960-lucass-MacBook-Pro.local~" ".saves-9506-lucass-MacBook-Pro.local~" ".saves-947-lucass-MacBook-Pro.local~" ".saves-937-lucass-MacBook-Pro.local~" ".saves-912-lucass-MacBook-Pro.local~" ".saves-909-lucass-MacBook-Pro.local~" ".saves-896-lucass-MacBook-Pro.local~" ".saves-8808-lucass-MacBook-Pro.local~" ".saves-851-lucass-MacBook-Pro.local~" ".saves-829-lucass-MacBook-Pro.local~" ".saves-823-lucass-MacBook-Pro.local~" ".saves-7717-lucass-MacBook-Pro.local~" ".saves-769-lucass-MacBook-Pro.local~" ".saves-7689-lucass-MacBook-Pro.local~" ".saves-743-lucass-MacBook-Pro.local~" ".saves-740-lucass-MacBook-Pro.local~" ".saves-7381-lucass-MacBook-Pro.local~" ".saves-731-lucass-MacBook-Pro.local~" ".saves-725-lucass-MacBook-Pro.local~" ".saves-689-lucass-MacBook-Pro.local~" ".saves-6708-lucass-MacBook-Pro.local~" ".saves-648-lucass-MacBook-Pro.local~" ".saves-6350-lucass-MacBook-Pro.local~" ".saves-630-lucass-MacBook-Pro.local~" ".saves-601-lucass-MacBook-Pro.local~" ".saves-5870-lucass-MacBook-Pro.local~" ".saves-5518-lucass-MacBook-Pro.local~" ".saves-545-lucass-MacBook-Pro.local~" ".saves-543-lucass-MacBook-Pro.local~" ".saves-5396-lucass-MacBook-Pro.local~" ".saves-5358-lucass-MacBook-Pro.local~" ".saves-533-lucass-MacBook-Pro.local~" ".saves-5292-lucass-MacBook-Pro.local~" ".saves-529-lucass-MacBook-Pro.local~" ".saves-522-lucass-MacBook-Pro.local~" ".saves-518-lucass-MacBook-Pro.local~" ".saves-516-lucass-MacBook-Pro.local~" ".saves-514-lucass-MacBook-Pro.local~" ".saves-510-lucass-MacBook-Pro.local~" ".saves-509-lucass-MacBook-Pro.local~" ".saves-506-lucass-MacBook-Pro.local~" ".saves-499-lucass-MacBook-Pro.local~" ".saves-496-lucass-MacBook-Pro.local~" ".saves-494-lucass-MacBook-Pro.local~" ".saves-493-lucass-MacBook-Pro.local~" ".saves-487-lucass-MacBook-Pro.local~" ".saves-4868-lucass-MacBook-Pro.local~" ".saves-486-lucass-MacBook-Pro.local~" ".saves-4823-lucass-MacBook-Pro.local~" ".saves-472-lucass-MacBook-Pro.local~" ".saves-467-lucass-MacBook-Pro.local~" ".saves-4641-lucass-MacBook-Pro.local~" ".saves-459-lucass-MacBook-Pro.local~" ".saves-45641-lucass-MacBook-Pro.local~" ".saves-4524-lucass-MacBook-Pro.local~" ".saves-4509-lucass-MacBook-Pro.local~" ".saves-4442-lucass-MacBook-Pro.local~" ".saves-437-lucass-MacBook-Pro.local~" ".saves-4367-lucass-MacBook-Pro.local~" ".saves-434-lucass-MacBook-Pro.local~" ".saves-4284-lucass-MacBook-Pro.local~" ".saves-4251-lucass-MacBook-Pro.local~" ".saves-425-lucass-MacBook-Pro.local~" ".saves-4205-lucass-MacBook-Pro.local~" ".saves-416-lucass-MacBook-Pro.local~" ".saves-4122-lucass-MacBook-Pro.local~" ".saves-4095-lucass-MacBook-Pro.local~" ".saves-3991-lucass-MBP.home~" ".saves-3990-lucass-MacBook-Pro.local~" ".saves-399-lucass-MacBook-Pro.local~" ".saves-3897-lucass-MacBook-Pro.local~" ".saves-3856-lucass-MacBook-Pro.local~" ".saves-3824-lucass-MacBook-Pro.local~" ".saves-3753-lucass-MacBook-Pro.local~" ".saves-3724-lucass-MacBook-Pro.local~" ".saves-3702-lucass-MacBook-Pro.local~" ".saves-3679-lucass-MacBook-Pro.local~" ".saves-3612-lucass-MacBook-Pro.local~" ".saves-3508-lucass-MacBook-Pro.local~" ".saves-3410-lucass-MacBook-Pro.local~" ".saves-3331-lucass-MacBook-Pro.local~" ".saves-3324-lucass-MacBook-Pro.local~" ".saves-3311-lucass-MacBook-Pro.local~" ".saves-3266-lucass-MacBook-Pro.local~" ".saves-3182-lucass-MacBook-Pro.local~" ".saves-3146-lucass-MacBook-Pro.local~" ".saves-2954-lucass-MacBook-Pro.local~" ".saves-2857-lucass-MacBook-Pro.local~" ".saves-2784-lucass-MacBook-Pro.local~" ".saves-27743-lucass-MacBook-Pro.local~" ".saves-2748-lucass-MacBook-Pro.local~" ".saves-2690-lucass-MacBook-Pro.local~" ".saves-26152-lucass-MacBook-Pro.local~" ".saves-2597-lucass-MacBook-Pro.local~" ".saves-2576-lucass-MacBook-Pro.local~" ".saves-2556-lucass-MacBook-Pro.local~" ".saves-2525-lucass-MacBook-Pro.local~" ".saves-2515-lucass-MacBook-Pro.local~" ".saves-23584-lucass-MacBook-Pro.local~" ".saves-2300-lucass-MacBook-Pro.local~" ".saves-2170-lucass-MacBook-Pro.local~" ".saves-2067-lucass-MacBook-Pro.local~" ".saves-2064-lucass-MacBook-Pro.local~" ".saves-20332-lucass-MacBook-Pro.local~" ".saves-2029-lucass-MacBook-Pro.local~" ".saves-20076-lucass-MacBook-Pro.local~" ".saves-1988-lucass-MacBook-Pro.local~" ".saves-1976-lucass-MacBook-Pro.local~" ".saves-1967-lucass-MBP.home~" ".saves-1895-lucass-MacBook-Pro.local~" ".saves-18700-lucass-MacBook-Pro.local~" ".saves-1831-lucass-MacBook-Pro.local~" ".saves-1813-lucass-MacBook-Pro.local~" ".saves-1762-lucass-MacBook-Pro.local~" ".saves-17073-lucass-MacBook-Pro.local~" ".saves-16789-lucass-MacBook-Pro.local~" ".saves-1659-lucass-MacBook-Pro.local~" ".saves-1658-lucass-MacBook-Pro.local~" ".saves-16540-lucass-MacBook-Pro.local~" ".saves-16267-lucass-MacBook-Pro.local~" ".saves-1565-lucass-MacBook-Pro.local~" ".saves-1477-lucass-MacBook-Pro.local~" ".saves-1470-lucass-MacBook-Pro.local~" ".saves-14259-lucass-MacBook-Pro.local~" ".saves-1367-lucass-MacBook-Pro.local~" ".saves-1364-lucass-MacBook-Pro.local~" ".saves-1346-lucass-MacBook-Pro.local~" ".saves-1320-lucass-MacBook-Pro.local~" ".saves-1263-lucass-MacBook-Pro.local~" ".saves-1236-lucass-MacBook-Pro.local~" ".saves-1226-lucass-MacBook-Pro.local~" ".saves-1220-lucass-MacBook-Pro.local~" ".saves-1137-lucass-MacBook-Pro.local~" ".saves-1117-lucass-MacBook-Pro.local~" ".saves-1097-lucass-MacBook-Pro.local~" ".saves-1081-lucass-MacBook-Pro.local~" ".saves-1080-lucass-MacBook-Pro.local~" ".saves-1076-lucass-MacBook-Pro.local~" ".saves-1067-lucass-MacBook-Pro.local~" ".saves-10367-lucass-MacBook-Pro.local~" ".saves-1008-lucass-MacBook-Pro.local~" ".saves-1003-lucass-MacBook-Pro.local~" "../" "./")
 
  ("/Users/amodeo/Dropbox/Apps/MobileOrg/" (22573 57874 0 0) "work.org" "work-system.org" "mobileorg.org~" "mobileorg.org" "mobileorg (Lucas Newman's conflicted copy 2016-01-03).org" "mobile-pull.org" "main.org~" "main.org" "lorg.org" "journal.org" "index.org" "Icon
 " "hal.org" "gorg.org" "food.org" "dump.org" "checksums.dat~" "checksums.dat" "car.org" "body.org" "archive.org" "agendas.org" ".DS_Store" ".dropbox" "../" "./")
@@ -84,6 +80,8 @@
  ("/Users/amodeo/Code/Python/gorg/Control/Commands/" (22561 27721 0 0) "Basic.py~" "Basic.py" "__pycache__/" "__init__.py~" "__init__.py" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/View/" (22558 5985 0 0) "Gates.py~" "Gates.py" "__pycache__/" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/" (22573 57872 0 0) "smex-items" "repos/" "master" "init.el~" "init.el" "ido.last~" "ido.last" "elpa/" "bookmarks" "auto-save-list/" ".org-id-locations" ".git/" "../" "./")
 
  ("/Users/amodeo/Code/Python/gorg/Control/" (22561 28064 0 0) "keymaps.txt~" "keymaps.txt" "Keymaps.py~" "Keymaps.py" "Core.py~" "Core.py" "Commands/" "__pycache__/" "__init__.py" "../" "./")
 
@@ -160,6 +158,8 @@
  ("/Users/amodeo/Code/elisp/lorg/" (22309 10541 0 0) "Org/" "lorg1.el~" "lorg1.el" "../" "./")
 
  ("/Users/amodeo/Code/elisp/lorg/Org/" (22309 10543 0 0) "work.org~" "work.org" "mobile-pull.org~" "mobile-pull.org" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "body.org~" "body.org" "archive.org~" "archive.org" ".git/" "../" "./")
+
+ ("/Users/amodeo/.emacs.d/auto-save-list/" (22269 20438 0 0) ".saves-909-lucass-MacBook-Pro.local~" ".saves-829-lucass-MacBook-Pro.local~" ".saves-823-lucass-MacBook-Pro.local~" ".saves-743-lucass-MacBook-Pro.local~" ".saves-627-lucass-MacBook-Pro.local~" ".saves-548-lucass-MacBook-Pro.local~" ".saves-4868-lucass-MacBook-Pro.local~" ".saves-1762-lucass-MacBook-Pro.local~" ".saves-1320-lucass-MacBook-Pro.local~" "../" "./")
 
  ("/Users/amodeo/Dropbox/Apps/" (22098 42924 0 0) "MobileOrg/" ".DS_Store" "../" "./")
 
