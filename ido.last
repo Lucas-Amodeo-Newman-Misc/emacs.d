@@ -64,7 +64,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22576 33399 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Org/" (22579 16822 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22573 63742 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 

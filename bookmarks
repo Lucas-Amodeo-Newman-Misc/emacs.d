@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n  :END:\n\n")
  (position . 109))
 ("org-capture-last-stored"
- (filename . "~/org/main.org")
- (front-context-string . "** ACTION modify")
- (rear-context-string . "ecking the mail\n")
- (position . 8250))
+ (filename . "~/Org/body.org")
+ (front-context-string . "** BREAKDOWN exe")
+ (rear-context-string . "  3973\n   :END:\n")
+ (position . 11188))
 )
