@@ -13,8 +13,8 @@
  (rear-context-string . "ATION:\n  :END:\n\n")
  (position . 109))
 ("org-capture-last-stored"
- (filename . "~/Org/body.org")
- (front-context-string . "** BREAKDOWN exe")
- (rear-context-string . "  3973\n   :END:\n")
- (position . 11188))
+ (filename . "~/Org/food.org")
+ (front-context-string . "** ITEM bacon\n  ")
+ (rear-context-string . "  nil\n    :END:\n")
+ (position . 109215))
 )

@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/" . "pygame/")
+ ("/Users/amodeo/Desktop/Stuff/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/gorg/Control/" . "Commands/")
  ("/Users/amodeo/Desktop/Stuff/" . "Hal/")
  ("/Users/amodeo/Desktop/" . "Stuff/")
@@ -21,6 +23,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/amodeo/Desktop/Stuff/Code/Python/pygame/"
+ "/Users/amodeo/Desktop/Stuff/Code/Python/"
+ "/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/"
  "/Users/amodeo/Org/"
  "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/gorg/Control/"
@@ -50,21 +55,29 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "rts.py"
+ "circles.py"
+ "test.py"
+ "body.org"
  "main.org"
  "init.el"
  "car.org"
  "Keymaps.py"
  "Core.py"
  "Gates.py"
- "keymaps.txt"
- "Basic.py"
- "test.py"
- "archive.org_archive"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/amodeo/Org/" (22579 16822 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" "#archive.org#" "../" "./")
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/pygame/" (22583 37860 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py~" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/" (22583 37454 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py~" "test.py" "sockets/" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pyorg/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "hal/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/" (22100 30989 0 0) "test2.py" "test.py~" "test.py" "#test3.py#" "#test2.py#" "#test.py#" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/" (22461 60579 0 0) "Python/" "iOS/" "elisp/" "C/" "AWS/" ".DS_Store" "#poker.py#" "../" "./")
+
+ ("/Users/amodeo/Org/" (22581 62215 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#body.org" "#body.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22573 63742 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")
 

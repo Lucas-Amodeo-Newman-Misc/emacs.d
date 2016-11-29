@@ -2,12 +2,12 @@
 ;; ----- smex-history -----
 (
  recover-file
+ eval-buffer
  recover-session
  lorg-git-push-\.emacs\.d
  lorg-git-push-orgfiles
  lorg-find-entry-id
  check-parens
- customize
 )
 
 ;; ----- smex-data -----
@@ -17,9 +17,9 @@
  (customize . 58)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 263)
+ (recover-file . 266)
  (org-mobile-push . 2)
- (eval-buffer . 164)
+ (eval-buffer . 165)
  (visual-line-mode . 3)
  (enriched-mode . 1)
  (font-lock-mode . 2)

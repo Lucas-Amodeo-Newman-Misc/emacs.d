@@ -152,6 +152,8 @@
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("M1" "Action" entry (file+headline "~/org/main.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("M!" "Recurring" entry (file+headline "~/org/main.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("M2" "Breakdown" entry (file+headline "~/org/main.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Mb" "Button" entry (file+headline "~/org/main.org" "Buttons")
@@ -171,6 +173,8 @@
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("G1" "Gorg Action" entry (file+headline "~/org/gorg.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("G!" "Gorg Recurring" entry (file+headline "~/org/gorg.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("G2" "Gorg Breakdown" entry (file+headline "~/org/gorg.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Gj" "Gorg Journal" entry (file+datetree "~/org/gorg.org")
@@ -193,6 +197,8 @@
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("W1" "Work Action" entry (file+headline "~/org/work.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("W!" "Work Recurring" entry (file+headline "~/org/work.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("W2" "Work Breakdown" entry (file+headline "~/org/work.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Wb" "Work Button" entry (file+headline "~/org/work.org" "Buttons")
@@ -212,6 +218,8 @@
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("B1" "Body Action" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("B!" "Body Recurring" entry (file+headline "~/org/body.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("B2" "Body Breakdown" entry (file+headline "~/org/body.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Bb" "Body Button" entry (file+headline "~/org/body.org" "Buttons")
@@ -231,6 +239,8 @@
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("F1" "Food Action" entry (file+headline "~/org/food.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("F!" "Food Recurring" entry (file+headline "~/org/food.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("F2" "Food Breakdown" entry (file+headline "~/org/food.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Fb" "Food Button" entry (file+headline "~/org/food.org" "Buttons")
@@ -263,6 +273,8 @@
 	 "* ACTION! %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("C1" "Car Action" entry (file+headline "~/org/car.org" "Initiatives")
 	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
+	("C!" "Car Recurring" entry (file+headline "~/org/car.org" "Recurring")
+	 "* ACTION %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 6\n:END:")
 	("C2" "Car Breakdown" entry (file+headline "~/org/car.org" "Initiatives")
 	 "* BREAKDOWN %i%?\n:PROPERTIES:\n:ACTIVE: t\n:DONE: nil\n:URGENCY: 5\n:END:")
 	("Cb" "Car Button" entry (file+headline "~/org/car.org" "Buttons")
@@ -301,7 +313,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3974)
+(set 'last-lorg-id-number 3984)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
