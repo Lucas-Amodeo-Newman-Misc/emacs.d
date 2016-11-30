@@ -2,8 +2,8 @@
 ;; ----- smex-history -----
 (
  recover-file
- eval-buffer
  recover-session
+ eval-buffer
  lorg-git-push-\.emacs\.d
  lorg-git-push-orgfiles
  lorg-find-entry-id
@@ -17,7 +17,7 @@
  (customize . 58)
  (org-indent-mode . 13)
  (org-agenda . 1)
- (recover-file . 266)
+ (recover-file . 274)
  (org-mobile-push . 2)
  (eval-buffer . 165)
  (visual-line-mode . 3)
@@ -55,7 +55,7 @@
  (lorg-set-location . 5)
  (lorg-visit-location . 4)
  (org-icalendar-combine-agenda-files . 1)
- (recover-session . 3)
+ (recover-session . 6)
  (gnus . 2)
  (report-emacs-bug . 1)
  (python-mode . 4)

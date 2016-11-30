@@ -14,7 +14,7 @@
  (position . 109))
 ("org-capture-last-stored"
  (filename . "~/Org/food.org")
- (front-context-string . "** ITEM bacon\n  ")
- (rear-context-string . "  nil\n    :END:\n")
- (position . 109215))
+ (front-context-string . "** ITEM rasberry")
+ (rear-context-string . "  3997\n   :END:\n")
+ (position . 108961))
 )
