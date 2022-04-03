@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/lucasnewman/code/Python/microblog/app/" . "templates/")
+ ("/Users/lucasnewman/code/Python/microblog/" . "app/")
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/" . "pygame/")
+ ("/Users/amodeo/Desktop/Stuff/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/gorg/Control/" . "Commands/")
  ("/Users/amodeo/Desktop/Stuff/" . "Hal/")
  ("/Users/amodeo/Desktop/" . "Stuff/")
@@ -21,6 +25,12 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/lucasnewman/code/Python/microblog/app/"
+ "/Users/lucasnewman/code/Python/microblog/"
+ "/Users/lucasnewman/code/Python/microblog/app/templates/"
+ "/Users/amodeo/Desktop/Stuff/Code/Python/pygame/"
+ "/Users/amodeo/Desktop/Stuff/Code/Python/"
+ "/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/"
  "/Users/amodeo/Org/"
  "/Users/amodeo/.emacs.d/"
  "/Users/amodeo/Code/Python/gorg/Control/"
@@ -50,20 +60,34 @@
 
 ;; ----- ido-work-file-list -----
 (
- "body.org"
- "main.org"
- "init.el"
- "car.org"
- "Keymaps.py"
- "Core.py"
- "Gates.py"
- "keymaps.txt"
- "Basic.py"
- "test.py"
+ "models.py"
+ "config.py"
+ "login.html"
+ "base.html"
+ "routes.py"
+ "forms.py"
+ "__init__.py"
+ "index.html"
+ ".flaskenv"
+ "microblog.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/lucasnewman/code/Python/microblog/app/" (25146 27825 776089 28000) "routes.py" "#routes.py#" "forms.py~" "templates/" "__init__.py~" ".#__init__.py" "routes.py~" "forms.py" "__pycache__/" "__init__.py" "#__init__.py#" ".#routes.py" "../" "./")
+
+ ("/Users/lucasnewman/code/Python/microblog/app/templates/" (25145 63416 590467 862000) "index.html~" "login.html~" "login.html" "base.html" "index.html" "base.html~" "../" "./")
+
+ ("/Users/lucasnewman/code/Python/microblog/" (25145 59390 878776 73000) "venv/" "microblog.py" "__pycache__/" "app/" "config.py" ".flaskenv" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/pygame/" (22583 37860 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py~" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/" (22583 37454 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py~" "test.py" "sockets/" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pyorg/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "hal/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/" (22100 30989 0 0) "test2.py" "test.py~" "test.py" "#test3.py#" "#test2.py#" "#test.py#" "../" "./")
+
+ ("/Users/amodeo/Desktop/Stuff/Code/" (22461 60579 0 0) "Python/" "iOS/" "elisp/" "C/" "AWS/" ".DS_Store" "#poker.py#" "../" "./")
+
  ("/Users/amodeo/Org/" (22581 62215 0 0) "work.org~" "work.org" "work-system.org~" "work-system.org" "mobile-pull.org~" "mobile-pull.org" "master" "main.org~" "main.org" "lorg.org~" "lorg.org" "journal.org~" "journal.org" "hal.org~" "hal.org" "gorg.org~" "gorg.org" "food.org~" "food.org" "dump.org~" "dump.org" "car.org~" "car.org" "body.org~" "body.org" "archive.org~" "archive.org_archive~" "archive.org_archive" ".git/" ".#body.org" "#body.org#" "#archive.org#" "../" "./")
 
  ("/Users/amodeo/" (22573 63742 0 0) "Public/" "Pictures/" "org.ics" "Org/" "News/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".python_history" ".newsrc-dribble" ".lesshst" ".leo/" ".idlerc/" ".gnus.el~" ".gnus.el" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".cocoapods/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile~" ".bash_profile" ".bash_history" "../" "./")

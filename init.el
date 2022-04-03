@@ -27,8 +27,10 @@
 (require 'ido)
 (ido-mode t)
 
-;;HAL
-(add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
+(display-line-numbers-mode t)
+
+;; ;;HAL
+;; (add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
 
 ;;FROM CUSTOMIZE
 (custom-set-variables
@@ -99,7 +101,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
-     (sequence "ACTION!(`)" "ACTION(1)" "BREAKDOWN(2)" "|" "DONE(3!)")
+     (sequence "ACTION(1)" "BREAKDOWN(2)" "ACTION!(`)" "|" "DONE(3!)")
      (sequence "STOCK(k)" "|" "BUTTON(b)")
      (sequence "|" "PERSON(P)" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
@@ -110,6 +112,8 @@
  '(send-mail-function (quote mailclient-send-it)))
 
 ;;ORG BASICS
+
+(setq org-startup-indented t)
 
 (define-key global-map "\C-cc" 'org-capture)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -137,6 +141,12 @@
 	  'lorg-set-id)
 
 ;;ORG CAPTURE
+
+(setq org-element-use-cache nil)
+
+(setq org-capture-templates
+      '(("j" "Journal" entry (file+datetree "~/org/journal.org")
+	 "* JOURNAL %U\n%i%?")))
 
 (setq org-capture-templates
       '(("j" "Journal" entry (file+datetree "~/org/journal.org")
@@ -307,13 +317,13 @@
  )
 
 
-;----------------------------------------------------------------------------------
-;                                        LORG
-;----------------------------------------------------------------------------------
+;; ;----------------------------------------------------------------------------------
+;; ;                                        LORG
+;; ;----------------------------------------------------------------------------------
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 3999)
+(set 'last-lorg-id-number 4006)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."
