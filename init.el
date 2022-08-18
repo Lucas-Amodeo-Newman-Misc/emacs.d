@@ -27,10 +27,17 @@
 (require 'ido)
 (ido-mode t)
 
+;;PYTHON
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)          
+
 (display-line-numbers-mode t)
 
 ;; ;;HAL
 ;; (add-to-list 'auto-mode-alist '("\\.hal\\'" . org-mode))
+
+
+(setq xterm-mouse-mode t)
 
 ;;FROM CUSTOMIZE
 (custom-set-variables
@@ -39,9 +46,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-agenda-custom-commands
-   (quote
-    (("A" . "Actions")
-    ("A7" "Actions-7"
+   '(("A" . "Actions")
+     ("A7" "Actions-7"
       ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY>6" nil))
       nil)
      ("A6" "Actions-6"
@@ -53,63 +59,60 @@
      ("A4" "Actions-4"
       ((tags-todo "ACTIVE=\"t\"+DONE=\"nil\"+URGENCY<5-URGENCY<2" nil))
       nil)
-    ("B" .  "Buttons")
-    ("B7" "Buttons-7"
-     ((tags "TODO=\"BUTTON\"+URGENCY=7"))
-     nil)
-    ("B6" "Buttons-6"
-     ((tags "TODO=\"BUTTON\"+URGENCY=6"))
-     nil)
-    ("n" "Need"
-     ((tags "NEED=\"t\"" nil))
-     nil)
-    ("k" "Stock"
-     ((tags "TODO=\"ITEM\"+STOCK=\"t\"" nil))
-     nil)
-    ("u" "Stuck"
-     ((tags "stuck" nil))
-     nil)
-)))
- '(org-agenda-files (quote ("~/Org")))
+     ("B" . "Buttons")
+     ("B7" "Buttons-7"
+      ((tags "TODO=\"BUTTON\"+URGENCY=7"))
+      nil)
+     ("B6" "Buttons-6"
+      ((tags "TODO=\"BUTTON\"+URGENCY=6"))
+      nil)
+     ("n" "Need"
+      ((tags "NEED=\"t\"" nil))
+      nil)
+     ("k" "Stock"
+      ((tags "TODO=\"ITEM\"+STOCK=\"t\"" nil))
+      nil)
+     ("u" "Stuck"
+      ((tags "stuck" nil))
+      nil)))
+ '(org-agenda-files '("~/Org"))
  '(org-agenda-sorting-strategy
-   (quote
-    ((agenda habit-down time-up priority-down category-keep)
+   '((agenda habit-down time-up priority-down category-keep)
      (todo todo-state-up priority-down category-keep)
      (tags priority-down category-keep)
-     (search category-keep))))
+     (search category-keep)))
  '(org-agenda-tags-todo-honor-ignore-options t)
- '(org-agenda-todo-ignore-scheduled (quote all))
- '(org-agenda-use-tag-inheritance (quote (todo search timeline agenda tags)))
+ '(org-agenda-todo-ignore-scheduled 'all)
+ '(org-agenda-use-tag-inheritance '(todo search timeline agenda tags))
  '(org-archive-location "archive.org_archive::datetree/* From %s")
  '(org-columns-default-format
    "%25ITEM %TODO %3ACTIVE %3DONE %3DURATION %URGENCY 6%LOCATION")
  '(org-confirm-elisp-link-function nil)
- '(org-drawers (quote ("PROPERTIES" "CLOCK" "LOGBOOK" "RESULTS" "NOTES")))
+ '(org-drawers '("PROPERTIES" "CLOCK" "LOGBOOK" "RESULTS" "NOTES"))
  '(org-global-properties
-   (quote
-    (("ACTIVE_ALL" . "nil t")
+   '(("ACTIVE_ALL" . "nil t")
      ("DONE_ALL" . "nil t")
      ("CONDITION-TYPE_ALL" . "\"active\" \"done\"")
      ("URGENCY_ALL" . "n 1 2 3 4 5 6 7 8 9")
      ("NEED_ALL" . "nil t")
-     ("STOCK_ALL" . "nil t"))))
+     ("STOCK_ALL" . "nil t")))
  '(org-hide-leading-stars t)
- '(org-id-link-to-org-use-id (quote create-if-interactive))
+ '(org-id-link-to-org-use-id 'create-if-interactive)
  '(org-indent-mode-turns-off-org-adapt-indentation nil)
  '(org-log-into-drawer t)
- '(org-refile-targets (quote ((org-agenda-files :regexp . "Inbox"))))
+ '(org-refile-targets '((org-agenda-files :regexp . "Inbox")))
  '(org-todo-keywords
-   (quote
-    ((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
+   '((sequence "PROCESS(p!)" "NOTICE(n!)" "|" "RESOLVED(r!)" "JOURNAL(j)" "INFO(i)")
      (sequence "ACTION(1)" "BREAKDOWN(2)" "ACTION!(`)" "|" "DONE(3!)")
      (sequence "STOCK(k)" "|" "BUTTON(b)")
      (sequence "|" "PERSON(P)" "ITEM(I)" "LOCATION(L)")
      (sequence "APPOINTMENT(A)" "|")
      (sequence "WORK(w)" "|")
-     (sequence "SEQUENCE(Q)" "MOVEMENT(M)" "|"))))
- '(org-use-property-inheritance (quote ("URGENCY")))
+     (sequence "SEQUENCE(Q)" "MOVEMENT(M)" "|")))
+ '(org-use-property-inheritance '("URGENCY"))
  '(org-yank-folded-subtrees nil)
- '(send-mail-function (quote mailclient-send-it)))
+ '(package-selected-packages '(ess virtualenv jedi csv-mode csv smex org marmalade))
+ '(send-mail-function 'mailclient-send-it))
 
 ;;ORG BASICS
 
@@ -323,7 +326,7 @@
 
 ;;LORG_ID
 
-(set 'last-lorg-id-number 4006)
+(set 'last-lorg-id-number 4007)
 
 (defun lorg-set-id ()
   "Accepts no arguments.  If the entry at point already has a LORG_ID property, do nothing.  If there is no such property, create it and assign as its value the value of variable last-lorg-id-number, incremented by one.  Change the value of last-lorg-id-number to this new value, and change it in the init file as well."

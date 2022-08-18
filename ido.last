@@ -2,6 +2,17 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/Lucas/Code/SQL/" . "sql-practice/")
+ ("/Users/Lucas/Code/JavaScript/crypto/" . "javascript-hashing-practice/")
+ ("/Users/Lucas/Code/JavaScript/" . "crypto/")
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/" . "sportsbook/")
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/" . "lucas_gpt3/")
+ ("/Users/Lucas/Code/Python/RedBot/" . "Red_Bot/")
+ ("/Users/Lucas/Code/Python/microblog/app/" . "templates/")
+ ("/Users/Lucas/Code/Python/microblog/" . "app/")
+ ("/Users/Lucas/Code/Python/" . "sportsbook/")
+ ("/Users/Lucas/Code/" . "Python/")
+ ("/Users/Lucas/" . ".emacs.d/")
  ("/Users/amodeo/Desktop/Stuff/Code/Python/" . "pygame/")
  ("/Users/amodeo/Desktop/Stuff/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/gorg/Control/" . "Commands/")
@@ -23,6 +34,22 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Lucas/Code/Python/sportsbook/"
+ "/Users/Lucas/.emacs.d/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/sportsbook/"
+ "/Users/Lucas/Code/JavaScript/crypto/javascript-hashing-practice/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/Selenium/"
+ "/Users/Lucas/Code/Python/Selenium/"
+ "/Users/Lucas/Code/Python/"
+ "/Users/Lucas/Code/Python/RedBot/Red_Bot/lucas_gpt3/"
+ "/Users/Lucas/Code/Python/SlipBot/"
+ "/Users/Lucas/Code/Python/pandas_tutorial/"
+ "/Users/Lucas/Code/Python/microblog/app/"
+ "/Users/Lucas/Code/Python/microblog/app/templates/"
+ "/Users/Lucas/Code/Python/microblog/"
+ "/Users/Lucas/"
+ "/Users/Lucas/Desktop/Stuff/Code/JavaScript/javascript-exercises/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/pygame/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/"
@@ -55,20 +82,66 @@
 
 ;; ----- ido-work-file-list -----
 (
- "rts.py"
- "circles.py"
- "test.py"
- "body.org"
- "main.org"
- "init.el"
- "car.org"
- "Keymaps.py"
- "Core.py"
- "Gates.py"
+ "robot.py"
+ "util.py"
+ "sms.py"
+ "threads.py"
+ "session.py"
+ "clicksend.py"
+ "sportsbook.py"
+ "index.html"
+ "bovada.py"
+ "requests.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/Lucas/Code/Python/sportsbook/" (25337 52775 0 0) "xpaths.py~" "#sportsbook.py#" ".#robot.py" ".git/" "#requests.py#" "#session.py#" "#clicksend.py#" "sportsbook.py" ".#bovada.py" "robot.py" "sockets.py" "clicksend.py" "#threads.py#" "clicksend.py~" ".#session.py" "sportsbook.py~" ".#sportsbook.py" "threads.py" "sockets.py~" "DLP_Datacenter_Template.xlsx" "test.py" "__pycache__/" ".#threads.py" "#bovada.py#" "session.py" "sample.xlsx" ".#clicksend.py" "DLP_Datacenter_Template.numbers" ".#sms.py" "util.py" "#sms.py#" "xpaths.py" "bovada.py~" "Sessions.py~" "#robot.py#" "Server.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/" (25337 21683 455149 729000) ".zsh_sessions/" ".viminfo" ".gitconfig" ".python_history" "Downloads/" ".mysql_history" "Documents/" ".vmware/" ".npm/" "Splice/" ".Trash/" "Dropbox/" "Applications/" "Movies/" ".dropbox/" "Public/" ".cups/" ".emacs.d/" ".lesshst" "Library/" "Desktop/" ".zsh_history" "Code/" "Pictures/" ".local/" ".bashrc" ".CFUserTextEncoding" ".DS_Store" "Music/" ".config/" "../" "./")
+
+ ("/Users/Lucas/Code/Python/" (25337 26895 0 0) "more_python/" "PyQt/" "sorts/" "escape_room/" "import/" "seby_escape.py" "coursera-webdata/" "pyorg/" "dictparse/" "CAL_TECH_CS_PLACEMENT/" "microblog/" "sebytext/" ".#RPA" "RedBot/" "gorg/" "csv/" "cpython/" "keyvalue/" "python_game_of_life/" "PyDataAlg/" "SlipBot/" "sportsbook/" "torrent/" "pandas_tutorial/" "chem1.py" "url/" "RegEx/" "pygame/" "Machine_Learning_Algorithms/" "tkinter/" "ProjectEuler/" "tic_tac_toe/" "algorthims/" "phonebook/" "example/" "filemanage/" "hal/" "gpt/" "poker/" "sockets/" "turtle/" "Ants/" "automata/" ".DS_Store" "#RPA#" "misc/" "mylibs/" "sashack/" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/" (25337 26895 0 0) "more_python/" "PyQt/" "sorts/" "escape_room/" "import/" "seby_escape.py" "coursera-webdata/" "pyorg/" "dictparse/" "CAL_TECH_CS_PLACEMENT/" "microblog/" "sebytext/" ".#RPA" "RedBot/" "gorg/" "csv/" "cpython/" "keyvalue/" "python_game_of_life/" "PyDataAlg/" "SlipBot/" "sportsbook/" "torrent/" "pandas_tutorial/" "chem1.py" "url/" "RegEx/" "pygame/" "Machine_Learning_Algorithms/" "tkinter/" "ProjectEuler/" "tic_tac_toe/" "algorthims/" "phonebook/" "example/" "filemanage/" "hal/" "gpt/" "poker/" "sockets/" "turtle/" "Ants/" "automata/" ".DS_Store" "#RPA#" "misc/" "mylibs/" "sashack/" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/sportsbook/" (25337 26895 0 0) "xpaths.py~" "#sportsbook.py#" ".#robot.py" ".git/" "#requests.py#" "#session.py#" "#clicksend.py#" "sportsbook.py" ".#bovada.py" "robot.py" "sockets.py" "clicksend.py" "#threads.py#" "clicksend.py~" ".#session.py" "sportsbook.py~" ".#sportsbook.py" "threads.py" "sockets.py~" "DLP_Datacenter_Template.xlsx" "test.py" "__pycache__/" ".#threads.py" "#bovada.py#" "session.py" "sample.xlsx" ".#clicksend.py" "DLP_Datacenter_Template.numbers" ".#sms.py" "#sms.py#" "xpaths.py" "bovada.py~" "Sessions.py~" "#robot.py#" "Server.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/.emacs.d/" (25332 5535 57097 269000) ".git/" "bookmarks~" "elpa/" ".org-id-locations" "master" "bookmarks" "init.el" ".python-environments/" "auto-save-list/" "ido.last~" "smex-items" "init.el~" "ido.last" "repos/" "ac-comphist.dat" "../" "./")
+
+ ("/Users/Lucas/Code/" (25322 55606 0 0) "SQL/" ".#poker.py#.icloud" "C/" "JavaScript/" "AWS/" "elisp/" "iOS/" "web/" "Python/" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Code/Python/pandas_tutorial/" (25185 41122 0 0) ".git/" "ex1.py~" "ex1.py" "ex5.py" "ex4.py" "data.csv" "ex3.py" ".#data.csv" "ex2.py" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Code/SQL/sql-practice/" (25279 13018 0 0) ".git/" "test.sql" "../" "./")
+
+ ("/Users/Lucas/Code/SQL/" (25279 13018 0 0) "mysqlsampledatabase.sql" ".DS_Store" "sql-practice/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/" (25275 32758 0 0) "crypto/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/crypto/" (25275 32759 0 0) "javascript-hashing-practice/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/crypto/javascript-hashing-practice/" (25275 32759 0 0) ".git/" "basic_hashing.js~" "basic_hashing.js" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/Selenium/" (25235 49703 0 0) ".#bovada.py" "#bovada.py#" "bovada.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/Selenium/" (25235 49654 0 0) ".#bovada.py" ".#sportsbooks.py" "#bovada.py#" "bovada.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/" (25185 47324 0 0) ".git/" "venv/" "microblog.py" "__pycache__/" "config.py~" "app/" "config.py" ".flaskenv" "migrations/" "app.db" "../" "./")
+
+ ("/Users/Lucas/Code/Python/SlipBot/" (25217 3093 0 0) "new_extraction_dict.json" "#script2.py#" "test.py~" "test.py" "script1.py" ".#script2.py" ".#test.py" "#test.py#" ".DS_Store" "script1.py~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/" (25217 34208 0 0) "Commit.bat" ".git/" "Red_Bot/" "Start_Slipbot_Dev_Mode.bat" ".gitattributes" ".gitignore" "README.md" "Start_Slipbot.bat" "Config/" "Test.bat" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/" (25217 34202 0 0) "Slipbot_Driver_0.4.0.py" "Classes.py" "Extraction Function/" "lucas_gpt3/" ".DS_Store" "test_RedBot.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/lucas_gpt3/" (25217 34202 0 0) "extraction_artifacts.json" "lucas_gpt3.py" "lucas_gpt3.py~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/app/templates/" (25185 46214 0 0) "index.html~" "login.html~" "login.html" "base.html" "index.html" "base.html~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/app/" (25185 46212 0 0) "routes.py" "forms.py~" "templates/" "__init__.py~" "routes.py~" "forms.py" "__pycache__/" "__init__.py" "models.py" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/JavaScript/javascript-exercises/" (25163 13404 803764 685000) ".git/" "deploy.html" "deploy.html~" "script.js" "script.js~" "../" "./")
+
  ("/Users/amodeo/Desktop/Stuff/Code/Python/pygame/" (22583 37860 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py~" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Code/Python/" (22583 37454 0 0) "url/" "turtle/" "torrent/" "tkinter/" "tic_tac_toe/" "test.py~" "test.py" "sockets/" "sebytext/" "RegEx/" "python_game_of_life/" "PyQt/" "pyorg/" "pygame/" "PyDataAlg/" "ProjectEuler/" "poker/" "phonebook/" "mylibs/" "keyvalue/" "hal/" "gorg/" "game_of_life/" "filemanage/" "dictparse/" "coursera-webdata/" "automata/" "Ants/" "algorthims/" ".DS_Store" "../" "./")

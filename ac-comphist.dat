@@ -1,0 +1,374 @@
+((("de" .
+   [1 0])
+  ("favorite" .
+   [1 0 0 0 0 0 0 0])
+  ("opening_amount" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("openo" .
+   [3 0 0 0 0])
+  ("openr" .
+   [5 0 0 0 0])
+  ("logic" .
+   [1 0 0 0 0])
+  ("state" .
+   [1 0 0 0 0])
+  ("openb" .
+   [1 0 0 0 0])
+  ("instr" .
+   [6 0 0 0 0])
+  ("b" .
+   [1])
+  ("cadence" .
+   [1 0 0 0 0 0 0])
+  ("opening_range" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("chrome" .
+   [1 0 0 0 0 0])
+  ("ch" .
+   [1 0])
+  ("tab_bottom" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("alert_candidates" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("push" .
+   [0 0 0 1])
+  ("StaleElementReferenceException" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("n" .
+   [1])
+  ("WebDriverException" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("length" .
+   [1 0 0 0 0 0])
+  ("upper" .
+   [1 0 0 0 0])
+  ("string" .
+   [2 0 0 0 0 0])
+  ("GameNotFoundError" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("GameNotFound" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("webBrowser" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("elapsed" .
+   [1 0 0 0 0 0 0])
+  ("FetchFailureError" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("FetchFalure" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("NoSuchElementException" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ElementNotInteractableException" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("SeleniumBreakageError" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("new_elem" .
+   [1 0 0 0 0 0 0 0])
+  ("icecream" .
+   [2 1 0 0 0 0 0 0])
+  ("new_selector" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("new_elems" .
+   [1 0 0 0 0 0 0 0 0])
+  ("submit_button" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ElementNotFetchableError" .
+   [0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("This" .
+   [1 0 0 0])
+  ("elems" .
+   [3 0 0 0 0])
+  ("method" .
+   [4 0 0 0 0 0])
+  ("elem" .
+   [4 0 0 0])
+  ("new" .
+   [1 0 0])
+  ("find_elements" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("search_results_first_item" .
+   [2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("funds" .
+   [1 0 0 0 0])
+  ("s" .
+   [1])
+  ("user_tab_name" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("selector" .
+   [14 0 0 0 0 0 0 0])
+  ("use" .
+   [1 0 0])
+  ("delay" .
+   [8 0 0 0 0])
+  ("fetch" .
+   [6 0 0 0 0])
+  ("Element" .
+   [5 0 0 0 0 0 0])
+  ("d" .
+   [2])
+  ("email_input" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("xp" .
+   [11 0])
+  ("sbutton" .
+   [2 0 0 0 0 0 0])
+  ("XPATHS" .
+   [3 0 0 0 0 0])
+  ("password_input" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("all_var" .
+   [1 0 0 0 0 0 0])
+  ("jsonlist_to_dict" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dates" .
+   [2 0 0 0 0])
+  ("data" .
+   [2 0 0 0])
+  ("FGV" .
+   [1 0 0])
+  ("txt" .
+   [1 0 0])
+  ("submit" .
+   [3 0 0 0 0 0])
+  ("money_input" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("bet" .
+   [6 0 0])
+  ("State" .
+   [1 0 0 0 0])
+  ("Golden" .
+   [1 0 0 0 0 0])
+  ("away" .
+   [7 0 0 0])
+  ("Boston" .
+   [1 0 0 0 0 0])
+  ("line" .
+   [9 0 0 0])
+  ("bottom_bet" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("top_bet" .
+   [2 0 0 0 0 0 0])
+  ("top" .
+   [1 0 0])
+  ("bottom" .
+   [3 0 0 0 0 0])
+  ("k" .
+   [1])
+  ("bets_dict" .
+   [2 0 0 0 0 0 0 0 0])
+  ("items" .
+   [1 0 0 0 0])
+  ("keys" .
+   [1 0 0 0])
+  ("By" .
+   [4 0])
+  ("vertical" .
+   [2 0 0 0 0 0 0 0])
+  ("two" .
+   [1 0 0])
+  ("a" .
+   [2])
+  ("find_element" .
+   [2 0 0 0 2 1 0 0 0 0 0 0])
+  ("bet_dict" .
+   [5 0 0 0 1 0 0 0])
+  ("selenium" .
+   [3 0 0 0 0 0 0 0])
+  ("bet_candidates" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("append" .
+   [1 0 0 0 0 0])
+  ("bets" .
+   [4 0 0 0])
+  ("get_attribute" .
+   [7 0 0 0 3 1 0 0 0 0 0 0 0])
+  ("value" .
+   [2 0 0 0 0])
+  ("score_element" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("score" .
+   [1 0 0 0 0])
+  ("betting_tab" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("best_of" .
+   [1 0 0 0 0 0 0])
+  ("tokens" .
+   [1 0 0 0 0 0])
+  ("i" .
+   [17])
+  ("update_funds" .
+   [1 0 0 0 0 1 0 0 0 0 0 0])
+  ("element" .
+   [38 0 0 0 0 0 0])
+  ("driver" .
+   [17 0 1 0 0 0])
+  ("balance" .
+   [3 0 0 0 0 0 0])
+  ("available_money" .
+   [1 1 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bov" .
+   [11 0 1])
+  ("Bovada" .
+   [0 0 0 0 1 0])
+  ("NotLoggedInError" .
+   [0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("_verify_logged_in" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("logged" .
+   [1 0 0 0 0 0])
+  ("logged_in" .
+   [3 0 0 0 0 0 0 0 0])
+  ("NotImplementedError" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("user_tab" .
+   [14 0 0 0 0 0 0 0])
+  ("click" .
+   [22 0 0 0 0])
+  ("lbutton" .
+   [2 0 0 0 0 0 0])
+  ("sleep" .
+   [12 0 0 0 0])
+  ("name" .
+   [22 0 0 0])
+  ("text" .
+   [12 0 0 0])
+  ("place_bet" .
+   [2 0 0 0 0 0 0 0 0])
+  ("team" .
+   [4 0 0 0])
+  ("bet_type" .
+   [4 0 0 0 0 0 0 0])
+  ("amount" .
+   [2 0 0 0 0 0])
+  ("_search_select" .
+   [1 0 0 2 0 0 0 0 0 0 0 0 0 0])
+  ("search" .
+   [2 0 0 0 1 0])
+  ("sports" .
+   [6 0 0 0 0 0])
+  ("get" .
+   [5 0 0])
+  ("search_bar" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("send_keys" .
+   [3 0 0 0 1 0 0 0 0])
+  ("first" .
+   [1 0 0 0 0])
+  ("item" .
+   [1 0 0 0])
+  ("first_item" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("sportsbook" .
+   [7 0 0 1 0 0 0 0 0 0])
+  ("game" .
+   [25 0 0 0])
+  ("Game" .
+   [1 0 0 0])
+  ("BasketballGame" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("start" .
+   [2 0 0 0 0])
+  ("patiently_get_element" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("home" .
+   [13 0 0 0])
+  ("we" .
+   [1 0])
+  ("event_coupons" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("XPATH" .
+   [4 0 0 0 1])
+  ("_get_bet_dict" .
+   [1 0 1 0 1 0 0 0 0 0 0 0 0])
+  ("ic" .
+   [18 0])
+  ("by" .
+   [6 0])
+  ("attempt_click" .
+   [1 0 0 1 0 1 1 0 0 0 0 0 0])
+  ("line_type" .
+   [3 0 0 0 0 0 0 0 0])
+  ("LineIsClosed" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("e" .
+   [10])
+  ("odds_change_alert" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("line_dict" .
+   [3 0 0 0 0 0 0 0 0])
+  ("odds" .
+   [3 0 0 0])
+  ("new_odds" .
+   [1 0 0 0 0 0 0 0])
+  ("_close_bet_tab" .
+   [1 0 0 1 0 0 0 0 0 0 0 0 0 1])
+  ("_open_bet_tab" .
+   [0 0 0 2 0 0 1 0 0 0 0 0 0])
+  ("OddsHaveChanged" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
+  ("odds_alert_inner" .
+   [1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bet_tab" .
+   [4 0 0 0 0 0 0])
+  ("_toggle_bet_tab_is_open" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("submit_bets" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("patiently_click" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bet_arrow" .
+   [3 0 0 0 0 0 0 0 0])
+  ("close_bet_tab" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("add_bet" .
+   [1 0 0 0 0 0 0])
+  ("Book" .
+   [1 0 0 0])
+  ("observe" .
+   [1 0 0 0 0 0 0])
+  ("_get_lines" .
+   [0 1 0 0 0 0 0 0 0 0])
+  ("main" .
+   [4 0 0 0])
+  ("away_score" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("scores" .
+   [1 0 0 0 0 0])
+  ("home_score" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("away_odds" .
+   [2 0 0 0 0 0 1 0 0])
+  ("home_odds" .
+   [4 0 0 0 0 0 0 0 0])
+  ("info_time" .
+   [1 0 0 0 0 0 0 0 0])
+  ("gametime" .
+   [2 0 0 0 0 0 0 0])
+  ("quarter" .
+   [1 0 0 0 0 0 0])
+  ("clock" .
+   [1 0 0 0 0])
+  ("abstime" .
+   [4 0 0 0 0 0 0])
+  ("datetime" .
+   [1 0 0 0 0 0 0 0])
+  ("now" .
+   [1 0 0])
+  ("Observation" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("obsv" .
+   [1 0 0 0])
+  ("find_game" .
+   [2 0 0 0 0 0 0 0 0])
+  ("EC" .
+   [2 0])
+  ("element_to_be_clickable" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("unclickable" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("ec" .
+   [2 0])
+  ("server" .
+   [2 0 0 0 0 0])
+  ("ServerThread" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])))

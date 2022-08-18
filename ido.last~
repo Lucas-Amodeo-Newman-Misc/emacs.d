@@ -2,8 +2,17 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/Users/lucasnewman/code/Python/microblog/app/" . "templates/")
- ("/Users/lucasnewman/code/Python/microblog/" . "app/")
+ ("/Users/Lucas/Code/SQL/" . "sql-practice/")
+ ("/Users/Lucas/Code/JavaScript/crypto/" . "javascript-hashing-practice/")
+ ("/Users/Lucas/Code/JavaScript/" . "crypto/")
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/" . "sportsbook/")
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/" . "lucas_gpt3/")
+ ("/Users/Lucas/Code/Python/RedBot/" . "Red_Bot/")
+ ("/Users/Lucas/Code/Python/microblog/app/" . "templates/")
+ ("/Users/Lucas/Code/Python/microblog/" . "app/")
+ ("/Users/Lucas/Code/Python/" . "sportsbook/")
+ ("/Users/Lucas/Code/" . "Python/")
+ ("/Users/Lucas/" . ".emacs.d/")
  ("/Users/amodeo/Desktop/Stuff/Code/Python/" . "pygame/")
  ("/Users/amodeo/Desktop/Stuff/Code/" . "Python/")
  ("/Users/amodeo/Code/Python/gorg/Control/" . "Commands/")
@@ -25,9 +34,22 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/lucasnewman/code/Python/microblog/app/"
- "/Users/lucasnewman/code/Python/microblog/"
- "/Users/lucasnewman/code/Python/microblog/app/templates/"
+ "/Users/Lucas/Code/Python/sportsbook/"
+ "/Users/Lucas/.emacs.d/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/sportsbook/"
+ "/Users/Lucas/Code/JavaScript/crypto/javascript-hashing-practice/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/"
+ "/Users/Lucas/Desktop/Stuff/Code/Python/Selenium/"
+ "/Users/Lucas/Code/Python/Selenium/"
+ "/Users/Lucas/Code/Python/"
+ "/Users/Lucas/Code/Python/RedBot/Red_Bot/lucas_gpt3/"
+ "/Users/Lucas/Code/Python/SlipBot/"
+ "/Users/Lucas/Code/Python/pandas_tutorial/"
+ "/Users/Lucas/Code/Python/microblog/app/"
+ "/Users/Lucas/Code/Python/microblog/app/templates/"
+ "/Users/Lucas/Code/Python/microblog/"
+ "/Users/Lucas/"
+ "/Users/Lucas/Desktop/Stuff/Code/JavaScript/javascript-exercises/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/pygame/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/"
  "/Users/amodeo/Desktop/Stuff/Code/Python/PyQt/"
@@ -60,25 +82,65 @@
 
 ;; ----- ido-work-file-list -----
 (
- "models.py"
- "config.py"
- "login.html"
- "base.html"
- "routes.py"
- "forms.py"
- "__init__.py"
- "index.html"
- ".flaskenv"
- "microblog.py"
+ "bovada.py"
+ "xpaths.py"
+ "test.py"
+ "init.el"
+ "test2.py"
+ "server.py"
+ "client.py"
+ "sportsbook.py"
+ "basic_hashing.js"
+ "sportsbooks.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/lucasnewman/code/Python/microblog/app/" (25146 27825 776089 28000) "routes.py" "#routes.py#" "forms.py~" "templates/" "__init__.py~" ".#__init__.py" "routes.py~" "forms.py" "__pycache__/" "__init__.py" "#__init__.py#" ".#routes.py" "../" "./")
+ ("/Users/Lucas/Code/Python/sportsbook/" (25331 5421 0 0) "xpaths.py~" ".git/" "sportsbook.py" ".#bovada.py" "sportsbook.py~" "DLP_Datacenter_Template.xlsx" "test.py" "__pycache__/" "#bovada.py#" "sample.xlsx" "DLP_Datacenter_Template.numbers" "xpaths.py" "bovada.py~" "bovada.py" "../" "./")
 
- ("/Users/lucasnewman/code/Python/microblog/app/templates/" (25145 63416 590467 862000) "index.html~" "login.html~" "login.html" "base.html" "index.html" "base.html~" "../" "./")
+ ("/Users/Lucas/.emacs.d/" (25315 64389 269382 286000) ".git/" "bookmarks~" "elpa/" ".org-id-locations" "master" "bookmarks" "init.el" ".python-environments/" "auto-save-list/" "ido.last~" "smex-items" "init.el~" "ido.last" "repos/" "ac-comphist.dat" "../" "./")
 
- ("/Users/lucasnewman/code/Python/microblog/" (25145 59390 878776 73000) "venv/" "microblog.py" "__pycache__/" "app/" "config.py" ".flaskenv" "../" "./")
+ ("/Users/Lucas/" (25322 52056 348214 958000) ".zsh_sessions/" ".viminfo" ".gitconfig" ".python_history" "Downloads/" ".mysql_history" "Documents/" ".vmware/" ".npm/" "Splice/" ".Trash/" "Dropbox/" "Applications/" "Movies/" ".dropbox/" "Public/" ".cups/" ".emacs.d/" ".lesshst" "Library/" "Desktop/" ".zsh_history" "Code/" "Pictures/" ".local/" ".bashrc" ".CFUserTextEncoding" ".DS_Store" "Music/" ".config/" "../" "./")
+
+ ("/Users/Lucas/Code/" (25322 55606 0 0) "SQL/" ".#poker.py#.icloud" "C/" "JavaScript/" "AWS/" "elisp/" "iOS/" "web/" "Python/" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Code/Python/" (25322 55606 0 0) "more_python/" "PyQt/" "sorts/" "escape_room/" "import/" "seby_escape.py" "coursera-webdata/" "pyorg/" "dictparse/" "CAL_TECH_CS_PLACEMENT/" "microblog/" "sebytext/" ".#RPA" "RedBot/" "gorg/" "csv/" "cpython/" "keyvalue/" "python_game_of_life/" "PyDataAlg/" "SlipBot/" "sportsbook/" "torrent/" "pandas_tutorial/" "chem1.py" "url/" "RegEx/" "pygame/" "Machine_Learning_Algorithms/" "tkinter/" "ProjectEuler/" "tic_tac_toe/" "algorthims/" "phonebook/" "example/" "filemanage/" "hal/" "gpt/" "poker/" "sockets/" "turtle/" "Ants/" "automata/" ".DS_Store" "#RPA#" "misc/" "mylibs/" "sashack/" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/sportsbook/" (25315 15008 0 0) "#sportsbook.py#" ".git/" "sportsbook.py" ".#bovada.py" "sportsbook.py~" ".#sportsbook.py" "test.py" "__pycache__/" "#bovada.py#" "client.py" "bovada.py~" "server.py" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/pandas_tutorial/" (25185 41122 0 0) ".git/" "ex1.py~" "ex1.py" "ex5.py" "ex4.py" "data.csv" "ex3.py" ".#data.csv" "ex2.py" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/" (25315 9838 0 0) "more_python/" "PyQt/" "sorts/" "escape_room/" "import/" "seby_escape.py" "coursera-webdata/" "pyorg/" "dictparse/" "CAL_TECH_CS_PLACEMENT/" "microblog/" "sebytext/" ".#RPA" "RedBot/" "gorg/" "csv/" "cpython/" "keyvalue/" "python_game_of_life/" "PyDataAlg/" "SlipBot/" "sportsbook/" "torrent/" "pandas_tutorial/" "chem1.py" "url/" "RegEx/" "pygame/" "Machine_Learning_Algorithms/" "tkinter/" "ProjectEuler/" "tic_tac_toe/" "algorthims/" "phonebook/" "example/" "filemanage/" "hal/" "gpt/" "poker/" "sockets/" "turtle/" "Ants/" "automata/" ".DS_Store" "#RPA#" "misc/" "mylibs/" "sashack/" "../" "./")
+
+ ("/Users/Lucas/Code/SQL/sql-practice/" (25279 13018 0 0) ".git/" "test.sql" "../" "./")
+
+ ("/Users/Lucas/Code/SQL/" (25279 13018 0 0) "mysqlsampledatabase.sql" ".DS_Store" "sql-practice/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/" (25275 32758 0 0) "crypto/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/crypto/" (25275 32759 0 0) "javascript-hashing-practice/" "../" "./")
+
+ ("/Users/Lucas/Code/JavaScript/crypto/javascript-hashing-practice/" (25275 32759 0 0) ".git/" "basic_hashing.js~" "basic_hashing.js" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/Python/Selenium/" (25235 49703 0 0) ".#bovada.py" "#bovada.py#" "bovada.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/Selenium/" (25235 49654 0 0) ".#bovada.py" ".#sportsbooks.py" "#bovada.py#" "bovada.py~" "bovada.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/" (25185 47324 0 0) ".git/" "venv/" "microblog.py" "__pycache__/" "config.py~" "app/" "config.py" ".flaskenv" "migrations/" "app.db" "../" "./")
+
+ ("/Users/Lucas/Code/Python/SlipBot/" (25217 3093 0 0) "new_extraction_dict.json" "#script2.py#" "test.py~" "test.py" "script1.py" ".#script2.py" ".#test.py" "#test.py#" ".DS_Store" "script1.py~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/" (25217 34208 0 0) "Commit.bat" ".git/" "Red_Bot/" "Start_Slipbot_Dev_Mode.bat" ".gitattributes" ".gitignore" "README.md" "Start_Slipbot.bat" "Config/" "Test.bat" ".DS_Store" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/" (25217 34202 0 0) "Slipbot_Driver_0.4.0.py" "Classes.py" "Extraction Function/" "lucas_gpt3/" ".DS_Store" "test_RedBot.py" "../" "./")
+
+ ("/Users/Lucas/Code/Python/RedBot/Red_Bot/lucas_gpt3/" (25217 34202 0 0) "extraction_artifacts.json" "lucas_gpt3.py" "lucas_gpt3.py~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/app/templates/" (25185 46214 0 0) "index.html~" "login.html~" "login.html" "base.html" "index.html" "base.html~" "../" "./")
+
+ ("/Users/Lucas/Code/Python/microblog/app/" (25185 46212 0 0) "routes.py" "forms.py~" "templates/" "__init__.py~" "routes.py~" "forms.py" "__pycache__/" "__init__.py" "models.py" "../" "./")
+
+ ("/Users/Lucas/Desktop/Stuff/Code/JavaScript/javascript-exercises/" (25163 13404 803764 685000) ".git/" "deploy.html" "deploy.html~" "script.js" "script.js~" "../" "./")
 
  ("/Users/amodeo/Desktop/Stuff/Code/Python/pygame/" (22583 37860 0 0) "ThePythonGameBook/" "test.py~" "test.py" "setup.py" "rts.py~" "rts.py" "dist/" "circles.py~" "circles.py" "build/" ".DS_Store" "../" "./")
 

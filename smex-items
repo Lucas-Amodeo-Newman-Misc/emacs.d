@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- display-line-numbers-mode
- eval-buffer
- org-indent-mode
- recover-file
- recover-session
- check-parens
- customize
+ xterm-mouse-mode
+ linum-mode
+ term
+ untabify
+ recover-this-file
+ list-packages
+ package-install
 )
 
 ;; ----- smex-data -----
 (
- (package-install . 2)
+ (package-install . 4)
  (org-mode . 16)
  (customize . 58)
  (org-indent-mode . 17)
@@ -43,7 +43,7 @@
  (lorg-reset-subtree . 1)
  (lorg-set-subtree-properties . 5)
  (byte-compile-file . 1)
- (list-packages . 5)
+ (list-packages . 8)
  (lorg-store-link . 3)
  (lorg-insert-link . 2)
  (lorg-examine-location . 1)
@@ -71,8 +71,13 @@
  (set-variable . 1)
  (indent-for-tab-command . 1)
  (line-number-mode . 2)
- (linum-mode . 6)
+ (linum-mode . 21)
  (lorg-git-push-orgfiles . 2)
  (lorg-git-push-\.emacs\.d . 1)
- (display-line-numbers-mode . 5)
+ (display-line-numbers-mode . 7)
+ (comment-line . 1)
+ (recover-this-file . 1)
+ (untabify . 3)
+ (term . 1)
+ (xterm-mouse-mode . 4)
 )
